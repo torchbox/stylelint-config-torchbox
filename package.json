@@ -1,0 +1,48 @@
+{
+  "name": "stylelint-config-torchbox",
+  "version": "0.1.0",
+  "description": "Shareable stylelint config for CSS and SCSS, following Torchbox’s code style.",
+  "license": "MIT",
+  "author": "Torchbox Ltd",
+  "main": "./config.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/torchbox/stylelint-config-torchbox.git"
+  },
+  "bugs": {
+    "url": "https://github.com/torchbox/stylelint-config-torchbox/issues"
+  },
+  "homepage": "https://github.com/torchbox/stylelint-config-torchbox",
+  "keywords": [
+    "stylelint",
+    "config",
+    "stylelint-config",
+    "lint",
+    "styleguide",
+    "itcss",
+    "bem"
+  ],
+  "files": [
+    "config.js"
+  ],
+  "devDependencies": {
+    "eslint": "6.2.2",
+    "jest": "24.9.0",
+    "prettier": "1.18.2",
+    "stylelint": "10.1.0"
+  },
+  "dependencies": {
+    "stylelint-config-prettier": "^5.2.0",
+    "stylelint-config-standard": "^18.3.0",
+    "stylelint-scss": "^3.10.0"
+  },
+  "peerDependencies": {
+    "stylelint": "^10.1.0"
+  },
+  "scripts": {
+    "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  }
+}

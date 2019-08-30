@@ -1,0 +1,14 @@
+sudo: false
+language: node_js
+install:
+  - npm ci
+script:
+  - npm run lint
+  - npm run test
+  # Log the contents of the published package in CI builds.
+  - npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz
+branches:
+  except:
+    - gh-pages
+notifications:
+  email: false
