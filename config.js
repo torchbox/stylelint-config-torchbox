@@ -9,7 +9,10 @@ module.exports = {
         'declaration-block-no-shorthand-property-overrides': true,
         'declaration-no-important': true,
         'selector-max-id': 0,
-        'selector-max-type': 2,
+        'selector-max-type': [
+            2,
+            { ignore: ['child', 'compounded', 'next-sibling'] },
+        ],
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
         'value-no-vendor-prefix': true,

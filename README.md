@@ -52,7 +52,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`declaration-block-no-shorthand-property-overrides`](https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides/)
 - [`declaration-no-important`](https://stylelint.io/user-guide/rules/declaration-no-important/)
 - [`selector-max-id`](https://stylelint.io/user-guide/rules/selector-max-id/): `0`
-- [`selector-max-type`](https://stylelint.io/user-guide/rules/selector-max-type/): `2`
+- [`selector-max-type`](https://stylelint.io/user-guide/rules/selector-max-type/): `2, ignore: child, compounded, next-sibling`
 - [`max-nesting-depth`](https://stylelint.io/user-guide/rules/max-nesting-depth/): `4`
 - [`selector-max-specificity`](https://stylelint.io/user-guide/rules/selector-max-specificity/): `0,4,0`
 - [`value-no-vendor-prefix`](https://stylelint.io/user-guide/rules/value-no-vendor-prefix/)
