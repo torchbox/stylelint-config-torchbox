@@ -182,8 +182,26 @@ Object {
     true,
   ],
   "no-missing-end-of-source-newline": null,
-  "number-leading-zero": null,
+  "number-leading-zero": Array [
+    "always",
+  ],
   "number-no-trailing-zeros": null,
+  "order/order": Array [
+    Array [
+      "dollar-variables",
+      "custom-properties",
+      Object {
+        "hasBlock": false,
+        "type": "at-rule",
+      },
+      "declarations",
+      "rules",
+      Object {
+        "hasBlock": true,
+        "type": "at-rule",
+      },
+    ],
+  ],
   "property-case": null,
   "property-no-unknown": Array [
     true,
@@ -203,9 +221,6 @@ Object {
   ],
   "scss/dollar-variable-no-missing-interpolation": Array [
     true,
-  ],
-  "scss/media-feature-value-dollar-variable": Array [
-    "always",
   ],
   "scss/percent-placeholder-pattern": Array [
     "^do-not-use-placeholders$",
@@ -241,6 +256,13 @@ Object {
   ],
   "selector-max-type": Array [
     2,
+    Object {
+      "ignore": Array [
+        "child",
+        "compounded",
+        "next-sibling",
+      ],
+    },
   ],
   "selector-no-vendor-prefix": Array [
     true,

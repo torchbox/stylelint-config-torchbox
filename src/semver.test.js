@@ -9,6 +9,7 @@ describe('semver - should those tests break, consider releasing a new major vers
             Object {
               "stylelint-config-prettier": "^5.2.0",
               "stylelint-config-standard": "^18.3.0",
+              "stylelint-order": "^3.1.1",
               "stylelint-scss": "^3.10.0",
             }
         `);
