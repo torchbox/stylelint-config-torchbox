@@ -38,6 +38,7 @@ To get the most out of this config, it is assumed that projects have the followi
 > See [`config.js`](./config.js) for the config definition. This package depends on:
 >
 > - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss)
+> - [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)
 > - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard)
 > - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier)
 
@@ -67,6 +68,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/dollar-variable-no-missing-interpolation`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
 - [`scss/media-feature-value-dollar-variable`](https://github.com/kristerkari/stylelint-scss#readme): `always`
+- [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations, rules, type: at-rule, hasBlock: true`
 
 #### Rules of `stylelint-config-standard`
 

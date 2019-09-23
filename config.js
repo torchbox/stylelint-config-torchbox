@@ -3,7 +3,7 @@
 // See https://stylelint.io/user-guide/rules/.
 module.exports = {
     extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-    plugins: ['stylelint-scss'],
+    plugins: ['stylelint-scss', 'stylelint-order'],
     rules: {
         'color-named': 'never',
         'declaration-block-no-shorthand-property-overrides': true,
@@ -28,5 +28,15 @@ module.exports = {
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/at-mixin-argumentless-call-parentheses': 'always',
         'scss/media-feature-value-dollar-variable': 'always',
+        'order/order': [
+            'dollar-variables',
+            'custom-properties',
+            // @-rules that have no nesting.
+            { type: 'at-rule', hasBlock: false },
+            'declarations',
+            'rules',
+            // @-rules that have nested elements, e.g. media queries
+            { type: 'at-rule', hasBlock: true },
+        ],
     },
 };
