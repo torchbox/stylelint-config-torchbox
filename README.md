@@ -1,6 +1,6 @@
 # [stylelint-config-torchbox](https://www.npmjs.com/package/stylelint-config-torchbox) [<img src="https://raw.githubusercontent.com/torchbox/stylelint-config-torchbox/master/.github/stylelint-logo.svg?sanitize=true" alt="Stylelint" width="90" height="90" align="right">](https://stylelint.io)
 
-[![stylelint-config-torchbox on npm](https://img.shields.io/npm/v/stylelint-config-torchbox.svg)](https://www.npmjs.com/package/stylelint-config-torchbox) [![Build status](https://github.com/actions/torchbox/stylelint-config-torchbox/.github/workflows/ci.yml/badge.svg)](https://github.com/torchbox/stylelint-config-torchbox/actions)
+[![stylelint-config-torchbox on npm](https://img.shields.io/npm/v/stylelint-config-torchbox.svg)](https://www.npmjs.com/package/stylelint-config-torchbox) [![Build status](https://github.com/torchbox/stylelint-config-torchbox/workflows/Continuous%20Integration/badge.svg)](https://github.com/torchbox/stylelint-config-torchbox/actions)
 
 > Shareable stylelint config for CSS and SCSS, following Torchbox’s code style.
 
