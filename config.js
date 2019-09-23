@@ -31,7 +31,6 @@ module.exports = {
         'scss/percent-placeholder-pattern': '^do-not-use-placeholders$',
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/at-mixin-argumentless-call-parentheses': 'always',
-        'scss/media-feature-value-dollar-variable': 'always',
         'order/order': [
             'dollar-variables',
             'custom-properties',

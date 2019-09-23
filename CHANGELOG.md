@@ -11,6 +11,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Enforce ordering of declaration blocks with [stylelint-order](https://github.com/hudochenkov/stylelint-order).
 - Allow using more usage of types in selectors with [selector-max-type](https://stylelint.io/user-guide/rules/selector-max-type) options.
 - Enforce `number-leading-zero`: always
+- Stop enforcing [`scss/media-feature-value-dollar-variable`](https://github.com/kristerkari/stylelint-scss#readme): `always`
 
 ## [0.1.0](https://github.com/torchbox/stylelint-config-torchbox/releases/tag/v0.1.0) (YYYY-MM-DD)
 
