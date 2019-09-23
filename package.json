@@ -29,7 +29,8 @@
     "eslint": "6.2.2",
     "jest": "24.9.0",
     "prettier": "1.18.2",
-    "stylelint": "10.1.0"
+    "stylelint": "10.1.0",
+    "stylelint-find-new-rules": "1.0.2"
   },
   "dependencies": {
     "stylelint-config-prettier": "^5.2.0",
@@ -43,6 +44,7 @@
     "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "test": "jest --coverage",
+    "test:rules": "stylelint-find-new-rules src/unused.js --unused --deprecated --invalid",
     "test:watch": "jest --watch"
   }
 }
