@@ -68,7 +68,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/percent-placeholder-pattern`](https://github.com/kristerkari/stylelint-scss#readme): `^do-not-use-placeholders$`
 - [`scss/dollar-variable-no-missing-interpolation`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
-- [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations, rules, type: at-rule, hasBlock: true`
+- [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
 
 #### Rules of `stylelint-config-standard`
 

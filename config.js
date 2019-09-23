@@ -37,9 +37,6 @@ module.exports = {
             // @-rules that have no nesting.
             { type: 'at-rule', hasBlock: false },
             'declarations',
-            'rules',
-            // @-rules that have nested elements, e.g. media queries
-            { type: 'at-rule', hasBlock: true },
         ],
     },
 };

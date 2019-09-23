@@ -195,11 +195,6 @@ Object {
         "type": "at-rule",
       },
       "declarations",
-      "rules",
-      Object {
-        "hasBlock": true,
-        "type": "at-rule",
-      },
     ],
   ],
   "property-case": null,
