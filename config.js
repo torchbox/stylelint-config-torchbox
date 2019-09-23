@@ -6,6 +6,7 @@ module.exports = {
     plugins: ['stylelint-scss', 'stylelint-order'],
     rules: {
         'color-named': 'never',
+        'number-leading-zero': 'always',
         'declaration-block-no-shorthand-property-overrides': true,
         'declaration-no-important': true,
         'selector-max-id': 0,

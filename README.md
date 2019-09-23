@@ -49,6 +49,7 @@ To get the most out of this config, it is assumed that projects have the followi
 #### Custom rules
 
 - [`color-named`](https://stylelint.io/user-guide/rules/color-named/): `never`
+- [`number-leading-zero`](https://stylelint.io/user-guide/rules/number-leading-zero/): `always`
 - [`declaration-block-no-shorthand-property-overrides`](https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides/)
 - [`declaration-no-important`](https://stylelint.io/user-guide/rules/declaration-no-important/)
 - [`selector-max-id`](https://stylelint.io/user-guide/rules/selector-max-id/): `0`
@@ -158,7 +159,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`media-query-list-comma-space-before`](https://stylelint.io/user-guide/rules/media-query-list-comma-space-before/)
 - [`no-eol-whitespace`](https://stylelint.io/user-guide/rules/no-eol-whitespace/)
 - [`no-missing-end-of-source-newline`](https://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/)
-- [`number-leading-zero`](https://stylelint.io/user-guide/rules/number-leading-zero/)
 - [`number-no-trailing-zeros`](https://stylelint.io/user-guide/rules/number-no-trailing-zeros/)
 - [`property-case`](https://stylelint.io/user-guide/rules/property-case/)
 - [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/)
