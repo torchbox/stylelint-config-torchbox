@@ -249,6 +249,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-import-partial-extension-whitelist`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/dollar-variable-default`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/no-dollar-variables`](https://github.com/kristerkari/stylelint-scss#readme)
+- [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order)
 - [`at-rule-blacklist`](https://stylelint.io/user-guide/rules/at-rule-blacklist/)
 - [`at-rule-property-requirelist`](https://stylelint.io/user-guide/rules/at-rule-property-requirelist/)
 - [`at-rule-whitelist`](https://stylelint.io/user-guide/rules/at-rule-whitelist/)
@@ -290,7 +291,9 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/map-keys-quotes`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/no-duplicate-dollar-variables`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/selector-no-union-class-name`](https://github.com/kristerkari/stylelint-scss#readme)
+- [`scss/media-feature-value-dollar-variable`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`selector-no-qualifying-type`](https://stylelint.io/user-guide/rules/selector-no-qualifying-type/)
 - [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
+- [`order/properties-order`](https://github.com/hudochenkov/stylelint-order)
 
 </details>
