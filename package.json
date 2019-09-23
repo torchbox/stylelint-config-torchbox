@@ -42,10 +42,11 @@
     "stylelint": "^10.1.0"
   },
   "scripts": {
+    "prepare": "./.githooks/deploy.sh",
     "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "build:docs": "node src/documentation.js && prettier --write README.md",
-    "test": "jest --coverage",
+    "test": "jest",
     "test:rules": "stylelint-find-new-rules src/unused.js --unused --deprecated --invalid",
     "test:watch": "jest --watch",
     "prepublishOnly": "npm run build:docs"
