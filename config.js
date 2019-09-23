@@ -1,5 +1,6 @@
 'use strict';
 
+// See https://stylelint.io/user-guide/rules/.
 module.exports = {
     extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
     plugins: ['stylelint-scss'],
