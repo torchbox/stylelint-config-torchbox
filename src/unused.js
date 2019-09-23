@@ -61,6 +61,7 @@ const tooOpinionated = [
     'scss/at-import-partial-extension-whitelist',
     'scss/dollar-variable-default',
     'scss/no-dollar-variables',
+    'order/properties-alphabetical-order',
 ];
 
 const overridenByOtherRule = [
@@ -125,10 +126,14 @@ const toReview = [
     'scss/no-duplicate-dollar-variables',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-union-class-name/README.md
     'scss/selector-no-union-class-name',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md
+    'scss/media-feature-value-dollar-variable',
     // https://stylelint.io/user-guide/rules/selector-no-qualifying-type/
     'selector-no-qualifying-type',
     // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/
     'shorthand-property-no-redundant-values',
+    // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
+    'order/properties-order',
 ];
 
 const unusedRules = [
