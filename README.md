@@ -9,7 +9,7 @@
 Install stylelint and the config:
 
 ```sh
-npm install --save-dev stylelint stylelint-config-torchbox
+npm install --save-dev stylelint@10 stylelint-config-torchbox
 
 ```
 
