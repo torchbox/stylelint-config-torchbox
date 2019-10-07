@@ -56,6 +56,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`declaration-no-important`](https://stylelint.io/user-guide/rules/declaration-no-important/)
 - [`selector-max-id`](https://stylelint.io/user-guide/rules/selector-max-id/): `0`
 - [`selector-max-type`](https://stylelint.io/user-guide/rules/selector-max-type/): `2, ignore: child, compounded, next-sibling`
+- [`selector-class-pattern`](https://stylelint.io/user-guide/rules/selector-class-pattern/): `, resolveNestedSelectors: true`
 - [`max-nesting-depth`](https://stylelint.io/user-guide/rules/max-nesting-depth/): `4`
 - [`selector-max-specificity`](https://stylelint.io/user-guide/rules/selector-max-specificity/): `0,4,0`
 - [`value-no-vendor-prefix`](https://stylelint.io/user-guide/rules/value-no-vendor-prefix/)
@@ -70,6 +71,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/percent-placeholder-pattern`](https://github.com/kristerkari/stylelint-scss#readme): `^do-not-use-placeholders$`
 - [`scss/dollar-variable-no-missing-interpolation`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
+- [`scss/at-mixin-pattern`](https://github.com/kristerkari/stylelint-scss#readme): ``
 - [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
 - [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-obsolete-attribute`](https://github.com/YozhikM/stylelint-a11y#readme)
@@ -233,7 +235,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/selector-nest-combinators`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`selector-attribute-operator-blacklist`](https://stylelint.io/user-guide/rules/selector-attribute-operator-blacklist/)
 - [`selector-attribute-operator-whitelist`](https://stylelint.io/user-guide/rules/selector-attribute-operator-whitelist/)
-- [`selector-class-pattern`](https://stylelint.io/user-guide/rules/selector-class-pattern/)
 - [`selector-combinator-blacklist`](https://stylelint.io/user-guide/rules/selector-combinator-blacklist/)
 - [`selector-combinator-whitelist`](https://stylelint.io/user-guide/rules/selector-combinator-whitelist/)
 - [`selector-max-attribute`](https://stylelint.io/user-guide/rules/selector-max-attribute/)
@@ -280,7 +281,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-if-closing-brace-space-after`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-import-no-partial-leading-underscore`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-mixin-parentheses-space-before`](https://github.com/kristerkari/stylelint-scss#readme)
-- [`scss/at-mixin-pattern`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/declaration-nested-properties-no-divided-groups`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/dollar-variable-colon-newline-after`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/dollar-variable-colon-space-after`](https://github.com/kristerkari/stylelint-scss#readme)

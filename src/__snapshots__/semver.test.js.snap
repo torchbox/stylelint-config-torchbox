@@ -240,6 +240,9 @@ Object {
   "scss/at-mixin-argumentless-call-parentheses": Array [
     "always",
   ],
+  "scss/at-mixin-pattern": Array [
+    /\\^\\[a-z0-9-\\]\\+\\$/,
+  ],
   "scss/at-rule-no-unknown": Array [
     true,
   ],
@@ -266,6 +269,12 @@ Object {
   ],
   "selector-attribute-quotes": Array [
     "always",
+  ],
+  "selector-class-pattern": Array [
+    /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
+    Object {
+      "resolveNestedSelectors": true,
+    },
   ],
   "selector-combinator-space-after": null,
   "selector-combinator-space-before": null,
