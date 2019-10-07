@@ -3,7 +3,7 @@
 // See https://stylelint.io/user-guide/rules/.
 module.exports = {
     extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-    plugins: ['stylelint-scss', 'stylelint-order'],
+    plugins: ['stylelint-scss', 'stylelint-order', 'stylelint-a11y'],
     rules: {
         'color-named': 'never',
         'number-leading-zero': 'always',
@@ -38,5 +38,10 @@ module.exports = {
             { type: 'at-rule', hasBlock: false },
             'declarations',
         ],
+        'a11y/content-property-no-static-value': true,
+        'a11y/no-obsolete-attribute': true,
+        'a11y/no-obsolete-element': true,
+        'a11y/no-text-align-justify': true,
+        'a11y/no-outline-none': true,
     },
 };

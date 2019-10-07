@@ -7,6 +7,7 @@ describe('semver - should those tests break, consider releasing a new major vers
     it('dependencies', () => {
         expect(pkg.dependencies).toMatchInlineSnapshot(`
             Object {
+              "stylelint-a11y": "^1.2.1",
               "stylelint-config-prettier": "^5.2.0",
               "stylelint-config-standard": "^18.3.0",
               "stylelint-order": "^3.1.1",

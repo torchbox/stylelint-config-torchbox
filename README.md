@@ -39,6 +39,7 @@ To get the most out of this config, it is assumed that projects have the followi
 >
 > - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss)
 > - [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)
+> - [`stylelint-a11y`](https://github.com/YozhikM/stylelint-a11y)
 > - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard)
 > - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier)
 
@@ -69,6 +70,11 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/dollar-variable-no-missing-interpolation`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
 - [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
+- [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/no-obsolete-attribute`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/no-outline-none`](https://github.com/YozhikM/stylelint-a11y#readme)
 
 #### Rules of `stylelint-config-standard`
 
