@@ -3,7 +3,12 @@
 // See https://stylelint.io/user-guide/rules/.
 module.exports = {
     extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-    plugins: ['stylelint-scss', 'stylelint-order', 'stylelint-a11y'],
+    plugins: [
+        'stylelint-scss',
+        'stylelint-order',
+        'stylelint-a11y',
+        'stylelint-declaration-strict-value',
+    ],
     rules: {
         'color-named': 'never',
         'number-leading-zero': 'always',
@@ -43,5 +48,16 @@ module.exports = {
         'a11y/no-obsolete-element': true,
         'a11y/no-text-align-justify': true,
         'a11y/no-outline-none': true,
+        'scale-unlimited/declaration-strict-value': [
+            ['color', 'background-color', 'fill', 'stroke', '/-color/'],
+            {
+                ignoreKeywords: [
+                    'currentColor',
+                    'inherit',
+                    'transparent',
+                    'initial',
+                ],
+            },
+        ],
     },
 };
