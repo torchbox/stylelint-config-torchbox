@@ -19,6 +19,16 @@ module.exports = {
             2,
             { ignore: ['child', 'compounded', 'next-sibling'] },
         ],
+        'selector-class-pattern': [
+            // Loose pattern for hyphenated BEM. This also allows simple words to be used as class names, .e.g. `.active`, `.button`.
+            // Based on:
+            // - https://github.com/postcss/postcss-bem-linter/issues/89#issuecomment-255482072
+            // - https://gist.github.com/Potherca/f2a65491e63338659c3a0d2b07eee382
+            // See also: https://github.com/simonsmith/stylelint-selector-bem-pattern.
+            // Proceed with caution if reviewing this – and use https://regexper.com.
+            /^[a-z]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$/,
+            { resolveNestedSelectors: true },
+        ],
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
         'value-no-vendor-prefix': true,
@@ -36,6 +46,7 @@ module.exports = {
         'scss/percent-placeholder-pattern': '^do-not-use-placeholders$',
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/at-mixin-argumentless-call-parentheses': 'always',
+        'scss/at-mixin-pattern': /^[a-z0-9-]+$/,
         'order/order': [
             'dollar-variables',
             'custom-properties',
