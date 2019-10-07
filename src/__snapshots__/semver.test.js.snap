@@ -220,6 +220,23 @@ Object {
     true,
   ],
   "rule-empty-line-before": null,
+  "scale-unlimited/declaration-strict-value": Array [
+    Array [
+      "color",
+      "background-color",
+      "fill",
+      "stroke",
+      "/-color/",
+    ],
+    Object {
+      "ignoreKeywords": Array [
+        "currentColor",
+        "inherit",
+        "transparent",
+        "initial",
+      ],
+    },
+  ],
   "scss/at-mixin-argumentless-call-parentheses": Array [
     "always",
   ],

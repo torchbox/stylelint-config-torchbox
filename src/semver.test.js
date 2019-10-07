@@ -10,6 +10,7 @@ describe('semver - should those tests break, consider releasing a new major vers
               "stylelint-a11y": "^1.2.1",
               "stylelint-config-prettier": "^5.2.0",
               "stylelint-config-standard": "^18.3.0",
+              "stylelint-declaration-strict-value": "^1.1.6",
               "stylelint-order": "^3.1.1",
               "stylelint-scss": "^3.10.0",
             }
