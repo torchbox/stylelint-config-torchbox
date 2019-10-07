@@ -62,6 +62,13 @@ const tooOpinionated = [
     'scss/dollar-variable-default',
     'scss/no-dollar-variables',
     'order/properties-alphabetical-order',
+    'a11y/font-size-is-readable',
+    'a11y/line-height-is-vertical-rhythmed',
+    'a11y/media-prefers-color-scheme',
+    'a11y/media-prefers-reduced-motion',
+    'a11y/no-display-none',
+    'a11y/no-spread-text',
+    'a11y/selector-pseudo-class-focus',
 ];
 
 const overridenByOtherRule = [
