@@ -170,6 +170,10 @@ ${generateList(formatRows(disabled))}
 ${generateList(formatRows(unused))}
 
 </details>
+
+## Contributing
+
+See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.
 `;
 
     const newREADME = `${README}${README_MARKER}\n${rulesDocumentation}`;

@@ -312,3 +312,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`order/properties-order`](https://github.com/hudochenkov/stylelint-order)
 
 </details>
+
+## Contributing
+
+See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.
