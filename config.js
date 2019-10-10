@@ -54,7 +54,6 @@ module.exports = {
             { type: 'at-rule', hasBlock: false },
             'declarations',
         ],
-        'a11y/content-property-no-static-value': true,
         'a11y/no-obsolete-attribute': true,
         'a11y/no-obsolete-element': true,
         'a11y/no-text-align-justify': true,

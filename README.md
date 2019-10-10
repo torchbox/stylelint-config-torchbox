@@ -73,7 +73,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
 - [`scss/at-mixin-pattern`](https://github.com/kristerkari/stylelint-scss#readme): ``
 - [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
-- [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-obsolete-attribute`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y#readme)

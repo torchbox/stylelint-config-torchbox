@@ -61,6 +61,9 @@ const tooOpinionated = [
     'scss/dollar-variable-default',
     'scss/no-dollar-variables',
     'order/properties-alphabetical-order',
+    // This is useful in principle, but a blanket ban means lots of manual work to add "disable"
+    // comments whenever `content` is used for decorative purposes only, e.g. breadcrumb / menu separators.
+    'a11y/content-property-no-static-value',
     'a11y/font-size-is-readable',
     'a11y/line-height-is-vertical-rhythmed',
     'a11y/media-prefers-color-scheme',

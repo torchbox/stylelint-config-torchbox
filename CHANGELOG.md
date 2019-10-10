@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+### Features
+
+- Stop enforcing `a11y/content-property-no-static-value`, which feels too restrictive for projects already following best practices.
+
 ### Bug fixes
 
 - Fix `scale-unlimited/declaration-strict-value` being applied twice to `background-color` declarations.
