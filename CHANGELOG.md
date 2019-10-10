@@ -6,6 +6,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [0.5.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v0.4.0...v0.5.0) (2019-10-10)
+
 ### Features
 
 - Stop enforcing `a11y/content-property-no-static-value`, which feels too restrictive for projects already following best practices.

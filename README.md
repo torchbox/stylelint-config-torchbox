@@ -258,6 +258,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/dollar-variable-default`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/no-dollar-variables`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order)
+- [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/font-size-is-readable`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/line-height-is-vertical-rhythmed`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/media-prefers-color-scheme`](https://github.com/YozhikM/stylelint-a11y#readme)
