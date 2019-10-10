@@ -223,7 +223,6 @@ Object {
   "scale-unlimited/declaration-strict-value": Array [
     Array [
       "color",
-      "background-color",
       "fill",
       "stroke",
       "/-color/",

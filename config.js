@@ -60,7 +60,7 @@ module.exports = {
         'a11y/no-text-align-justify': true,
         'a11y/no-outline-none': true,
         'scale-unlimited/declaration-strict-value': [
-            ['color', 'background-color', 'fill', 'stroke', '/-color/'],
+            ['color', 'fill', 'stroke', '/-color/'],
             {
                 ignoreKeywords: [
                     'currentColor',

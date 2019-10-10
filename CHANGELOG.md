@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+### Bug fixes
+
+- Fix `scale-unlimited/declaration-strict-value` being applied twice to `background-color` declarations.
+
 ## [0.4.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v0.3.0...v0.4.0) (2019-10-08)
 
 ### Features

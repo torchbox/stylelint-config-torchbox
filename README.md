@@ -78,7 +78,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y#readme)
 - [`a11y/no-outline-none`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value#readme): `color, background-color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial`
+- [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value#readme): `color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial`
 
 #### Rules of `stylelint-config-standard`
 
