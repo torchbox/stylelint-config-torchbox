@@ -6,7 +6,7 @@
 
 ## Usage
 
-Install stylelint and the config:
+Install stylelint, and the config:
 
 ```sh
 npm install --save-dev stylelint@10 stylelint-config-torchbox
