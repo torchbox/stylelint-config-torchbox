@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [1.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v0.5.0...v1.0.0) (2020-11-10)
+
+### Features
+
+- Update stylelint to v13 ([#9](https://github.com/torchbox/stylelint-config-torchbox/pull/9))
+- Update all config dependencies to their latest releases, compatible with stylelint v13 ([#9](https://github.com/torchbox/stylelint-config-torchbox/pull/9))
+- Enforce [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/) from stylelint v13 ([#9](https://github.com/torchbox/stylelint-config-torchbox/pull/9))
+- Rename all deprecated stylelint rules to their newer alternatives.
+- The config’s README documentation now links directly to rules’ documentation for plugins.
+
+### BREAKING CHANGES
+
+The configuration now mandates stylelint v13, and additionally enforces [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/).
+
 ## [0.5.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v0.4.0...v0.5.0) (2019-10-10)
 
 ### Features

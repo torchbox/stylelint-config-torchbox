@@ -34,7 +34,7 @@ npm run lint
 ### Releasing a new version
 
 - Make a new branch for the new release.
-- Follow [stylelint’s semantic versioning policy](https://github.com/stylelint/stylelint/blob/master/docs/user-guide/semantic-versioning-policy.md) to determine what new version to create.
+- Follow [stylelint’s semantic versioning policy](https://stylelint.io/about/semantic-versioning) to determine what new version to create.
 - Update the [CHANGELOG](CHANGELOG.md).
 - If there are breaking changes, make sure to document them separately, and add any upgrade considerations.
 - Update the version number in `package.json`, following semver.
