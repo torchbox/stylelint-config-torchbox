@@ -34,12 +34,13 @@ const pluginDependencies = Object.keys(pkg.dependencies).filter(
 
 const predefinedPluginURLs = {
     'stylelint-a11y': 'https://github.com/YozhikM/stylelint-a11y',
+    'stylelint-order': 'https://github.com/hudochenkov/stylelint-order',
 };
 
 const pluginURLs = pluginDependencies.reduce((urls, name) => {
     const pluginPkg = require(`${name}/package.json`);
 
-    urls[name] = pluginPkg.homepage || predefinedPluginURLs;
+    urls[name] = pluginPkg.homepage || predefinedPluginURLs[name];
 
     return urls;
 }, {});
