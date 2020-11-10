@@ -106,6 +106,25 @@ const formattingByPrettier = [
 ];
 
 const toReview = [
+    // List of rules from stylelint v13 upgrade.
+    // https://stylelint.io/user-guide/rules/alpha-value-notation/
+    'alpha-value-notation',
+    // https://stylelint.io/user-guide/rules/color-function-notation/
+    'color-function-notation',
+    // https://stylelint.io/user-guide/rules/hue-degree-notation/
+    'hue-degree-notation',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/comment-no-empty/README.md
+    'scss/comment-no-empty',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after/README.md
+    'scss/dollar-variable-empty-line-after',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block/README.md
+    'scss/dollar-variable-first-in-block',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-duplicate-mixins/README.md
+    'scss/no-duplicate-mixins',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-global-function-names/README.md
+    'scss/no-global-function-names',
+    // ================================
+    // List of rules we initially decided to ship the config without, although they could in theory be added.
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line/README.md
     'scss/at-each-key-value-single-line',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-function-named-arguments/README.md
