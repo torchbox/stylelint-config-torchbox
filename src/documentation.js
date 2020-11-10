@@ -32,10 +32,14 @@ const pluginDependencies = Object.keys(pkg.dependencies).filter(
         name.startsWith('stylelint-') && !name.startsWith('stylelint-config'),
 );
 
+const predefinedPluginURLs = {
+    'stylelint-a11y': 'https://github.com/YozhikM/stylelint-a11y',
+};
+
 const pluginURLs = pluginDependencies.reduce((urls, name) => {
     const pluginPkg = require(`${name}/package.json`);
 
-    urls[name] = pluginPkg.homepage;
+    urls[name] = pluginPkg.homepage || predefinedPluginURLs;
 
     return urls;
 }, {});

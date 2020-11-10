@@ -73,10 +73,10 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss#readme): `always`
 - [`scss/at-mixin-pattern`](https://github.com/kristerkari/stylelint-scss#readme): ``
 - [`order/order`](https://github.com/hudochenkov/stylelint-order): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
-- [`a11y/no-obsolete-attribute`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/no-outline-none`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/no-obsolete-attribute`]([object Object])
+- [`a11y/no-obsolete-element`]([object Object])
+- [`a11y/no-text-align-justify`]([object Object])
+- [`a11y/no-outline-none`]([object Object])
 - [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value#readme): `color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial`
 
 #### Rules of `stylelint-config-standard`
@@ -258,14 +258,14 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/dollar-variable-default`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`scss/no-dollar-variables`](https://github.com/kristerkari/stylelint-scss#readme)
 - [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order)
-- [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/font-size-is-readable`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/line-height-is-vertical-rhythmed`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/media-prefers-color-scheme`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/media-prefers-reduced-motion`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/no-display-none`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/no-spread-text`](https://github.com/YozhikM/stylelint-a11y#readme)
-- [`a11y/selector-pseudo-class-focus`](https://github.com/YozhikM/stylelint-a11y#readme)
+- [`a11y/content-property-no-static-value`]([object Object])
+- [`a11y/font-size-is-readable`]([object Object])
+- [`a11y/line-height-is-vertical-rhythmed`]([object Object])
+- [`a11y/media-prefers-color-scheme`]([object Object])
+- [`a11y/media-prefers-reduced-motion`]([object Object])
+- [`a11y/no-display-none`]([object Object])
+- [`a11y/no-spread-text`]([object Object])
+- [`a11y/selector-pseudo-class-focus`]([object Object])
 - [`at-rule-blacklist`](https://stylelint.io/user-guide/rules/at-rule-blacklist/)
 - [`at-rule-property-requirelist`](https://stylelint.io/user-guide/rules/at-rule-property-requirelist/)
 - [`at-rule-whitelist`](https://stylelint.io/user-guide/rules/at-rule-whitelist/)
