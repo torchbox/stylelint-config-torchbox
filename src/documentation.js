@@ -11,7 +11,6 @@ const fs = require('fs');
 const path = require('path');
 const stylelint = require('stylelint');
 
-const pkg = require('../package.json');
 const config = require('../config');
 const unusedConfig = require('./unused');
 
@@ -27,47 +26,30 @@ const generateList = (items) => {
     return `- ${items.join('\n- ')}`;
 };
 
-const pluginDependencies = Object.keys(pkg.dependencies).filter(
-    (name) =>
-        name.startsWith('stylelint-') && !name.startsWith('stylelint-config'),
-);
-
-const predefinedPluginURLs = {
-    'stylelint-a11y': 'https://github.com/YozhikM/stylelint-a11y',
-    'stylelint-order': 'https://github.com/hudochenkov/stylelint-order',
+const pluginURLs = {
+    'scss': (name) =>
+        `https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/${name}/README.md`,
+    'a11y': (name) =>
+        `https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/${name}/README.md`,
+    'order': (name) =>
+        `https://github.com/hudochenkov/stylelint-order/blob/master/rules/${name}/README.md`,
+    'scale-unlimited': () =>
+        'https://github.com/AndyOGo/stylelint-declaration-strict-value',
 };
 
-const pluginURLs = pluginDependencies.reduce((urls, name) => {
-    const pluginPkg = require(`${name}/package.json`);
+const getRuleURL = (name) => {
+    const isPluginRule = name.includes('/');
 
-    urls[name] = pluginPkg.homepage || predefinedPluginURLs[name];
-
-    return urls;
-}, {});
-
-const pluginRules = pluginDependencies.reduce((rules, pluginName) => {
-    let plugin = require(pluginName);
-    plugin = plugin.default || plugin;
-
-    if (Array.isArray(plugin)) {
-        plugin.forEach((rule) => {
-            rules[rule.ruleName] = pluginName;
-        });
-    } else {
-        rules[plugin.ruleName] = pluginName;
+    if (!isPluginRule) {
+        return `https://stylelint.io/user-guide/rules/${name}/`;
     }
 
-    return rules;
-}, {});
-
-const isPluginRule = (name) => name.includes('/');
+    const [pluginPrefix, ruleName] = name.split('/');
+    return pluginURLs[pluginPrefix](ruleName);
+};
 
 const formatRuleName = (name) => {
-    const url = isPluginRule(name)
-        ? pluginURLs[pluginRules[name]]
-        : `https://stylelint.io/user-guide/rules/${name}/`;
-
-    return `[\`${name}\`](${url})`;
+    return `[\`${name}\`](${getRuleURL(name)})`;
 };
 
 const formatRuleValue = (value) => {
