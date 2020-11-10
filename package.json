@@ -29,19 +29,19 @@
     "eslint": "7.13.0",
     "jest": "26.6.3",
     "prettier": "2.1.2",
-    "stylelint": "10.1.0",
-    "stylelint-find-new-rules": "1.0.2"
+    "stylelint": "13.7.2",
+    "stylelint-find-new-rules": "3.0.1"
   },
   "dependencies": {
-    "stylelint-a11y": "^1.2.1",
-    "stylelint-config-prettier": "^5.2.0",
-    "stylelint-config-standard": "^18.3.0",
-    "stylelint-declaration-strict-value": "^1.1.6",
-    "stylelint-order": "^3.1.1",
-    "stylelint-scss": "^3.10.0"
+    "stylelint-a11y": "^1.2.3",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-declaration-strict-value": "^1.6.1",
+    "stylelint-order": "^4.1.0",
+    "stylelint-scss": "^3.18.0"
   },
   "peerDependencies": {
-    "stylelint": "^10.1.0"
+    "stylelint": "^13.0.0"
   },
   "scripts": {
     "prepare": "./.githooks/deploy.sh",
