@@ -7,8 +7,7 @@ describe('config', () => {
     it('works', () => {
         return stylelint
             .lint({
-                code:
-                    'div.this #should .cause .issues:before { display: block !important; color: red; }',
+                code: 'div.this #should .cause .issues:before { display: block !important; color: red; }',
                 codeFilename: 'styles.css',
                 configFile: path.join(__dirname, '..', 'config.js'),
             })
