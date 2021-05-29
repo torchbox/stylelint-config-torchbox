@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "eslint": "7.27.0",
-    "jest": "27.0.2",
+    "jest": "27.0.3",
     "prettier": "2.3.0",
     "stylelint": "13.7.2",
     "stylelint-find-new-rules": "3.0.1"
