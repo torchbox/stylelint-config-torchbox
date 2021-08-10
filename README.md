@@ -26,6 +26,14 @@ module.exports = {
 
 - Use Stylelint’s [`--report-needless-disables`](https://stylelint.io/user-guide/node-api/#reportneedlessdisables) flag to ensure you do not use more `stylelint-disable` comments than needed.
 
+### Vue
+
+stylelint supports Vue, and our configuration is usable in `.vue` single-file components with no changes. Do make sure linting is configured to check `.vue` files:
+
+- Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables './src/sass' './src/vue_components'`.
+- With [`stylelint-webpack-plugin`](https://webpack.js.org/plugins/stylelint-webpack-plugin/), use `extensions: ['scss', 'vue'],`.
+- With [`pre-commit`](https://github.com/awebdeveloper/pre-commit-stylelint), use `files: \.(scss|vue)$`.
+
 ### Related tools
 
 To get the most out of this config, it is assumed that projects have the following tools set up:
