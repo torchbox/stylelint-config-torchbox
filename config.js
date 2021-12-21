@@ -66,6 +66,7 @@ module.exports = {
                     'inherit',
                     'transparent',
                     'initial',
+                    'none',
                 ],
             },
         ],
