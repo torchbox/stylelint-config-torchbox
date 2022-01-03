@@ -32,7 +32,6 @@ module.exports = {
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
         'value-no-vendor-prefix': true,
-        'function-calc-no-invalid': true,
         'property-no-vendor-prefix': true,
         'selector-no-vendor-prefix': true,
         'media-feature-name-no-vendor-prefix': true,
