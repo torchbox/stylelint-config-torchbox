@@ -40,7 +40,19 @@ module.exports = {
         'no-descending-specificity': null,
         'at-rule-no-vendor-prefix': true,
         'at-rule-no-unknown': null,
-        'scss/at-rule-no-unknown': true,
+        'scss/at-rule-no-unknown': [
+            true,
+            {
+                ignoreAtRules: [
+                    'tailwind',
+                    'apply',
+                    'variants',
+                    'responsive',
+                    'screen',
+                    'layer',
+                ],
+            },
+        ],
         'scss/declaration-nested-properties': 'never',
         'scss/selector-no-redundant-nesting-selector': true,
         'scss/percent-placeholder-pattern': '^do-not-use-placeholders$',
