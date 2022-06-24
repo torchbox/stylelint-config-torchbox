@@ -9,23 +9,19 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - id: nvm
-        run: echo "##[set-output name=NVMRC;]$(cat .nvmrc)"
-      - uses: actions/setup-node@v2-beta
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
         with:
-          node-version: '${{ steps.nvm.outputs.NVMRC }}'
-      - uses: actions/cache@v2
+          node-version-file: '.nvmrc'
+      - uses: actions/cache@v3
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-node-
-      - name: install, build, test
-        run: |
-          npm install --no-optional --no-audit --no-fund --progress=false
-          npm run lint
-          npm run test
-          npm run test:rules
-          npm run build:docs
-          npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run test:rules
+      - run: npm run build:docs
+      - run: npm pack --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //' && rm *.tgz
