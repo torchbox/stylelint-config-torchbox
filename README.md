@@ -9,8 +9,7 @@
 Install stylelint, and the config:
 
 ```sh
-npm install --save-dev stylelint@13 stylelint-config-torchbox
-
+npm install --save-dev stylelint@13 stylelint-config-torchbox@1.0.0
 ```
 
 Then [configure stylelint to use this config](https://stylelint.io/user-guide/configuration/#extends). As a `stylelint.config.js` in the root of your project:
@@ -24,11 +23,72 @@ module.exports = {
 
 ### Tips
 
-- Use Stylelint’s [`--report-needless-disables`](https://stylelint.io/user-guide/node-api/#reportneedlessdisables) flag to ensure you do not use more `stylelint-disable` comments than needed.
+#### Linting setup for ongoing projects
+
+Review our [CHANGELOG](https://github.com/torchbox/stylelint-config-torchbox/blob/main/CHANGELOG.md) for guidance on how to upgrade a project’s linting to a specific version.
+
+More generally, when retrofitting stricter linting onto an existing project, consider [a gradual approach to linting strictness](https://thib.me/upgrading-to-stricter-eslint-config), so you can start using linting without having to change significant portions of the project’s code. Here is an example, disabling commonly hard-to-retrofit rules:
+
+```js
+// Rules which we ideally would want to enforce but are reporting too many issues currently.
+const legacyRules = {
+  'max-nesting-depth': null,
+  'selector-max-specificity': null,
+};
+
+module.exports = {
+  // See https://github.com/torchbox/stylelint-config-torchbox for rules.
+  extends: 'stylelint-config-torchbox',
+  rules: {
+    ...legacyRules,
+  },
+};
+```
+
+#### Common CLI flags
+
+We recommend the following `run` script to add to your `package.json`:
+
+```json
+"lint:css": "stylelint --report-needless-disables 'src/sass' 'src/vue'"
+```
+
+- Use [`--report-needless-disables`](https://stylelint.io/user-guide/node-api/#reportneedlessdisables) flag to ensure you do not use more `stylelint-disable` comments than needed.
+- Target specific folders so Stylelint doesn’t attempt to lint e.g. JS or HTML files.
+
+#### `.stylelintignore`
+
+Stylelint supports ignore patterns in a `.stylelintignore` file, however we tend not to use this since we lint all files within a given folder.
+
+### Prettier
+
+This config is [Prettier](https://prettier.io/)-compatible, there isn’t anything extra needed.
+
+### Tailwind
+
+This config should work with [Tailwind](https://tailwindcss.com/) with no adjustments needed. Please submit an issue if that’s not the case.
+
+### pre-commit
+
+Here is a sample setup with our recommended configuration for the [pre-commit](https://pre-commit.com/) pre-commit hook framework:
+
+```yaml
+default_language_version:
+  node: system
+repos:
+  - repo: https://github.com/thibaudcolas/pre-commit-stylelint
+    rev: v13.13.1
+    hooks:
+      - id: stylelint
+        files: \.(scss|vue)$
+        additional_dependencies:
+          - stylelint@13.13.1
+          - stylelint-config-torchbox@1.0.0
+```
 
 ### Vue
 
-stylelint supports Vue, and our configuration is usable in `.vue` single-file components with no changes. Do make sure linting is configured to check `.vue` files:
+Stylelint supports Vue, and our configuration is usable in `.vue` single-file components with no changes. Do make sure linting is configured to check `.vue` files:
 
 - Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables './src/sass' './src/vue_components'`.
 - With [`stylelint-webpack-plugin`](https://webpack.js.org/plugins/stylelint-webpack-plugin/), use `extensions: ['scss', 'vue'],`.
