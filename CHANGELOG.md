@@ -6,7 +6,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
-## [1.1.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v1.0.0...v1.1.0) (2022-06-24)
+## [1.1.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v1.0.0...v1.1.0) (2022-06-25)
 
 ## Features
 
