@@ -73,7 +73,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`selector-no-vendor-prefix`](https://stylelint.io/user-guide/rules/selector-no-vendor-prefix/)
 - [`media-feature-name-no-vendor-prefix`](https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix/)
 - [`at-rule-no-vendor-prefix`](https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix/)
-- [`scss/at-rule-no-unknown`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md)
+- [`scss/at-rule-no-unknown`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md): `true, ignoreAtRules: tailwind, apply, variants, responsive, screen, layer`
 - [`scss/declaration-nested-properties`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/declaration-nested-properties/README.md): `never`
 - [`scss/selector-no-redundant-nesting-selector`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-redundant-nesting-selector/README.md)
 - [`scss/percent-placeholder-pattern`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/percent-placeholder-pattern/README.md): `^do-not-use-placeholders$`
@@ -85,7 +85,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-obsolete-element/README.md)
 - [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-text-align-justify/README.md)
 - [`a11y/no-outline-none`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-outline-none/README.md)
-- [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value): `color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial`
+- [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value): `color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial, none`
 
 #### Rules of `stylelint-config-standard`
 

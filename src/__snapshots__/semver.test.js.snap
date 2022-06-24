@@ -244,6 +244,16 @@ Object {
   ],
   "scss/at-rule-no-unknown": Array [
     true,
+    Object {
+      "ignoreAtRules": Array [
+        "tailwind",
+        "apply",
+        "variants",
+        "responsive",
+        "screen",
+        "layer",
+      ],
+    },
   ],
   "scss/declaration-nested-properties": Array [
     "never",
