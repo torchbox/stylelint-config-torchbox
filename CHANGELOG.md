@@ -26,7 +26,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 The configuration now mandates stylelint v13, and additionally enforces [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/).
 
-#### Upgrading to v1.0.0
+### Upgrading to v1.0.0
 
 Here are recommended steps:
 
