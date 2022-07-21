@@ -1,5 +1,6 @@
 {
   extends: ['config:base'],
+  dependencyDashboard: false,
   // https://renovatebot.com/docs/configuration-options/#commitbodytable
   commitBodyTable: true,
   // https://renovatebot.com/docs/configuration-options/#ignoredeps
@@ -26,6 +27,8 @@
   rebaseStalePrs: true,
   // Silently merge updates without PRs
   automergeType: 'branch',
+  // https://renovatebot.com/docs/configuration-options/#schedule
+  schedule: ['every weekend'],
   // Limit the number of consecutive PRs
   prHourlyLimit: 2,
   node: {
