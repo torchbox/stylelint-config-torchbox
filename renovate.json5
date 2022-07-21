@@ -47,5 +47,14 @@
       groupName: 'stylelint-find-new-rules',
       automerge: true,
     },
+    {
+      packagePatterns: ['^actions/', '^github/'],
+      groupName: 'actions',
+      automerge: true,
+    },
+    {
+      matchDepTypes: ['peerDependencies'],
+      enabled: false,
+    },
   ],
 }
