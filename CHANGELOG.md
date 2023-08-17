@@ -6,14 +6,14 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
-## [3.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.1...v3.0.0) (2023-08-17)
+## [3.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.3...v3.0.0) (2023-08-17)
 
 ### Features
 
-- Update stylelint to v15.
-- Update all config dependencies to their latest releases, compatible with stylelint v15.
-- Remove dependency on `stylelint-config-prettier`, which is no longer needed with stylelint v15.
-- Change enforced rules from `stylelint-config-standard`, including 10 new rules (see list below).
+- Update stylelint to v15 ([#28](https://github.com/torchbox/stylelint-config-torchbox/pull/28)).
+- Update all config dependencies to their latest releases, compatible with stylelint v15 ([#28](https://github.com/torchbox/stylelint-config-torchbox/pull/28)).
+- Remove dependency on `stylelint-config-prettier`, which is no longer needed with stylelint v15 ([#28](https://github.com/torchbox/stylelint-config-torchbox/pull/28)).
+- Change enforced rules from `stylelint-config-standard`, including 10 new rules (see list below) ([#28](https://github.com/torchbox/stylelint-config-torchbox/pull/28)).
 
 ### BREAKING CHANGES
 
