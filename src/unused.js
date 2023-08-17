@@ -7,59 +7,92 @@ const config = require('../config');
  */
 
 const tooOpinionated = [
+    // https://stylelint.io/user-guide/rules/comment-word-disallowed-list
     'comment-word-disallowed-list',
-    'custom-media-pattern',
-    'custom-property-pattern',
-    'declaration-block-no-redundant-longhand-properties',
-    'declaration-property-unit-disallowed-list',
+    // https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list
     'declaration-property-unit-allowed-list',
+    // https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list
+    'declaration-property-unit-disallowed-list',
+    // https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list
     'declaration-property-value-allowed-list',
-    'font-family-name-quotes',
+    // https://stylelint.io/user-guide/rules/font-weight-notation
     'font-weight-notation',
-    'function-disallowed-list',
-    'function-url-no-scheme-relative',
-    'function-url-quotes',
-    'function-url-scheme-disallowed-list',
-    'function-url-scheme-allowed-list',
+    // https://stylelint.io/user-guide/rules/function-allowed-list
     'function-allowed-list',
-    'keyframes-name-pattern',
-    'linebreaks',
-    'media-feature-name-disallowed-list',
-    'media-feature-name-value-allowed-list',
+    // https://stylelint.io/user-guide/rules/function-disallowed-list
+    'function-disallowed-list',
+    // https://stylelint.io/user-guide/rules/function-url-no-scheme-relative
+    'function-url-no-scheme-relative',
+    // https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list
+    'function-url-scheme-allowed-list',
+    // https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list
+    'function-url-scheme-disallowed-list',
+    // https://stylelint.io/user-guide/rules/media-feature-name-allowed-list
     'media-feature-name-allowed-list',
-    'no-empty-first-line',
+    // https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list
+    'media-feature-name-disallowed-list',
+    // https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list
+    'media-feature-name-value-allowed-list',
+    // https://stylelint.io/user-guide/rules/no-unknown-animations
     'no-unknown-animations',
-    'number-max-precision',
-    'property-disallowed-list',
-    'property-allowed-list',
-    'scss/partial-no-import',
-    'scss/selector-nest-combinators',
-    'selector-attribute-operator-disallowed-list',
-    'selector-attribute-operator-allowed-list',
-    'selector-combinator-disallowed-list',
-    'selector-combinator-allowed-list',
-    'selector-max-attribute',
-    'selector-max-class',
-    'selector-max-combinators',
-    'selector-max-compound-selectors',
-    'selector-max-pseudo-class',
-    'selector-max-universal',
-    'selector-nested-pattern',
-    'selector-pseudo-class-disallowed-list',
-    'selector-pseudo-class-allowed-list',
-    'selector-pseudo-element-disallowed-list',
-    'selector-pseudo-element-allowed-list',
-    'time-min-milliseconds',
-    'unit-disallowed-list',
-    'unit-allowed-list',
-    'value-keyword-case',
-    'scss/dollar-variable-pattern',
-    'scss/at-function-pattern',
-    'scss/at-import-partial-extension-blacklist',
-    'scss/at-import-partial-extension-whitelist',
-    'scss/dollar-variable-default',
-    'scss/no-dollar-variables',
+    // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md
     'order/properties-alphabetical-order',
+    // https://stylelint.io/user-guide/rules/property-allowed-list
+    'property-allowed-list',
+    // https://stylelint.io/user-guide/rules/property-disallowed-list
+    'property-disallowed-list',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-function-pattern/README.md
+    'scss/at-function-pattern',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md
+    'scss/at-import-partial-extension-blacklist',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist/README.md
+    'scss/at-import-partial-extension-whitelist',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-default/README.md
+    'scss/dollar-variable-default',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-pattern/README.md
+    'scss/dollar-variable-pattern',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md
+    'scss/no-dollar-variables',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/partial-no-import/README.md
+    'scss/partial-no-import',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-nest-combinators/README.md
+    'scss/selector-nest-combinators',
+    // https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list
+    'selector-attribute-operator-allowed-list',
+    // https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list
+    'selector-attribute-operator-disallowed-list',
+    // https://stylelint.io/user-guide/rules/selector-combinator-allowed-list
+    'selector-combinator-allowed-list',
+    // https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list
+    'selector-combinator-disallowed-list',
+    // https://stylelint.io/user-guide/rules/selector-max-attribute
+    'selector-max-attribute',
+    // https://stylelint.io/user-guide/rules/selector-max-class
+    'selector-max-class',
+    // https://stylelint.io/user-guide/rules/selector-max-combinators
+    'selector-max-combinators',
+    // https://stylelint.io/user-guide/rules/selector-max-compound-selectors
+    'selector-max-compound-selectors',
+    // https://stylelint.io/user-guide/rules/selector-max-pseudo-class
+    'selector-max-pseudo-class',
+    // https://stylelint.io/user-guide/rules/selector-max-universal
+    'selector-max-universal',
+    // https://stylelint.io/user-guide/rules/selector-nested-pattern
+    'selector-nested-pattern',
+    // https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list
+    'selector-pseudo-class-allowed-list',
+    // https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list
+    'selector-pseudo-class-disallowed-list',
+    // https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list
+    'selector-pseudo-element-allowed-list',
+    // https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list
+    'selector-pseudo-element-disallowed-list',
+    // https://stylelint.io/user-guide/rules/time-min-milliseconds
+    'time-min-milliseconds',
+    // https://stylelint.io/user-guide/rules/unit-allowed-list
+    'unit-allowed-list',
+    // https://stylelint.io/user-guide/rules/unit-disallowed-list
+    'unit-disallowed-list',
 ];
 
 const overridenByOtherRule = [
@@ -67,7 +100,6 @@ const overridenByOtherRule = [
     'at-rule-property-required-list',
     'at-rule-allowed-list',
     'color-no-hex',
-    'selector-id-pattern',
 ];
 
 const formattingByPrettier = [
@@ -124,13 +156,6 @@ const toReview = [
     // https://stylelint.io/user-guide/rules/selector-disallowed-list/
     'selector-disallowed-list',
     // List of rules from stylelint v13 upgrade.
-    // https://stylelint.io/user-guide/rules/alpha-value-notation/
-    'alpha-value-notation',
-    // https://stylelint.io/user-guide/rules/color-function-notation/
-    'color-function-notation',
-    // https://stylelint.io/user-guide/rules/hue-degree-notation/
-    'hue-degree-notation',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/comment-no-empty/README.md
     'scss/comment-no-empty',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after/README.md
     'scss/dollar-variable-empty-line-after',
@@ -141,7 +166,6 @@ const toReview = [
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-global-function-names/README.md
     'scss/no-global-function-names',
     // ================================
-    // List of rules we initially decided to ship the config without, although they could in theory be added.
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line/README.md
     'scss/at-each-key-value-single-line',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-function-named-arguments/README.md
@@ -166,16 +190,14 @@ const toReview = [
     'scss/function-unquote-no-unquoted-strings-inside',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/map-keys-quotes/README.md
     'scss/map-keys-quotes',
+    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md
+    'scss/media-feature-value-dollar-variable',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables/README.md
     'scss/no-duplicate-dollar-variables',
     // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-union-class-name/README.md
     'scss/selector-no-union-class-name',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md
-    'scss/media-feature-value-dollar-variable',
-    // https://stylelint.io/user-guide/rules/selector-no-qualifying-type/
+    // https://stylelint.io/user-guide/rules/selector-no-qualifying-type
     'selector-no-qualifying-type',
-    // https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/
-    'shorthand-property-no-redundant-values',
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
     'order/properties-order',
 ];
