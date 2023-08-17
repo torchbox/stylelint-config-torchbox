@@ -13,7 +13,6 @@ const tooOpinionated = [
     'declaration-block-no-redundant-longhand-properties',
     'declaration-property-unit-disallowed-list',
     'declaration-property-unit-allowed-list',
-    'declaration-property-value-disallowed-list',
     'declaration-property-value-allowed-list',
     'font-family-name-quotes',
     'font-weight-notation',
@@ -61,16 +60,6 @@ const tooOpinionated = [
     'scss/dollar-variable-default',
     'scss/no-dollar-variables',
     'order/properties-alphabetical-order',
-    // This is useful in principle, but a blanket ban means lots of manual work to add "disable"
-    // comments whenever `content` is used for decorative purposes only, e.g. breadcrumb / menu separators.
-    'a11y/content-property-no-static-value',
-    'a11y/font-size-is-readable',
-    'a11y/line-height-is-vertical-rhythmed',
-    'a11y/media-prefers-color-scheme',
-    'a11y/media-prefers-reduced-motion',
-    'a11y/no-display-none',
-    'a11y/no-spread-text',
-    'a11y/selector-pseudo-class-focus',
 ];
 
 const overridenByOtherRule = [
@@ -106,6 +95,17 @@ const formattingByPrettier = [
 ];
 
 const toReview = [
+    // List of rules from stylelint v14 upgrade.
+    // https://stylelint.io/user-guide/rules/color-hex-alpha/
+    'color-hex-alpha',
+    // https://stylelint.io/user-guide/rules/comment-pattern/
+    'comment-pattern',
+    // https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/
+    'rule-selector-property-disallowed-list',
+    // https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/
+    'selector-attribute-name-disallowed-list',
+    // https://stylelint.io/user-guide/rules/selector-disallowed-list/
+    'selector-disallowed-list',
     // List of rules from stylelint v13 upgrade.
     // https://stylelint.io/user-guide/rules/alpha-value-notation/
     'alpha-value-notation',

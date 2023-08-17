@@ -6,7 +6,6 @@ module.exports = {
     plugins: [
         'stylelint-scss',
         'stylelint-order',
-        'stylelint-a11y',
         'stylelint-declaration-strict-value',
     ],
     rules: {
@@ -32,7 +31,6 @@ module.exports = {
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
         'value-no-vendor-prefix': true,
-        'function-calc-no-invalid': true,
         'property-no-vendor-prefix': true,
         'selector-no-vendor-prefix': true,
         'media-feature-name-no-vendor-prefix': true,
@@ -40,6 +38,10 @@ module.exports = {
         'no-descending-specificity': null,
         'at-rule-no-vendor-prefix': true,
         'at-rule-no-unknown': null,
+        // Replaces previously-used `a11y/no-text-align-justify`.
+        'declaration-property-value-disallowed-list': {
+            'text-align': ['justify'],
+        },
         'scss/at-rule-no-unknown': [
             true,
             {
@@ -66,10 +68,6 @@ module.exports = {
             { type: 'at-rule', hasBlock: false },
             'declarations',
         ],
-        'a11y/no-obsolete-attribute': true,
-        'a11y/no-obsolete-element': true,
-        'a11y/no-text-align-justify': true,
-        'a11y/no-outline-none': true,
         'scale-unlimited/declaration-strict-value': [
             ['color', 'fill', 'stroke', '/-color/'],
             {
