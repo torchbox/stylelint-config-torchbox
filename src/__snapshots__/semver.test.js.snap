@@ -1,11 +1,11 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`semver - should those tests break, consider releasing a new major version of the package config contents 1`] = `
-Object {
-  "alpha-value-notation": Array [
+{
+  "alpha-value-notation": [
     "percentage",
-    Object {
-      "exceptProperties": Array [
+    {
+      "exceptProperties": [
         "opacity",
       ],
     },
@@ -15,7 +15,7 @@ Object {
   "at-rule-name-newline-after": null,
   "at-rule-name-space-after": null,
   "at-rule-no-unknown": null,
-  "at-rule-no-vendor-prefix": Array [
+  "at-rule-no-vendor-prefix": [
     true,
   ],
   "at-rule-semicolon-newline-after": null,
@@ -25,95 +25,95 @@ Object {
   "block-closing-brace-newline-before": null,
   "block-closing-brace-space-after": null,
   "block-closing-brace-space-before": null,
-  "block-no-empty": Array [
+  "block-no-empty": [
     true,
   ],
   "block-opening-brace-newline-after": null,
   "block-opening-brace-newline-before": null,
   "block-opening-brace-space-after": null,
   "block-opening-brace-space-before": null,
-  "color-function-notation": Array [
+  "color-function-notation": [
     "modern",
   ],
   "color-hex-case": null,
-  "color-hex-length": Array [
+  "color-hex-length": [
     "short",
   ],
-  "color-named": Array [
+  "color-named": [
     "never",
   ],
-  "color-no-invalid-hex": Array [
+  "color-no-invalid-hex": [
     true,
   ],
-  "comment-empty-line-before": Array [
+  "comment-empty-line-before": [
     "always",
-    Object {
-      "except": Array [
+    {
+      "except": [
         "first-nested",
       ],
-      "ignore": Array [
+      "ignore": [
         "stylelint-commands",
       ],
     },
   ],
-  "comment-no-empty": Array [
+  "comment-no-empty": [
     true,
   ],
-  "comment-whitespace-inside": Array [
+  "comment-whitespace-inside": [
     "always",
   ],
-  "custom-media-pattern": Array [
+  "custom-media-pattern": [
     "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    Object {
+    {
       "message": "Expected custom media query name to be kebab-case",
     },
   ],
-  "custom-property-empty-line-before": Array [
+  "custom-property-empty-line-before": [
     "always",
-    Object {
-      "except": Array [
+    {
+      "except": [
         "after-custom-property",
         "first-nested",
       ],
-      "ignore": Array [
+      "ignore": [
         "after-comment",
         "inside-single-line-block",
       ],
     },
   ],
-  "custom-property-no-missing-var-function": Array [
+  "custom-property-no-missing-var-function": [
     true,
   ],
-  "custom-property-pattern": Array [
+  "custom-property-pattern": [
     "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    Object {
+    {
       "message": "Expected custom property name to be kebab-case",
     },
   ],
   "declaration-bang-space-after": null,
   "declaration-bang-space-before": null,
-  "declaration-block-no-duplicate-custom-properties": Array [
+  "declaration-block-no-duplicate-custom-properties": [
     true,
   ],
-  "declaration-block-no-duplicate-properties": Array [
+  "declaration-block-no-duplicate-properties": [
     true,
-    Object {
-      "ignore": Array [
+    {
+      "ignore": [
         "consecutive-duplicates-with-different-values",
       ],
     },
   ],
-  "declaration-block-no-redundant-longhand-properties": Array [
+  "declaration-block-no-redundant-longhand-properties": [
     true,
   ],
-  "declaration-block-no-shorthand-property-overrides": Array [
+  "declaration-block-no-shorthand-property-overrides": [
     true,
   ],
   "declaration-block-semicolon-newline-after": null,
   "declaration-block-semicolon-newline-before": null,
   "declaration-block-semicolon-space-after": null,
   "declaration-block-semicolon-space-before": null,
-  "declaration-block-single-line-max-declarations": Array [
+  "declaration-block-single-line-max-declarations": [
     1,
   ],
   "declaration-block-trailing-semicolon": null,
@@ -121,127 +121,127 @@ Object {
   "declaration-colon-space-after": null,
   "declaration-colon-space-before": null,
   "declaration-empty-line-before": null,
-  "declaration-no-important": Array [
+  "declaration-no-important": [
     true,
   ],
-  "declaration-property-value-disallowed-list": Array [
-    Object {
-      "text-align": Array [
+  "declaration-property-value-disallowed-list": [
+    {
+      "text-align": [
         "justify",
       ],
     },
   ],
-  "font-family-name-quotes": Array [
+  "font-family-name-quotes": [
     "always-where-recommended",
   ],
-  "font-family-no-duplicate-names": Array [
+  "font-family-no-duplicate-names": [
     true,
   ],
-  "font-family-no-missing-generic-family-keyword": Array [
+  "font-family-no-missing-generic-family-keyword": [
     true,
   ],
-  "function-calc-no-unspaced-operator": Array [
+  "function-calc-no-unspaced-operator": [
     true,
   ],
   "function-comma-newline-after": null,
   "function-comma-newline-before": null,
   "function-comma-space-after": null,
   "function-comma-space-before": null,
-  "function-linear-gradient-no-nonstandard-direction": Array [
+  "function-linear-gradient-no-nonstandard-direction": [
     true,
   ],
   "function-max-empty-lines": null,
-  "function-name-case": Array [
+  "function-name-case": [
     "lower",
   ],
   "function-parentheses-newline-inside": null,
   "function-parentheses-space-inside": null,
-  "function-url-quotes": Array [
+  "function-url-quotes": [
     "always",
   ],
-  "function-whitespace-after": Array [
+  "function-whitespace-after": [
     "always",
   ],
-  "hue-degree-notation": Array [
+  "hue-degree-notation": [
     "angle",
   ],
   "indentation": null,
-  "keyframe-declaration-no-important": Array [
+  "keyframe-declaration-no-important": [
     true,
   ],
-  "keyframes-name-pattern": Array [
+  "keyframes-name-pattern": [
     "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    Object {
+    {
       "message": "Expected keyframe name to be kebab-case",
     },
   ],
-  "length-zero-no-unit": Array [
+  "length-zero-no-unit": [
     true,
   ],
   "linebreaks": null,
   "max-empty-lines": null,
   "max-line-length": null,
-  "max-nesting-depth": Array [
+  "max-nesting-depth": [
     4,
   ],
   "media-feature-colon-space-after": null,
   "media-feature-colon-space-before": null,
   "media-feature-name-case": null,
-  "media-feature-name-no-unknown": Array [
+  "media-feature-name-no-unknown": [
     true,
   ],
-  "media-feature-name-no-vendor-prefix": Array [
+  "media-feature-name-no-vendor-prefix": [
     true,
   ],
   "media-feature-parentheses-space-inside": null,
-  "media-feature-range-operator-space-after": Array [
+  "media-feature-range-operator-space-after": [
     "always",
   ],
-  "media-feature-range-operator-space-before": Array [
+  "media-feature-range-operator-space-before": [
     "always",
   ],
   "media-query-list-comma-newline-after": null,
   "media-query-list-comma-newline-before": null,
   "media-query-list-comma-space-after": null,
   "media-query-list-comma-space-before": null,
-  "named-grid-areas-no-invalid": Array [
+  "named-grid-areas-no-invalid": [
     true,
   ],
   "no-descending-specificity": null,
-  "no-duplicate-at-import-rules": Array [
+  "no-duplicate-at-import-rules": [
     true,
   ],
-  "no-duplicate-selectors": Array [
+  "no-duplicate-selectors": [
     true,
   ],
   "no-empty-first-line": null,
-  "no-empty-source": Array [
+  "no-empty-source": [
     true,
   ],
   "no-eol-whitespace": null,
   "no-extra-semicolons": null,
-  "no-invalid-double-slash-comments": Array [
+  "no-invalid-double-slash-comments": [
     true,
   ],
-  "no-invalid-position-at-import-rule": Array [
+  "no-invalid-position-at-import-rule": [
     true,
   ],
-  "no-irregular-whitespace": Array [
+  "no-irregular-whitespace": [
     true,
   ],
   "no-missing-end-of-source-newline": null,
-  "number-leading-zero": Array [
+  "number-leading-zero": [
     "always",
   ],
-  "number-max-precision": Array [
+  "number-max-precision": [
     4,
   ],
   "number-no-trailing-zeros": null,
-  "order/order": Array [
-    Array [
+  "order/order": [
+    [
       "dollar-variables",
       "custom-properties",
-      Object {
+      {
         "hasBlock": false,
         "type": "at-rule",
       },
@@ -249,32 +249,32 @@ Object {
     ],
   ],
   "property-case": null,
-  "property-no-unknown": Array [
+  "property-no-unknown": [
     true,
   ],
-  "property-no-vendor-prefix": Array [
+  "property-no-vendor-prefix": [
     true,
   ],
-  "rule-empty-line-before": Array [
+  "rule-empty-line-before": [
     "always-multi-line",
-    Object {
-      "except": Array [
+    {
+      "except": [
         "first-nested",
       ],
-      "ignore": Array [
+      "ignore": [
         "after-comment",
       ],
     },
   ],
-  "scale-unlimited/declaration-strict-value": Array [
-    Array [
+  "scale-unlimited/declaration-strict-value": [
+    [
       "color",
       "fill",
       "stroke",
       "/-color/",
     ],
-    Object {
-      "ignoreKeywords": Array [
+    {
+      "ignoreKeywords": [
         "currentColor",
         "inherit",
         "transparent",
@@ -303,16 +303,16 @@ Object {
       ],
     },
   ],
-  "scss/at-mixin-argumentless-call-parentheses": Array [
+  "scss/at-mixin-argumentless-call-parentheses": [
     "always",
   ],
-  "scss/at-mixin-pattern": Array [
+  "scss/at-mixin-pattern": [
     /\\^\\[a-z0-9-\\]\\+\\$/,
   ],
-  "scss/at-rule-no-unknown": Array [
+  "scss/at-rule-no-unknown": [
     true,
-    Object {
-      "ignoreAtRules": Array [
+    {
+      "ignoreAtRules": [
         "tailwind",
         "apply",
         "variants",
@@ -322,34 +322,34 @@ Object {
       ],
     },
   ],
-  "scss/declaration-nested-properties": Array [
+  "scss/declaration-nested-properties": [
     "never",
   ],
-  "scss/dollar-variable-no-missing-interpolation": Array [
+  "scss/dollar-variable-no-missing-interpolation": [
     true,
   ],
-  "scss/percent-placeholder-pattern": Array [
+  "scss/percent-placeholder-pattern": [
     "^do-not-use-placeholders$",
   ],
-  "scss/selector-no-redundant-nesting-selector": Array [
+  "scss/selector-no-redundant-nesting-selector": [
     true,
   ],
   "selector-attribute-brackets-space-inside": null,
   "selector-attribute-operator-space-after": null,
   "selector-attribute-operator-space-before": null,
   "selector-attribute-quotes": null,
-  "selector-class-pattern": Array [
+  "selector-class-pattern": [
     /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
-    Object {
+    {
       "resolveNestedSelectors": true,
     },
   ],
   "selector-combinator-space-after": null,
   "selector-combinator-space-before": null,
   "selector-descendant-combinator-no-non-space": null,
-  "selector-id-pattern": Array [
+  "selector-id-pattern": [
     "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    Object {
+    {
       "message": "Expected id selector to be kebab-case",
     },
   ],
@@ -358,61 +358,61 @@ Object {
   "selector-list-comma-space-after": null,
   "selector-list-comma-space-before": null,
   "selector-max-empty-lines": null,
-  "selector-max-id": Array [
+  "selector-max-id": [
     0,
   ],
-  "selector-max-specificity": Array [
+  "selector-max-specificity": [
     "0,4,0",
   ],
-  "selector-max-type": Array [
+  "selector-max-type": [
     2,
-    Object {
-      "ignore": Array [
+    {
+      "ignore": [
         "child",
         "compounded",
         "next-sibling",
       ],
     },
   ],
-  "selector-no-vendor-prefix": Array [
+  "selector-no-vendor-prefix": [
     true,
   ],
   "selector-pseudo-class-case": null,
-  "selector-pseudo-class-no-unknown": Array [
+  "selector-pseudo-class-no-unknown": [
     true,
   ],
   "selector-pseudo-class-parentheses-space-inside": null,
   "selector-pseudo-element-case": null,
-  "selector-pseudo-element-colon-notation": Array [
+  "selector-pseudo-element-colon-notation": [
     "double",
   ],
-  "selector-pseudo-element-no-unknown": Array [
+  "selector-pseudo-element-no-unknown": [
     true,
   ],
-  "selector-type-case": Array [
+  "selector-type-case": [
     "lower",
   ],
-  "selector-type-no-unknown": Array [
+  "selector-type-no-unknown": [
     true,
-    Object {
-      "ignore": Array [
+    {
+      "ignore": [
         "custom-elements",
       ],
     },
   ],
-  "shorthand-property-no-redundant-values": Array [
+  "shorthand-property-no-redundant-values": [
     true,
   ],
-  "string-no-newline": Array [
+  "string-no-newline": [
     true,
   ],
   "string-quotes": null,
   "unicode-bom": null,
   "unit-case": null,
-  "unit-no-unknown": Array [
+  "unit-no-unknown": [
     true,
   ],
-  "value-keyword-case": Array [
+  "value-keyword-case": [
     "lower",
   ],
   "value-list-comma-newline-after": null,
@@ -420,7 +420,7 @@ Object {
   "value-list-comma-space-after": null,
   "value-list-comma-space-before": null,
   "value-list-max-empty-lines": null,
-  "value-no-vendor-prefix": Array [
+  "value-no-vendor-prefix": [
     true,
   ],
 }

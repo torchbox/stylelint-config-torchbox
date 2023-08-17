@@ -6,7 +6,7 @@ const pkg = require('../package.json');
 describe('semver - should those tests break, consider releasing a new major version of the package', () => {
     it('dependencies', () => {
         expect(pkg.dependencies).toMatchInlineSnapshot(`
-            Object {
+            {
               "stylelint-config-prettier": "^9.0.3",
               "stylelint-config-standard": "^24.0.0",
               "stylelint-declaration-strict-value": "^1.8.0",
@@ -18,7 +18,7 @@ describe('semver - should those tests break, consider releasing a new major vers
 
     it('peerDependencies', () => {
         expect(pkg.peerDependencies).toMatchInlineSnapshot(`
-            Object {
+            {
               "stylelint": "^14.0.0",
             }
         `);
