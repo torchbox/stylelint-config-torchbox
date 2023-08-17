@@ -2,32 +2,24 @@
 
 exports[`semver - should those tests break, consider releasing a new major version of the package config contents 1`] = `
 Object {
-  "a11y/no-obsolete-attribute": Array [
-    true,
-  ],
-  "a11y/no-obsolete-element": Array [
-    true,
-  ],
-  "a11y/no-outline-none": Array [
-    true,
-  ],
-  "a11y/no-text-align-justify": Array [
-    true,
+  "alpha-value-notation": Array [
+    "percentage",
+    Object {
+      "exceptProperties": Array [
+        "opacity",
+      ],
+    },
   ],
   "at-rule-empty-line-before": null,
   "at-rule-name-case": null,
   "at-rule-name-newline-after": null,
-  "at-rule-name-space-after": Array [
-    "always",
-  ],
+  "at-rule-name-space-after": null,
   "at-rule-no-unknown": null,
   "at-rule-no-vendor-prefix": Array [
     true,
   ],
   "at-rule-semicolon-newline-after": null,
-  "at-rule-semicolon-space-before": Array [
-    "never",
-  ],
+  "at-rule-semicolon-space-before": null,
   "block-closing-brace-empty-line-before": null,
   "block-closing-brace-newline-after": null,
   "block-closing-brace-newline-before": null,
@@ -40,6 +32,9 @@ Object {
   "block-opening-brace-newline-before": null,
   "block-opening-brace-space-after": null,
   "block-opening-brace-space-before": null,
+  "color-function-notation": Array [
+    "modern",
+  ],
   "color-hex-case": null,
   "color-hex-length": Array [
     "short",
@@ -67,6 +62,12 @@ Object {
   "comment-whitespace-inside": Array [
     "always",
   ],
+  "custom-media-pattern": Array [
+    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    Object {
+      "message": "Expected custom media query name to be kebab-case",
+    },
+  ],
   "custom-property-empty-line-before": Array [
     "always",
     Object {
@@ -80,11 +81,19 @@ Object {
       ],
     },
   ],
-  "declaration-bang-space-after": Array [
-    "never",
+  "custom-property-no-missing-var-function": Array [
+    true,
   ],
-  "declaration-bang-space-before": Array [
-    "always",
+  "custom-property-pattern": Array [
+    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    Object {
+      "message": "Expected custom property name to be kebab-case",
+    },
+  ],
+  "declaration-bang-space-after": null,
+  "declaration-bang-space-before": null,
+  "declaration-block-no-duplicate-custom-properties": Array [
+    true,
   ],
   "declaration-block-no-duplicate-properties": Array [
     true,
@@ -93,6 +102,9 @@ Object {
         "consecutive-duplicates-with-different-values",
       ],
     },
+  ],
+  "declaration-block-no-redundant-longhand-properties": Array [
+    true,
   ],
   "declaration-block-no-shorthand-property-overrides": Array [
     true,
@@ -112,13 +124,20 @@ Object {
   "declaration-no-important": Array [
     true,
   ],
+  "declaration-property-value-disallowed-list": Array [
+    Object {
+      "text-align": Array [
+        "justify",
+      ],
+    },
+  ],
+  "font-family-name-quotes": Array [
+    "always-where-recommended",
+  ],
   "font-family-no-duplicate-names": Array [
     true,
   ],
   "font-family-no-missing-generic-family-keyword": Array [
-    true,
-  ],
-  "function-calc-no-invalid": Array [
     true,
   ],
   "function-calc-no-unspaced-operator": Array [
@@ -137,12 +156,24 @@ Object {
   ],
   "function-parentheses-newline-inside": null,
   "function-parentheses-space-inside": null,
+  "function-url-quotes": Array [
+    "always",
+  ],
   "function-whitespace-after": Array [
     "always",
+  ],
+  "hue-degree-notation": Array [
+    "angle",
   ],
   "indentation": null,
   "keyframe-declaration-no-important": Array [
     true,
+  ],
+  "keyframes-name-pattern": Array [
+    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    Object {
+      "message": "Expected keyframe name to be kebab-case",
+    },
   ],
   "length-zero-no-unit": Array [
     true,
@@ -153,12 +184,8 @@ Object {
   "max-nesting-depth": Array [
     4,
   ],
-  "media-feature-colon-space-after": Array [
-    "always",
-  ],
-  "media-feature-colon-space-before": Array [
-    "never",
-  ],
+  "media-feature-colon-space-after": null,
+  "media-feature-colon-space-before": null,
   "media-feature-name-case": null,
   "media-feature-name-no-unknown": Array [
     true,
@@ -166,9 +193,7 @@ Object {
   "media-feature-name-no-vendor-prefix": Array [
     true,
   ],
-  "media-feature-parentheses-space-inside": Array [
-    "never",
-  ],
+  "media-feature-parentheses-space-inside": null,
   "media-feature-range-operator-space-after": Array [
     "always",
   ],
@@ -179,6 +204,9 @@ Object {
   "media-query-list-comma-newline-before": null,
   "media-query-list-comma-space-after": null,
   "media-query-list-comma-space-before": null,
+  "named-grid-areas-no-invalid": Array [
+    true,
+  ],
   "no-descending-specificity": null,
   "no-duplicate-at-import-rules": Array [
     true,
@@ -195,9 +223,18 @@ Object {
   "no-invalid-double-slash-comments": Array [
     true,
   ],
+  "no-invalid-position-at-import-rule": Array [
+    true,
+  ],
+  "no-irregular-whitespace": Array [
+    true,
+  ],
   "no-missing-end-of-source-newline": null,
   "number-leading-zero": Array [
     "always",
+  ],
+  "number-max-precision": Array [
+    4,
   ],
   "number-no-trailing-zeros": null,
   "order/order": Array [
@@ -218,7 +255,17 @@ Object {
   "property-no-vendor-prefix": Array [
     true,
   ],
-  "rule-empty-line-before": null,
+  "rule-empty-line-before": Array [
+    "always-multi-line",
+    Object {
+      "except": Array [
+        "first-nested",
+      ],
+      "ignore": Array [
+        "after-comment",
+      ],
+    },
+  ],
   "scale-unlimited/declaration-strict-value": Array [
     Array [
       "color",
@@ -287,18 +334,10 @@ Object {
   "scss/selector-no-redundant-nesting-selector": Array [
     true,
   ],
-  "selector-attribute-brackets-space-inside": Array [
-    "never",
-  ],
-  "selector-attribute-operator-space-after": Array [
-    "never",
-  ],
-  "selector-attribute-operator-space-before": Array [
-    "never",
-  ],
-  "selector-attribute-quotes": Array [
-    "always",
-  ],
+  "selector-attribute-brackets-space-inside": null,
+  "selector-attribute-operator-space-after": null,
+  "selector-attribute-operator-space-before": null,
+  "selector-attribute-quotes": null,
   "selector-class-pattern": Array [
     /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
     Object {
@@ -308,6 +347,12 @@ Object {
   "selector-combinator-space-after": null,
   "selector-combinator-space-before": null,
   "selector-descendant-combinator-no-non-space": null,
+  "selector-id-pattern": Array [
+    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    Object {
+      "message": "Expected id selector to be kebab-case",
+    },
+  ],
   "selector-list-comma-newline-after": null,
   "selector-list-comma-newline-before": null,
   "selector-list-comma-space-after": null,
@@ -336,9 +381,7 @@ Object {
   "selector-pseudo-class-no-unknown": Array [
     true,
   ],
-  "selector-pseudo-class-parentheses-space-inside": Array [
-    "never",
-  ],
+  "selector-pseudo-class-parentheses-space-inside": null,
   "selector-pseudo-element-case": null,
   "selector-pseudo-element-colon-notation": Array [
     "double",
@@ -350,6 +393,14 @@ Object {
     "lower",
   ],
   "selector-type-no-unknown": Array [
+    true,
+    Object {
+      "ignore": Array [
+        "custom-elements",
+      ],
+    },
+  ],
+  "shorthand-property-no-redundant-values": Array [
     true,
   ],
   "string-no-newline": Array [

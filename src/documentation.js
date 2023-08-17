@@ -29,8 +29,6 @@ const generateList = (items) => {
 const pluginURLs = {
     'scss': (name) =>
         `https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/${name}/README.md`,
-    'a11y': (name) =>
-        `https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/${name}/README.md`,
     'order': (name) =>
         `https://github.com/hudochenkov/stylelint-order/blob/master/rules/${name}/README.md`,
     'scale-unlimited': () =>

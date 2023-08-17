@@ -107,7 +107,6 @@ To get the most out of this config, it is assumed that projects have the followi
 >
 > - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss)
 > - [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)
-> - [`stylelint-a11y`](https://github.com/YozhikM/stylelint-a11y)
 > - [`stylelint-declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value)
 > - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard)
 > - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier)
@@ -128,11 +127,11 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`max-nesting-depth`](https://stylelint.io/user-guide/rules/max-nesting-depth/): `4`
 - [`selector-max-specificity`](https://stylelint.io/user-guide/rules/selector-max-specificity/): `0,4,0`
 - [`value-no-vendor-prefix`](https://stylelint.io/user-guide/rules/value-no-vendor-prefix/)
-- [`function-calc-no-invalid`](https://stylelint.io/user-guide/rules/function-calc-no-invalid/)
 - [`property-no-vendor-prefix`](https://stylelint.io/user-guide/rules/property-no-vendor-prefix/)
 - [`selector-no-vendor-prefix`](https://stylelint.io/user-guide/rules/selector-no-vendor-prefix/)
 - [`media-feature-name-no-vendor-prefix`](https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix/)
 - [`at-rule-no-vendor-prefix`](https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix/)
+- [`declaration-property-value-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list/): `text-align: justify`
 - [`scss/at-rule-no-unknown`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md): `true, ignoreAtRules: tailwind, apply, variants, responsive, screen, layer`
 - [`scss/declaration-nested-properties`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/declaration-nested-properties/README.md): `never`
 - [`scss/selector-no-redundant-nesting-selector`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-redundant-nesting-selector/README.md)
@@ -141,40 +140,42 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-mixin-argumentless-call-parentheses`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-mixin-argumentless-call-parentheses/README.md): `always`
 - [`scss/at-mixin-pattern`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-mixin-pattern/README.md): ``
 - [`order/order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/order/README.md): `dollar-variables, custom-properties, type: at-rule, hasBlock: false, declarations`
-- [`a11y/no-obsolete-attribute`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-obsolete-attribute/README.md)
-- [`a11y/no-obsolete-element`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-obsolete-element/README.md)
-- [`a11y/no-text-align-justify`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-text-align-justify/README.md)
-- [`a11y/no-outline-none`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-outline-none/README.md)
 - [`scale-unlimited/declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value): `color, fill, stroke, /-color/, ignoreKeywords: currentColor, inherit, transparent, initial, none, unset, Canvas, CanvasText, LinkText, VisitedText, ActiveText, ButtonFace, ButtonText, ButtonBorder, Field, FieldText, Highlight, HighlightText, SelectedItem, SelectedItemText, Mark, MarkText, GrayText, AccentColor, AccentColorText`
 
 #### Rules of `stylelint-config-standard`
 
-- [`at-rule-name-space-after`](https://stylelint.io/user-guide/rules/at-rule-name-space-after/): `always`
+- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/): `percentage, exceptProperties: opacity`
+- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/): `modern`
 - [`color-hex-length`](https://stylelint.io/user-guide/rules/color-hex-length/): `short`
 - [`comment-empty-line-before`](https://stylelint.io/user-guide/rules/comment-empty-line-before/): `always, except: first-nested, ignore: stylelint-commands`
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
-- [`declaration-bang-space-after`](https://stylelint.io/user-guide/rules/declaration-bang-space-after/): `never`
-- [`declaration-bang-space-before`](https://stylelint.io/user-guide/rules/declaration-bang-space-before/): `always`
+- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom media query name to be kebab-case`
+- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom property name to be kebab-case`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
+- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
+- [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`function-name-case`](https://stylelint.io/user-guide/rules/function-name-case/): `lower`
+- [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
 - [`function-whitespace-after`](https://stylelint.io/user-guide/rules/function-whitespace-after/): `always`
+- [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/): `angle`
+- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected keyframe name to be kebab-case`
 - [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/)
-- [`media-feature-colon-space-after`](https://stylelint.io/user-guide/rules/media-feature-colon-space-after/): `always`
-- [`media-feature-colon-space-before`](https://stylelint.io/user-guide/rules/media-feature-colon-space-before/): `never`
-- [`media-feature-parentheses-space-inside`](https://stylelint.io/user-guide/rules/media-feature-parentheses-space-inside/): `never`
 - [`media-feature-range-operator-space-after`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-after/): `always`
 - [`media-feature-range-operator-space-before`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-before/): `always`
-- [`selector-attribute-brackets-space-inside`](https://stylelint.io/user-guide/rules/selector-attribute-brackets-space-inside/): `never`
-- [`selector-attribute-operator-space-after`](https://stylelint.io/user-guide/rules/selector-attribute-operator-space-after/): `never`
-- [`selector-attribute-operator-space-before`](https://stylelint.io/user-guide/rules/selector-attribute-operator-space-before/): `never`
-- [`selector-pseudo-class-parentheses-space-inside`](https://stylelint.io/user-guide/rules/selector-pseudo-class-parentheses-space-inside/): `never`
+- [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
+- [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
+- [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
+- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected id selector to be kebab-case`
 - [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
 - [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
+- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 - [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
 - [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
 - [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)
 - [`comment-no-empty`](https://stylelint.io/user-guide/rules/comment-no-empty/)
+- [`custom-property-no-missing-var-function`](https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function/)
+- [`declaration-block-no-duplicate-custom-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties/)
 - [`declaration-block-no-duplicate-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/): `true, ignore: consecutive-duplicates-with-different-values`
 - [`font-family-no-duplicate-names`](https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/)
 - [`font-family-no-missing-generic-family-keyword`](https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword/)
@@ -182,18 +183,18 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`function-linear-gradient-no-nonstandard-direction`](https://stylelint.io/user-guide/rules/function-linear-gradient-no-nonstandard-direction/)
 - [`keyframe-declaration-no-important`](https://stylelint.io/user-guide/rules/keyframe-declaration-no-important/)
 - [`media-feature-name-no-unknown`](https://stylelint.io/user-guide/rules/media-feature-name-no-unknown/)
+- [`named-grid-areas-no-invalid`](https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid/)
 - [`no-duplicate-at-import-rules`](https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules/)
 - [`no-duplicate-selectors`](https://stylelint.io/user-guide/rules/no-duplicate-selectors/)
 - [`no-empty-source`](https://stylelint.io/user-guide/rules/no-empty-source/)
 - [`no-invalid-double-slash-comments`](https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/)
+- [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/)
 - [`property-no-unknown`](https://stylelint.io/user-guide/rules/property-no-unknown/)
 - [`selector-pseudo-class-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown/)
 - [`selector-pseudo-element-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-element-no-unknown/)
-- [`selector-type-no-unknown`](https://stylelint.io/user-guide/rules/selector-type-no-unknown/)
+- [`selector-type-no-unknown`](https://stylelint.io/user-guide/rules/selector-type-no-unknown/): `true, ignore: custom-elements`
 - [`string-no-newline`](https://stylelint.io/user-guide/rules/string-no-newline/)
 - [`unit-no-unknown`](https://stylelint.io/user-guide/rules/unit-no-unknown/)
-- [`selector-attribute-quotes`](https://stylelint.io/user-guide/rules/selector-attribute-quotes/): `always`
-- [`at-rule-semicolon-space-before`](https://stylelint.io/user-guide/rules/at-rule-semicolon-space-before/): `never`
 
 #### Disabled rules
 
@@ -206,6 +207,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`at-rule-no-unknown`](https://stylelint.io/user-guide/rules/at-rule-no-unknown/)
 - [`at-rule-empty-line-before`](https://stylelint.io/user-guide/rules/at-rule-empty-line-before/)
 - [`at-rule-name-case`](https://stylelint.io/user-guide/rules/at-rule-name-case/)
+- [`at-rule-name-space-after`](https://stylelint.io/user-guide/rules/at-rule-name-space-after/)
 - [`at-rule-semicolon-newline-after`](https://stylelint.io/user-guide/rules/at-rule-semicolon-newline-after/)
 - [`block-closing-brace-empty-line-before`](https://stylelint.io/user-guide/rules/block-closing-brace-empty-line-before/)
 - [`block-closing-brace-newline-after`](https://stylelint.io/user-guide/rules/block-closing-brace-newline-after/)
@@ -215,6 +217,8 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`block-opening-brace-space-after`](https://stylelint.io/user-guide/rules/block-opening-brace-space-after/)
 - [`block-opening-brace-space-before`](https://stylelint.io/user-guide/rules/block-opening-brace-space-before/)
 - [`color-hex-case`](https://stylelint.io/user-guide/rules/color-hex-case/)
+- [`declaration-bang-space-after`](https://stylelint.io/user-guide/rules/declaration-bang-space-after/)
+- [`declaration-bang-space-before`](https://stylelint.io/user-guide/rules/declaration-bang-space-before/)
 - [`declaration-block-semicolon-newline-after`](https://stylelint.io/user-guide/rules/declaration-block-semicolon-newline-after/)
 - [`declaration-block-semicolon-space-after`](https://stylelint.io/user-guide/rules/declaration-block-semicolon-space-after/)
 - [`declaration-block-semicolon-space-before`](https://stylelint.io/user-guide/rules/declaration-block-semicolon-space-before/)
@@ -230,15 +234,23 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`function-parentheses-space-inside`](https://stylelint.io/user-guide/rules/function-parentheses-space-inside/)
 - [`indentation`](https://stylelint.io/user-guide/rules/indentation/)
 - [`max-empty-lines`](https://stylelint.io/user-guide/rules/max-empty-lines/)
+- [`max-line-length`](https://stylelint.io/user-guide/rules/max-line-length/)
+- [`media-feature-colon-space-after`](https://stylelint.io/user-guide/rules/media-feature-colon-space-after/)
+- [`media-feature-colon-space-before`](https://stylelint.io/user-guide/rules/media-feature-colon-space-before/)
 - [`media-feature-name-case`](https://stylelint.io/user-guide/rules/media-feature-name-case/)
+- [`media-feature-parentheses-space-inside`](https://stylelint.io/user-guide/rules/media-feature-parentheses-space-inside/)
 - [`media-query-list-comma-newline-after`](https://stylelint.io/user-guide/rules/media-query-list-comma-newline-after/)
 - [`media-query-list-comma-space-after`](https://stylelint.io/user-guide/rules/media-query-list-comma-space-after/)
 - [`media-query-list-comma-space-before`](https://stylelint.io/user-guide/rules/media-query-list-comma-space-before/)
+- [`no-empty-first-line`](https://stylelint.io/user-guide/rules/no-empty-first-line/)
 - [`no-eol-whitespace`](https://stylelint.io/user-guide/rules/no-eol-whitespace/)
 - [`no-missing-end-of-source-newline`](https://stylelint.io/user-guide/rules/no-missing-end-of-source-newline/)
 - [`number-no-trailing-zeros`](https://stylelint.io/user-guide/rules/number-no-trailing-zeros/)
 - [`property-case`](https://stylelint.io/user-guide/rules/property-case/)
-- [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/)
+- [`selector-attribute-brackets-space-inside`](https://stylelint.io/user-guide/rules/selector-attribute-brackets-space-inside/)
+- [`selector-attribute-operator-space-after`](https://stylelint.io/user-guide/rules/selector-attribute-operator-space-after/)
+- [`selector-attribute-operator-space-before`](https://stylelint.io/user-guide/rules/selector-attribute-operator-space-before/)
+- [`selector-attribute-quotes`](https://stylelint.io/user-guide/rules/selector-attribute-quotes/)
 - [`selector-combinator-space-after`](https://stylelint.io/user-guide/rules/selector-combinator-space-after/)
 - [`selector-combinator-space-before`](https://stylelint.io/user-guide/rules/selector-combinator-space-before/)
 - [`selector-descendant-combinator-no-non-space`](https://stylelint.io/user-guide/rules/selector-descendant-combinator-no-non-space/)
@@ -246,7 +258,9 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`selector-list-comma-space-before`](https://stylelint.io/user-guide/rules/selector-list-comma-space-before/)
 - [`selector-max-empty-lines`](https://stylelint.io/user-guide/rules/selector-max-empty-lines/)
 - [`selector-pseudo-class-case`](https://stylelint.io/user-guide/rules/selector-pseudo-class-case/)
+- [`selector-pseudo-class-parentheses-space-inside`](https://stylelint.io/user-guide/rules/selector-pseudo-class-parentheses-space-inside/)
 - [`selector-pseudo-element-case`](https://stylelint.io/user-guide/rules/selector-pseudo-element-case/)
+- [`string-quotes`](https://stylelint.io/user-guide/rules/string-quotes/)
 - [`unit-case`](https://stylelint.io/user-guide/rules/unit-case/)
 - [`value-list-comma-newline-after`](https://stylelint.io/user-guide/rules/value-list-comma-newline-after/)
 - [`value-list-comma-space-after`](https://stylelint.io/user-guide/rules/value-list-comma-space-after/)
@@ -254,19 +268,17 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`value-list-max-empty-lines`](https://stylelint.io/user-guide/rules/value-list-max-empty-lines/)
 - [`no-extra-semicolons`](https://stylelint.io/user-guide/rules/no-extra-semicolons/)
 - [`linebreaks`](https://stylelint.io/user-guide/rules/linebreaks/)
-- [`max-line-length`](https://stylelint.io/user-guide/rules/max-line-length/)
-- [`function-comma-newline-before`](https://stylelint.io/user-guide/rules/function-comma-newline-before/)
-- [`value-list-comma-newline-before`](https://stylelint.io/user-guide/rules/value-list-comma-newline-before/)
-- [`declaration-block-semicolon-newline-before`](https://stylelint.io/user-guide/rules/declaration-block-semicolon-newline-before/)
+- [`at-rule-name-newline-after`](https://stylelint.io/user-guide/rules/at-rule-name-newline-after/)
+- [`at-rule-semicolon-space-before`](https://stylelint.io/user-guide/rules/at-rule-semicolon-space-before/)
 - [`block-closing-brace-space-after`](https://stylelint.io/user-guide/rules/block-closing-brace-space-after/)
 - [`block-opening-brace-newline-before`](https://stylelint.io/user-guide/rules/block-opening-brace-newline-before/)
+- [`declaration-block-semicolon-newline-before`](https://stylelint.io/user-guide/rules/declaration-block-semicolon-newline-before/)
+- [`function-comma-newline-before`](https://stylelint.io/user-guide/rules/function-comma-newline-before/)
+- [`media-query-list-comma-newline-before`](https://stylelint.io/user-guide/rules/media-query-list-comma-newline-before/)
 - [`selector-list-comma-newline-before`](https://stylelint.io/user-guide/rules/selector-list-comma-newline-before/)
 - [`selector-list-comma-space-after`](https://stylelint.io/user-guide/rules/selector-list-comma-space-after/)
-- [`media-query-list-comma-newline-before`](https://stylelint.io/user-guide/rules/media-query-list-comma-newline-before/)
-- [`at-rule-name-newline-after`](https://stylelint.io/user-guide/rules/at-rule-name-newline-after/)
-- [`no-empty-first-line`](https://stylelint.io/user-guide/rules/no-empty-first-line/)
 - [`unicode-bom`](https://stylelint.io/user-guide/rules/unicode-bom/)
-- [`string-quotes`](https://stylelint.io/user-guide/rules/string-quotes/)
+- [`value-list-comma-newline-before`](https://stylelint.io/user-guide/rules/value-list-comma-newline-before/)
 
 </details>
 
@@ -282,7 +294,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
 - [`declaration-property-unit-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list/)
 - [`declaration-property-unit-allowed-list`](https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list/)
-- [`declaration-property-value-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list/)
 - [`declaration-property-value-allowed-list`](https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/)
 - [`font-weight-notation`](https://stylelint.io/user-guide/rules/font-weight-notation/)
@@ -330,14 +341,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/dollar-variable-default`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-default/README.md)
 - [`scss/no-dollar-variables`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md)
 - [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md)
-- [`a11y/content-property-no-static-value`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/content-property-no-static-value/README.md)
-- [`a11y/font-size-is-readable`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/font-size-is-readable/README.md)
-- [`a11y/line-height-is-vertical-rhythmed`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/line-height-is-vertical-rhythmed/README.md)
-- [`a11y/media-prefers-color-scheme`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/media-prefers-color-scheme/README.md)
-- [`a11y/media-prefers-reduced-motion`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/media-prefers-reduced-motion/README.md)
-- [`a11y/no-display-none`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-display-none/README.md)
-- [`a11y/no-spread-text`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/no-spread-text/README.md)
-- [`a11y/selector-pseudo-class-focus`](https://github.com/YozhikM/stylelint-a11y/blob/master/src/rules/selector-pseudo-class-focus/README.md)
 - [`at-rule-disallowed-list`](https://stylelint.io/user-guide/rules/at-rule-disallowed-list/)
 - [`at-rule-property-required-list`](https://stylelint.io/user-guide/rules/at-rule-property-required-list/)
 - [`at-rule-allowed-list`](https://stylelint.io/user-guide/rules/at-rule-allowed-list/)
@@ -364,6 +367,11 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/operator-no-newline-after`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/operator-no-newline-after/README.md)
 - [`scss/operator-no-newline-before`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/operator-no-newline-before/README.md)
 - [`scss/operator-no-unspaced`](https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/operator-no-unspaced/README.md)
+- [`color-hex-alpha`](https://stylelint.io/user-guide/rules/color-hex-alpha/)
+- [`comment-pattern`](https://stylelint.io/user-guide/rules/comment-pattern/)
+- [`rule-selector-property-disallowed-list`](https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/)
+- [`selector-attribute-name-disallowed-list`](https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/)
+- [`selector-disallowed-list`](https://stylelint.io/user-guide/rules/selector-disallowed-list/)
 - [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/)
 - [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/)
 - [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/)
