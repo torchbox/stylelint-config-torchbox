@@ -18,10 +18,6 @@ const unusedRules = Object.keys(unusedConfig.rules).filter(
     (name) => typeof config.rules[name] === 'undefined',
 );
 
-const linter = stylelint.createLinter({
-    configFile: path.join(__dirname, '..', 'config.js'),
-});
-
 const generateList = (items) => {
     return `- ${items.join('\n- ')}`;
 };
@@ -82,8 +78,10 @@ const README_PATH = path.join(__dirname, '..', 'README.md');
 const README_MARKER = '<!-- Generated with: npm run build:docs -->';
 const README = fs.readFileSync(README_PATH, 'utf-8').split(README_MARKER)[0];
 
-linter.getConfigForFile().then((result) => {
-    const { rules } = result.config;
+const configFile = path.join(__dirname, '..', 'config.js');
+
+stylelint.resolveConfig(__filename, { configFile }).then((resolvedConfig) => {
+    const { rules } = resolvedConfig;
     const enforcedRules = Object.keys(rules).filter(
         (name) => rules[name] !== null,
     );
