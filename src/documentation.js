@@ -24,7 +24,7 @@ const generateList = (items) => {
 
 const pluginURLs = {
     'scss': (name) =>
-        `https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/${name}/README.md`,
+        `https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/${name}/README.md`,
     'order': (name) =>
         `https://github.com/hudochenkov/stylelint-order/blob/master/rules/${name}/README.md`,
     'scale-unlimited': () =>
@@ -75,6 +75,7 @@ const formatRows = (rules) => {
 };
 
 const README_PATH = path.join(__dirname, '..', 'README.md');
+const RULES_PATH = path.join(__dirname, 'rules.md');
 const README_MARKER = '<!-- Generated with: npm run build:docs -->';
 const README = fs.readFileSync(README_PATH, 'utf-8').split(README_MARKER)[0];
 
@@ -123,44 +124,53 @@ stylelint.resolveConfig(__filename, { configFile }).then((resolvedConfig) => {
 
     const unused = unusedRules.map((name) => [formatRuleName(name)]);
 
-    const rulesDocumentation = `
+    const readmeRules = `
 ### Rules
+
+> For the full list of enabled, disabled, and unused rules, view [src/rules.md](src/rules.md).
 
 #### Custom rules
 
 ${generateList(formatRows(customConventions))}
 
-#### Rules of \`stylelint-config-standard\`
+## Inherited rules
 
 ${generateList(formatRows(inheritedConventions))}
-
-#### Disabled rules
-
-> Rules that are turned off on purpose.
-
-<details>
-
-${generateList(formatRows(disabled))}
-
-</details>
-
-#### Unused rules
-
-> Rules that are not configured.
-
-<details>
-
-${generateList(formatRows(unused))}
-
-</details>
 
 ## Contributing
 
 See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.
 `;
 
-    const newREADME = `${README}${README_MARKER}\n${rulesDocumentation}`;
+    const fullRules = `
+# Rules
+
+## Custom rules
+
+${generateList(formatRows(customConventions))}
+
+## Inherited rules
+
+${generateList(formatRows(inheritedConventions))}
+
+## Disabled rules
+
+> Rules that are turned off on purpose.
+
+${generateList(formatRows(disabled))}
+
+## Unused rules
+
+> Rules that are not configured, either because they aren’t relevant for us, or we decided they are too opinionated, or we haven’t had the chance to properly review them yet.
+
+${generateList(formatRows(unused))}
+`;
+
+    const newREADME = `${README}${README_MARKER}\n${readmeRules}`;
+    const newRulesDocs = `${README_MARKER}\n${fullRules}`;
 
     fs.writeFileSync(README_PATH, newREADME, 'utf-8');
-    console.log('Updated README.md with rules docs:', rulesDocumentation);
+    fs.writeFileSync(RULES_PATH, newRulesDocs, 'utf-8');
+    console.log('Updated README.md with rules docs');
+    console.log('Updated rules.md with full rules docs:', newRulesDocs);
 });
