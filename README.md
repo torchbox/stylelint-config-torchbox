@@ -151,7 +151,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
-- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`function-name-case`](https://stylelint.io/user-guide/rules/function-name-case/): `lower`
 - [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
@@ -163,10 +162,8 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
 - [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
 - [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
-- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected id selector to be kebab-case`
 - [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
 - [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
-- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 - [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
 - [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
 - [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)

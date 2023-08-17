@@ -6,6 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [2.0.3](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.2...v2.0.3) (2023-08-17)
+
+### Bug fixes
+
+Disables the following rules introduced in Stylelint 14 & related package updates, to make it simpler for projects to upgrade to Stylelint 14:
+
+- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
+- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/)
+- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
+
 ## [2.0.2](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.1...v2.0.2) (2023-08-17)
 
 ### Bug fixes

@@ -36,7 +36,6 @@
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
-- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`function-name-case`](https://stylelint.io/user-guide/rules/function-name-case/): `lower`
 - [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
@@ -48,10 +47,8 @@
 - [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
 - [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
 - [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
-- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected id selector to be kebab-case`
 - [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
 - [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
-- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 - [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
 - [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
 - [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)
@@ -83,13 +80,16 @@
 > Rules that are turned off on purpose.
 
 - [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/)
-- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/)
-- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/)
 - [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/)
 - [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/)
+- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/)
+- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/)
+- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/)
 - [`declaration-empty-line-before`](https://stylelint.io/user-guide/rules/declaration-empty-line-before/)
 - [`no-descending-specificity`](https://stylelint.io/user-guide/rules/no-descending-specificity/)
 - [`at-rule-no-unknown`](https://stylelint.io/user-guide/rules/at-rule-no-unknown/)
+- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
+- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 - [`at-rule-empty-line-before`](https://stylelint.io/user-guide/rules/at-rule-empty-line-before/)
 - [`at-rule-name-case`](https://stylelint.io/user-guide/rules/at-rule-name-case/)
 - [`at-rule-name-space-after`](https://stylelint.io/user-guide/rules/at-rule-name-space-after/)

@@ -84,9 +84,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
-  "declaration-block-no-redundant-longhand-properties": [
-    true,
-  ],
+  "declaration-block-no-redundant-longhand-properties": null,
   "declaration-block-no-shorthand-property-overrides": [
     true,
   ],
@@ -323,12 +321,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "selector-combinator-space-after": null,
   "selector-combinator-space-before": null,
   "selector-descendant-combinator-no-non-space": null,
-  "selector-id-pattern": [
-    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    {
-      "message": "Expected id selector to be kebab-case",
-    },
-  ],
+  "selector-id-pattern": null,
   "selector-list-comma-newline-after": null,
   "selector-list-comma-newline-before": null,
   "selector-list-comma-space-after": null,
@@ -376,9 +369,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
-  "shorthand-property-no-redundant-values": [
-    true,
-  ],
+  "shorthand-property-no-redundant-values": null,
   "string-no-newline": [
     true,
   ],

@@ -32,10 +32,11 @@ module.exports = {
             { resolveNestedSelectors: true },
         ],
         'keyframes-name-pattern': null,
-        'alpha-value-notation': null,
-        'color-function-notation': null,
         'custom-media-pattern': null,
         'custom-property-pattern': null,
+        'selector-id-pattern': null,
+        'alpha-value-notation': null,
+        'color-function-notation': null,
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
         'value-no-vendor-prefix': true,
@@ -46,6 +47,8 @@ module.exports = {
         'no-descending-specificity': null,
         'at-rule-no-vendor-prefix': true,
         'at-rule-no-unknown': null,
+        'declaration-block-no-redundant-longhand-properties': null,
+        'shorthand-property-no-redundant-values': null,
         // Replaces previously-used `a11y/no-text-align-justify`.
         'declaration-property-value-disallowed-list': {
             'text-align': ['justify'],
