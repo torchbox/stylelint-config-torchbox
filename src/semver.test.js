@@ -24,12 +24,10 @@ describe('semver - should those tests break, consider releasing a new major vers
         `);
     });
 
-    it('config contents', () => {
-        const linter = stylelint.createLinter({
+    it('config contents', async () => {
+        const config = await stylelint.resolveConfig(__filename, {
             configFile: path.join(__dirname, '..', 'config.js'),
         });
-        return linter.getConfigForFile().then((result) => {
-            expect(result.config.rules).toMatchSnapshot();
-        });
+        expect(config.rules).toMatchSnapshot();
     });
 });

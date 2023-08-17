@@ -30,8 +30,8 @@
     "jest": "29.6.2",
     "prettier": "3.0.1",
     "prettier-2": "npm:prettier@2.8.8",
-    "stylelint": "14.1.0",
-    "stylelint-find-new-rules": "3.0.4"
+    "stylelint": "14.16.1",
+    "stylelint-find-new-rules": "4.1.0"
   },
   "dependencies": {
     "stylelint-config-prettier": "^9.0.3",

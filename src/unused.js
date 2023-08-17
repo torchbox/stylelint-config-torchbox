@@ -95,6 +95,23 @@ const formattingByPrettier = [
 ];
 
 const toReview = [
+    // List of rules from stylelint v14.16.1 upgrade.
+    // https://stylelint.io/user-guide/rules/annotation-no-unknown
+    'annotation-no-unknown',
+    // https://stylelint.io/user-guide/rules/declaration-property-max-values
+    'declaration-property-max-values',
+    // https://stylelint.io/user-guide/rules/function-no-unknown
+    'function-no-unknown',
+    // https://stylelint.io/user-guide/rules/import-notation
+    'import-notation',
+    // https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors
+    'keyframe-block-no-duplicate-selectors',
+    // https://stylelint.io/user-guide/rules/keyframe-selector-notation
+    'keyframe-selector-notation',
+    // https://stylelint.io/user-guide/rules/media-feature-range-notation
+    'media-feature-range-notation',
+    // https://stylelint.io/user-guide/rules/selector-not-notation
+    'selector-not-notation',
     // List of rules from stylelint v14 upgrade.
     // https://stylelint.io/user-guide/rules/color-hex-alpha/
     'color-hex-alpha',
