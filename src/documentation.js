@@ -135,7 +135,7 @@ ${generateList(formatRows(customConventions))}
 
 ## Inherited rules
 
-${generateList(formatRows(inheritedConventions))}
+${generateList(formatRows(inheritedConventions.sort()))}
 
 ## Contributing
 
@@ -151,19 +151,19 @@ ${generateList(formatRows(customConventions))}
 
 ## Inherited rules
 
-${generateList(formatRows(inheritedConventions))}
+${generateList(formatRows(inheritedConventions).sort())}
 
 ## Disabled rules
 
 > Rules that are turned off on purpose.
 
-${generateList(formatRows(disabled))}
+${generateList(formatRows(disabled).sort())}
 
 ## Unused rules
 
 > Rules that are not configured, either because they aren’t relevant for us, or we decided they are too opinionated, or we haven’t had the chance to properly review them yet.
 
-${generateList(formatRows(unused))}
+${generateList(formatRows(unused).sort())}
 `;
 
     const newREADME = `${README}${README_MARKER}\n${readmeRules}`;

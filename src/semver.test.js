@@ -7,12 +7,9 @@ describe('semver - should those tests break, consider releasing a new major vers
     it('dependencies', () => {
         expect(pkg.dependencies).toMatchInlineSnapshot(`
             {
-              "postcss-scss": "^4.0.7",
-              "stylelint-config-prettier": "^9.0.3",
-              "stylelint-config-standard": "^24.0.0",
-              "stylelint-declaration-strict-value": "^1.8.0",
-              "stylelint-order": "^5.0.0",
-              "stylelint-scss": "^4.0.0",
+              "stylelint-config-standard-scss": "^10.0.0",
+              "stylelint-declaration-strict-value": "^1.9.2",
+              "stylelint-order": "^6.0.3",
             }
         `);
     });
@@ -20,7 +17,7 @@ describe('semver - should those tests break, consider releasing a new major vers
     it('peerDependencies', () => {
         expect(pkg.peerDependencies).toMatchInlineSnapshot(`
             {
-              "stylelint": "^14.0.0",
+              "stylelint": "^15.0.0",
             }
         `);
     });

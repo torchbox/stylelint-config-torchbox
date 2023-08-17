@@ -3,30 +3,16 @@
 exports[`semver - should those tests break, consider releasing a new major version of the package config contents 1`] = `
 {
   "alpha-value-notation": null,
+  "annotation-no-unknown": null,
   "at-rule-empty-line-before": null,
-  "at-rule-name-case": null,
-  "at-rule-name-newline-after": null,
-  "at-rule-name-space-after": null,
   "at-rule-no-unknown": null,
   "at-rule-no-vendor-prefix": [
     true,
   ],
-  "at-rule-semicolon-newline-after": null,
-  "at-rule-semicolon-space-before": null,
-  "block-closing-brace-empty-line-before": null,
-  "block-closing-brace-newline-after": null,
-  "block-closing-brace-newline-before": null,
-  "block-closing-brace-space-after": null,
-  "block-closing-brace-space-before": null,
   "block-no-empty": [
     true,
   ],
-  "block-opening-brace-newline-after": null,
-  "block-opening-brace-newline-before": null,
-  "block-opening-brace-space-after": null,
-  "block-opening-brace-space-before": null,
   "color-function-notation": null,
-  "color-hex-case": null,
   "color-hex-length": [
     "short",
   ],
@@ -47,9 +33,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
-  "comment-no-empty": [
-    true,
-  ],
+  "comment-no-empty": null,
   "comment-whitespace-inside": [
     "always",
   ],
@@ -71,8 +55,6 @@ exports[`semver - should those tests break, consider releasing a new major versi
     true,
   ],
   "custom-property-pattern": null,
-  "declaration-bang-space-after": null,
-  "declaration-bang-space-before": null,
   "declaration-block-no-duplicate-custom-properties": [
     true,
   ],
@@ -80,7 +62,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
     true,
     {
       "ignore": [
-        "consecutive-duplicates-with-different-values",
+        "consecutive-duplicates-with-different-syntaxes",
       ],
     },
   ],
@@ -88,17 +70,9 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "declaration-block-no-shorthand-property-overrides": [
     true,
   ],
-  "declaration-block-semicolon-newline-after": null,
-  "declaration-block-semicolon-newline-before": null,
-  "declaration-block-semicolon-space-after": null,
-  "declaration-block-semicolon-space-before": null,
   "declaration-block-single-line-max-declarations": [
     1,
   ],
-  "declaration-block-trailing-semicolon": null,
-  "declaration-colon-newline-after": null,
-  "declaration-colon-space-after": null,
-  "declaration-colon-space-before": null,
   "declaration-empty-line-before": null,
   "declaration-no-important": [
     true,
@@ -122,62 +96,50 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "function-calc-no-unspaced-operator": [
     true,
   ],
-  "function-comma-newline-after": null,
-  "function-comma-newline-before": null,
-  "function-comma-space-after": null,
-  "function-comma-space-before": null,
   "function-linear-gradient-no-nonstandard-direction": [
     true,
   ],
-  "function-max-empty-lines": null,
   "function-name-case": [
     "lower",
   ],
-  "function-parentheses-newline-inside": null,
-  "function-parentheses-space-inside": null,
+  "function-no-unknown": null,
   "function-url-quotes": [
-    "always",
-  ],
-  "function-whitespace-after": [
     "always",
   ],
   "hue-degree-notation": [
     "angle",
   ],
-  "indentation": null,
+  "import-notation": [
+    "string",
+  ],
+  "keyframe-block-no-duplicate-selectors": [
+    true,
+  ],
   "keyframe-declaration-no-important": [
     true,
+  ],
+  "keyframe-selector-notation": [
+    "percentage-unless-within-keyword-only-block",
   ],
   "keyframes-name-pattern": null,
   "length-zero-no-unit": [
     true,
+    {
+      "ignore": [
+        "custom-properties",
+      ],
+    },
   ],
-  "linebreaks": null,
-  "max-empty-lines": null,
-  "max-line-length": null,
   "max-nesting-depth": [
     4,
   ],
-  "media-feature-colon-space-after": null,
-  "media-feature-colon-space-before": null,
-  "media-feature-name-case": null,
   "media-feature-name-no-unknown": [
     true,
   ],
   "media-feature-name-no-vendor-prefix": [
     true,
   ],
-  "media-feature-parentheses-space-inside": null,
-  "media-feature-range-operator-space-after": [
-    "always",
-  ],
-  "media-feature-range-operator-space-before": [
-    "always",
-  ],
-  "media-query-list-comma-newline-after": null,
-  "media-query-list-comma-newline-before": null,
-  "media-query-list-comma-space-after": null,
-  "media-query-list-comma-space-before": null,
+  "media-feature-range-notation": null,
   "named-grid-areas-no-invalid": [
     true,
   ],
@@ -188,29 +150,27 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "no-duplicate-selectors": [
     true,
   ],
-  "no-empty-first-line": null,
   "no-empty-source": [
     true,
   ],
-  "no-eol-whitespace": null,
-  "no-extra-semicolons": null,
   "no-invalid-double-slash-comments": [
     true,
   ],
   "no-invalid-position-at-import-rule": [
     true,
+    {
+      "ignoreAtRules": [
+        "use",
+        "forward",
+      ],
+    },
   ],
   "no-irregular-whitespace": [
     true,
   ],
-  "no-missing-end-of-source-newline": null,
-  "number-leading-zero": [
-    "always",
-  ],
   "number-max-precision": [
     4,
   ],
-  "number-no-trailing-zeros": null,
   "order/order": [
     [
       "dollar-variables",
@@ -222,7 +182,6 @@ exports[`semver - should those tests break, consider releasing a new major versi
       "declarations",
     ],
   ],
-  "property-case": null,
   "property-no-unknown": [
     true,
   ],
@@ -277,11 +236,49 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
+  "scss/at-else-closing-brace-newline-after": [
+    "always-last-in-chain",
+  ],
+  "scss/at-else-closing-brace-space-after": [
+    "always-intermediate",
+  ],
+  "scss/at-else-empty-line-before": [
+    "never",
+  ],
+  "scss/at-else-if-parentheses-space-before": [
+    "always",
+  ],
+  "scss/at-extend-no-missing-placeholder": null,
+  "scss/at-function-parentheses-space-before": [
+    "never",
+  ],
+  "scss/at-function-pattern": null,
+  "scss/at-if-closing-brace-newline-after": [
+    "always-last-in-chain",
+  ],
+  "scss/at-if-closing-brace-space-after": [
+    "always-intermediate",
+  ],
+  "scss/at-if-no-null": [
+    true,
+  ],
+  "scss/at-import-no-partial-leading-underscore": [
+    true,
+  ],
+  "scss/at-import-partial-extension": [
+    "never",
+  ],
   "scss/at-mixin-argumentless-call-parentheses": [
     "always",
   ],
+  "scss/at-mixin-parentheses-space-before": [
+    "never",
+  ],
   "scss/at-mixin-pattern": [
     /\\^\\[a-z0-9-\\]\\+\\$/,
+  ],
+  "scss/at-rule-conditional-no-parentheses": [
+    true,
   ],
   "scss/at-rule-no-unknown": [
     true,
@@ -296,10 +293,47 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
+  "scss/comment-no-empty": [
+    true,
+  ],
   "scss/declaration-nested-properties": [
     "never",
   ],
+  "scss/declaration-nested-properties-no-divided-groups": [
+    true,
+  ],
+  "scss/dollar-variable-colon-space-after": [
+    "always",
+  ],
+  "scss/dollar-variable-colon-space-before": [
+    "never",
+  ],
+  "scss/dollar-variable-empty-line-before": null,
   "scss/dollar-variable-no-missing-interpolation": [
+    true,
+  ],
+  "scss/dollar-variable-pattern": null,
+  "scss/double-slash-comment-empty-line-before": null,
+  "scss/double-slash-comment-whitespace-inside": [
+    "always",
+  ],
+  "scss/function-quote-no-quoted-strings-inside": [
+    true,
+  ],
+  "scss/function-unquote-no-unquoted-strings-inside": [
+    true,
+  ],
+  "scss/no-duplicate-mixins": [
+    true,
+  ],
+  "scss/no-global-function-names": null,
+  "scss/operator-no-newline-after": [
+    true,
+  ],
+  "scss/operator-no-newline-before": [
+    true,
+  ],
+  "scss/operator-no-unspaced": [
     true,
   ],
   "scss/percent-placeholder-pattern": [
@@ -308,25 +342,19 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "scss/selector-no-redundant-nesting-selector": [
     true,
   ],
-  "selector-attribute-brackets-space-inside": null,
-  "selector-attribute-operator-space-after": null,
-  "selector-attribute-operator-space-before": null,
-  "selector-attribute-quotes": null,
+  "selector-anb-no-unmatchable": [
+    true,
+  ],
+  "selector-attribute-quotes": [
+    "always",
+  ],
   "selector-class-pattern": [
     /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
     {
       "resolveNestedSelectors": true,
     },
   ],
-  "selector-combinator-space-after": null,
-  "selector-combinator-space-before": null,
-  "selector-descendant-combinator-no-non-space": null,
   "selector-id-pattern": null,
-  "selector-list-comma-newline-after": null,
-  "selector-list-comma-newline-before": null,
-  "selector-list-comma-space-after": null,
-  "selector-list-comma-space-before": null,
-  "selector-max-empty-lines": null,
   "selector-max-id": [
     0,
   ],
@@ -346,12 +374,10 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "selector-no-vendor-prefix": [
     true,
   ],
-  "selector-pseudo-class-case": null,
+  "selector-not-notation": null,
   "selector-pseudo-class-no-unknown": [
     true,
   ],
-  "selector-pseudo-class-parentheses-space-inside": null,
-  "selector-pseudo-element-case": null,
   "selector-pseudo-element-colon-notation": [
     "double",
   ],
@@ -373,20 +399,12 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "string-no-newline": [
     true,
   ],
-  "string-quotes": null,
-  "unicode-bom": null,
-  "unit-case": null,
   "unit-no-unknown": [
     true,
   ],
   "value-keyword-case": [
     "lower",
   ],
-  "value-list-comma-newline-after": null,
-  "value-list-comma-newline-before": null,
-  "value-list-comma-space-after": null,
-  "value-list-comma-space-before": null,
-  "value-list-max-empty-lines": null,
   "value-no-vendor-prefix": [
     true,
   ],
