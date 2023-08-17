@@ -1,8 +1,11 @@
 'use strict';
 
+const postcssScss = require('postcss-scss');
+
 // See https://stylelint.io/user-guide/rules/.
 module.exports = {
     extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
+    customSyntax: postcssScss,
     plugins: [
         'stylelint-scss',
         'stylelint-order',

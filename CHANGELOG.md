@@ -6,6 +6,12 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [2.0.1](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.0...v2.0.1) (2023-08-17)
+
+### Bug fixes
+
+- Add explicit support for Sass/SCSS syntax
+
 ## [2.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v1.1.1...v2.0.0) (2023-08-17)
 
 ### Features
