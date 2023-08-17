@@ -2,14 +2,7 @@
 
 exports[`semver - should those tests break, consider releasing a new major version of the package config contents 1`] = `
 {
-  "alpha-value-notation": [
-    "percentage",
-    {
-      "exceptProperties": [
-        "opacity",
-      ],
-    },
-  ],
+  "alpha-value-notation": null,
   "at-rule-empty-line-before": null,
   "at-rule-name-case": null,
   "at-rule-name-newline-after": null,
@@ -32,9 +25,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "block-opening-brace-newline-before": null,
   "block-opening-brace-space-after": null,
   "block-opening-brace-space-before": null,
-  "color-function-notation": [
-    "modern",
-  ],
+  "color-function-notation": null,
   "color-hex-case": null,
   "color-hex-length": [
     "short",
@@ -62,12 +53,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "comment-whitespace-inside": [
     "always",
   ],
-  "custom-media-pattern": [
-    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    {
-      "message": "Expected custom media query name to be kebab-case",
-    },
-  ],
+  "custom-media-pattern": null,
   "custom-property-empty-line-before": [
     "always",
     {
@@ -84,12 +70,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "custom-property-no-missing-var-function": [
     true,
   ],
-  "custom-property-pattern": [
-    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    {
-      "message": "Expected custom property name to be kebab-case",
-    },
-  ],
+  "custom-property-pattern": null,
   "declaration-bang-space-after": null,
   "declaration-bang-space-before": null,
   "declaration-block-no-duplicate-custom-properties": [
@@ -169,12 +150,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "keyframe-declaration-no-important": [
     true,
   ],
-  "keyframes-name-pattern": [
-    "^([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
-    {
-      "message": "Expected keyframe name to be kebab-case",
-    },
-  ],
+  "keyframes-name-pattern": null,
   "length-zero-no-unit": [
     true,
   ],

@@ -146,14 +146,10 @@ To get the most out of this config, it is assumed that projects have the followi
 
 ## Inherited rules
 
-- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/): `percentage, exceptProperties: opacity`
-- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/): `modern`
 - [`color-hex-length`](https://stylelint.io/user-guide/rules/color-hex-length/): `short`
 - [`comment-empty-line-before`](https://stylelint.io/user-guide/rules/comment-empty-line-before/): `always, except: first-nested, ignore: stylelint-commands`
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
-- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom media query name to be kebab-case`
-- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom property name to be kebab-case`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
 - [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
@@ -161,7 +157,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
 - [`function-whitespace-after`](https://stylelint.io/user-guide/rules/function-whitespace-after/): `always`
 - [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/): `angle`
-- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected keyframe name to be kebab-case`
 - [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/)
 - [`media-feature-range-operator-space-after`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-after/): `always`
 - [`media-feature-range-operator-space-before`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-before/): `always`

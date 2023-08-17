@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ## Unreleased
 
+## [2.0.2](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.1...v2.0.2) (2023-08-17)
+
+### Bug fixes
+
+Disables the following rules introduced in Stylelint 14 & related package updates, to make it simpler for projects to upgrade to Stylelint 14:
+
+- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected keyframe name to be kebab-case`
+- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/): `percentage, exceptProperties: opacity`
+- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/): `modern`
+- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom media query name to be kebab-case`
+- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom property name to be kebab-case`
+
 ## [2.0.1](https://github.com/torchbox/stylelint-config-torchbox/compare/v2.0.0...v2.0.1) (2023-08-17)
 
 ### Bug fixes

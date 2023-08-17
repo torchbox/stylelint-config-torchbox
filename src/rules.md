@@ -31,14 +31,10 @@
 
 ## Inherited rules
 
-- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/): `percentage, exceptProperties: opacity`
-- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/): `modern`
 - [`color-hex-length`](https://stylelint.io/user-guide/rules/color-hex-length/): `short`
 - [`comment-empty-line-before`](https://stylelint.io/user-guide/rules/comment-empty-line-before/): `always, except: first-nested, ignore: stylelint-commands`
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
-- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom media query name to be kebab-case`
-- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected custom property name to be kebab-case`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
 - [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
@@ -46,7 +42,6 @@
 - [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
 - [`function-whitespace-after`](https://stylelint.io/user-guide/rules/function-whitespace-after/): `always`
 - [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/): `angle`
-- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/): `^(a-za-z0-9*)(-a-z0-9+)*$, message: Expected keyframe name to be kebab-case`
 - [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/)
 - [`media-feature-range-operator-space-after`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-after/): `always`
 - [`media-feature-range-operator-space-before`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-before/): `always`
@@ -87,6 +82,11 @@
 
 > Rules that are turned off on purpose.
 
+- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/)
+- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/)
+- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/)
+- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/)
+- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/)
 - [`declaration-empty-line-before`](https://stylelint.io/user-guide/rules/declaration-empty-line-before/)
 - [`no-descending-specificity`](https://stylelint.io/user-guide/rules/no-descending-specificity/)
 - [`at-rule-no-unknown`](https://stylelint.io/user-guide/rules/at-rule-no-unknown/)
@@ -170,36 +170,34 @@
 > Rules that are not configured, either because they aren’t relevant for us, or we decided they are too opinionated, or we haven’t had the chance to properly review them yet.
 
 - [`comment-word-disallowed-list`](https://stylelint.io/user-guide/rules/comment-word-disallowed-list/)
-- [`custom-media-pattern`](https://stylelint.io/user-guide/rules/custom-media-pattern/)
-- [`custom-property-pattern`](https://stylelint.io/user-guide/rules/custom-property-pattern/)
-- [`declaration-block-no-redundant-longhand-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-redundant-longhand-properties/)
-- [`declaration-property-unit-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list/)
 - [`declaration-property-unit-allowed-list`](https://stylelint.io/user-guide/rules/declaration-property-unit-allowed-list/)
+- [`declaration-property-unit-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-unit-disallowed-list/)
 - [`declaration-property-value-allowed-list`](https://stylelint.io/user-guide/rules/declaration-property-value-allowed-list/)
-- [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/)
 - [`font-weight-notation`](https://stylelint.io/user-guide/rules/font-weight-notation/)
+- [`function-allowed-list`](https://stylelint.io/user-guide/rules/function-allowed-list/)
 - [`function-disallowed-list`](https://stylelint.io/user-guide/rules/function-disallowed-list/)
 - [`function-url-no-scheme-relative`](https://stylelint.io/user-guide/rules/function-url-no-scheme-relative/)
-- [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/)
-- [`function-url-scheme-disallowed-list`](https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list/)
 - [`function-url-scheme-allowed-list`](https://stylelint.io/user-guide/rules/function-url-scheme-allowed-list/)
-- [`function-allowed-list`](https://stylelint.io/user-guide/rules/function-allowed-list/)
-- [`keyframes-name-pattern`](https://stylelint.io/user-guide/rules/keyframes-name-pattern/)
-- [`linebreaks`](https://stylelint.io/user-guide/rules/linebreaks/)
+- [`function-url-scheme-disallowed-list`](https://stylelint.io/user-guide/rules/function-url-scheme-disallowed-list/)
+- [`media-feature-name-allowed-list`](https://stylelint.io/user-guide/rules/media-feature-name-allowed-list/)
 - [`media-feature-name-disallowed-list`](https://stylelint.io/user-guide/rules/media-feature-name-disallowed-list/)
 - [`media-feature-name-value-allowed-list`](https://stylelint.io/user-guide/rules/media-feature-name-value-allowed-list/)
-- [`media-feature-name-allowed-list`](https://stylelint.io/user-guide/rules/media-feature-name-allowed-list/)
-- [`no-empty-first-line`](https://stylelint.io/user-guide/rules/no-empty-first-line/)
 - [`no-unknown-animations`](https://stylelint.io/user-guide/rules/no-unknown-animations/)
-- [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/)
-- [`property-disallowed-list`](https://stylelint.io/user-guide/rules/property-disallowed-list/)
+- [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md)
 - [`property-allowed-list`](https://stylelint.io/user-guide/rules/property-allowed-list/)
+- [`property-disallowed-list`](https://stylelint.io/user-guide/rules/property-disallowed-list/)
+- [`scss/at-function-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-pattern/README.md)
+- [`scss/at-import-partial-extension-blacklist`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md)
+- [`scss/at-import-partial-extension-whitelist`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist/README.md)
+- [`scss/dollar-variable-default`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-default/README.md)
+- [`scss/dollar-variable-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-pattern/README.md)
+- [`scss/no-dollar-variables`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md)
 - [`scss/partial-no-import`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/partial-no-import/README.md)
 - [`scss/selector-nest-combinators`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-nest-combinators/README.md)
-- [`selector-attribute-operator-disallowed-list`](https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list/)
 - [`selector-attribute-operator-allowed-list`](https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list/)
-- [`selector-combinator-disallowed-list`](https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list/)
+- [`selector-attribute-operator-disallowed-list`](https://stylelint.io/user-guide/rules/selector-attribute-operator-disallowed-list/)
 - [`selector-combinator-allowed-list`](https://stylelint.io/user-guide/rules/selector-combinator-allowed-list/)
+- [`selector-combinator-disallowed-list`](https://stylelint.io/user-guide/rules/selector-combinator-disallowed-list/)
 - [`selector-max-attribute`](https://stylelint.io/user-guide/rules/selector-max-attribute/)
 - [`selector-max-class`](https://stylelint.io/user-guide/rules/selector-max-class/)
 - [`selector-max-combinators`](https://stylelint.io/user-guide/rules/selector-max-combinators/)
@@ -207,26 +205,17 @@
 - [`selector-max-pseudo-class`](https://stylelint.io/user-guide/rules/selector-max-pseudo-class/)
 - [`selector-max-universal`](https://stylelint.io/user-guide/rules/selector-max-universal/)
 - [`selector-nested-pattern`](https://stylelint.io/user-guide/rules/selector-nested-pattern/)
-- [`selector-pseudo-class-disallowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list/)
 - [`selector-pseudo-class-allowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-class-allowed-list/)
-- [`selector-pseudo-element-disallowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list/)
+- [`selector-pseudo-class-disallowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-class-disallowed-list/)
 - [`selector-pseudo-element-allowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-element-allowed-list/)
+- [`selector-pseudo-element-disallowed-list`](https://stylelint.io/user-guide/rules/selector-pseudo-element-disallowed-list/)
 - [`time-min-milliseconds`](https://stylelint.io/user-guide/rules/time-min-milliseconds/)
-- [`unit-disallowed-list`](https://stylelint.io/user-guide/rules/unit-disallowed-list/)
 - [`unit-allowed-list`](https://stylelint.io/user-guide/rules/unit-allowed-list/)
-- [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/)
-- [`scss/dollar-variable-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-pattern/README.md)
-- [`scss/at-function-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-pattern/README.md)
-- [`scss/at-import-partial-extension-blacklist`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md)
-- [`scss/at-import-partial-extension-whitelist`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist/README.md)
-- [`scss/dollar-variable-default`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-default/README.md)
-- [`scss/no-dollar-variables`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md)
-- [`order/properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md)
+- [`unit-disallowed-list`](https://stylelint.io/user-guide/rules/unit-disallowed-list/)
 - [`at-rule-disallowed-list`](https://stylelint.io/user-guide/rules/at-rule-disallowed-list/)
 - [`at-rule-property-required-list`](https://stylelint.io/user-guide/rules/at-rule-property-required-list/)
 - [`at-rule-allowed-list`](https://stylelint.io/user-guide/rules/at-rule-allowed-list/)
 - [`color-no-hex`](https://stylelint.io/user-guide/rules/color-no-hex/)
-- [`selector-id-pattern`](https://stylelint.io/user-guide/rules/selector-id-pattern/)
 - [`scss/at-else-closing-brace-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-closing-brace-newline-after/README.md)
 - [`scss/at-else-closing-brace-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-closing-brace-space-after/README.md)
 - [`scss/at-else-empty-line-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-empty-line-before/README.md)
@@ -261,9 +250,6 @@
 - [`rule-selector-property-disallowed-list`](https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/)
 - [`selector-attribute-name-disallowed-list`](https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/)
 - [`selector-disallowed-list`](https://stylelint.io/user-guide/rules/selector-disallowed-list/)
-- [`alpha-value-notation`](https://stylelint.io/user-guide/rules/alpha-value-notation/)
-- [`color-function-notation`](https://stylelint.io/user-guide/rules/color-function-notation/)
-- [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/)
 - [`scss/comment-no-empty`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-empty/README.md)
 - [`scss/dollar-variable-empty-line-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after/README.md)
 - [`scss/dollar-variable-first-in-block`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block/README.md)
@@ -281,9 +267,8 @@
 - [`scss/function-quote-no-quoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-quote-no-quoted-strings-inside/README.md)
 - [`scss/function-unquote-no-unquoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-unquote-no-unquoted-strings-inside/README.md)
 - [`scss/map-keys-quotes`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/map-keys-quotes/README.md)
+- [`scss/media-feature-value-dollar-variable`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md)
 - [`scss/no-duplicate-dollar-variables`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables/README.md)
 - [`scss/selector-no-union-class-name`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-union-class-name/README.md)
-- [`scss/media-feature-value-dollar-variable`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md)
 - [`selector-no-qualifying-type`](https://stylelint.io/user-guide/rules/selector-no-qualifying-type/)
-- [`shorthand-property-no-redundant-values`](https://stylelint.io/user-guide/rules/shorthand-property-no-redundant-values/)
 - [`order/properties-order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md)
