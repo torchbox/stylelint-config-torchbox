@@ -41,21 +41,17 @@ const tooOpinionated = [
     'property-allowed-list',
     // https://stylelint.io/user-guide/rules/property-disallowed-list
     'property-disallowed-list',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-function-pattern/README.md
-    'scss/at-function-pattern',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist
     'scss/at-import-partial-extension-blacklist',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist
     'scss/at-import-partial-extension-whitelist',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-default/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-default
     'scss/dollar-variable-default',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-pattern/README.md
-    'scss/dollar-variable-pattern',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-dollar-variables/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-dollar-variables
     'scss/no-dollar-variables',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/partial-no-import/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/partial-no-import
     'scss/partial-no-import',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-nest-combinators/README.md
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-nest-combinators
     'scss/selector-nest-combinators',
     // https://stylelint.io/user-guide/rules/selector-attribute-operator-allowed-list
     'selector-attribute-operator-allowed-list',
@@ -103,48 +99,33 @@ const overridenByOtherRule = [
 ];
 
 const formattingByPrettier = [
-    'scss/at-else-closing-brace-newline-after',
-    'scss/at-else-closing-brace-space-after',
-    'scss/at-else-empty-line-before',
-    'scss/at-else-if-parentheses-space-before',
-    'scss/at-extend-no-missing-placeholder',
-    'scss/at-function-parentheses-space-before',
-    'scss/at-if-closing-brace-newline-after',
-    'scss/at-if-closing-brace-space-after',
-    'scss/at-import-no-partial-leading-underscore',
-    'scss/at-mixin-parentheses-space-before',
-    'scss/declaration-nested-properties-no-divided-groups',
     'scss/dollar-variable-colon-newline-after',
-    'scss/dollar-variable-colon-space-after',
-    'scss/dollar-variable-colon-space-before',
-    'scss/dollar-variable-empty-line-before',
-    'scss/double-slash-comment-empty-line-before',
     'scss/double-slash-comment-inline',
-    'scss/double-slash-comment-whitespace-inside',
-    'scss/operator-no-newline-after',
-    'scss/operator-no-newline-before',
-    'scss/operator-no-unspaced',
 ];
 
 const toReview = [
-    // List of rules from stylelint v14.16.1 upgrade.
-    // https://stylelint.io/user-guide/rules/annotation-no-unknown
-    'annotation-no-unknown',
+    // List of rules from stylelint v15.10.2 upgrade.
+    // https://stylelint.io/user-guide/rules/media-query-no-invalid
+    'media-query-no-invalid',
+    // https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown
+    'declaration-property-value-no-unknown',
+    // https://stylelint.io/user-guide/rules/media-feature-name-unit-allowed-list
+    'media-feature-name-unit-allowed-list',
+    // https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown
+    'media-feature-name-value-no-unknown',
+    // https://stylelint.io/user-guide/rules/no-unknown-custom-properties
+    'no-unknown-custom-properties',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-unnamespaced
+    'scss/at-use-no-unnamespaced',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-no-namespaced-assignment
+    'scss/dollar-variable-no-namespaced-assignment',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-disallowed-list
+    'scss/function-disallowed-list',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-no-unknown
+    'scss/function-no-unknown',
+    // List of rules from stylelint v14 upgrade.
     // https://stylelint.io/user-guide/rules/declaration-property-max-values
     'declaration-property-max-values',
-    // https://stylelint.io/user-guide/rules/function-no-unknown
-    'function-no-unknown',
-    // https://stylelint.io/user-guide/rules/import-notation
-    'import-notation',
-    // https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors
-    'keyframe-block-no-duplicate-selectors',
-    // https://stylelint.io/user-guide/rules/keyframe-selector-notation
-    'keyframe-selector-notation',
-    // https://stylelint.io/user-guide/rules/media-feature-range-notation
-    'media-feature-range-notation',
-    // https://stylelint.io/user-guide/rules/selector-not-notation
-    'selector-not-notation',
-    // List of rules from stylelint v14 upgrade.
     // https://stylelint.io/user-guide/rules/color-hex-alpha/
     'color-hex-alpha',
     // https://stylelint.io/user-guide/rules/comment-pattern/
@@ -155,49 +136,33 @@ const toReview = [
     'selector-attribute-name-disallowed-list',
     // https://stylelint.io/user-guide/rules/selector-disallowed-list/
     'selector-disallowed-list',
-    // List of rules from stylelint v13 upgrade.
-    'scss/comment-no-empty',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after/README.md
-    'scss/dollar-variable-empty-line-after',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block/README.md
-    'scss/dollar-variable-first-in-block',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-duplicate-mixins/README.md
-    'scss/no-duplicate-mixins',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-global-function-names/README.md
-    'scss/no-global-function-names',
-    // ================================
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line/README.md
-    'scss/at-each-key-value-single-line',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-function-named-arguments/README.md
-    'scss/at-function-named-arguments',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-if-no-null/README.md
-    'scss/at-if-no-null',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-import-partial-extension/README.md
-    'scss/at-import-partial-extension',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-mixin-named-arguments/README.md
-    'scss/at-mixin-named-arguments',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/at-rule-conditional-no-parentheses/README.md
-    'scss/at-rule-conditional-no-parentheses',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/comment-no-loud/README.md
-    'scss/comment-no-loud',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/dimension-no-non-numeric-values/README.md
-    'scss/dimension-no-non-numeric-values',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/function-color-relative/README.md
-    'scss/function-color-relative',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/function-quote-no-quoted-strings-inside/README.md
-    'scss/function-quote-no-quoted-strings-inside',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/function-unquote-no-unquoted-strings-inside/README.md
-    'scss/function-unquote-no-unquoted-strings-inside',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/map-keys-quotes/README.md
-    'scss/map-keys-quotes',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable/README.md
-    'scss/media-feature-value-dollar-variable',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables/README.md
-    'scss/no-duplicate-dollar-variables',
-    // https://github.com/kristerkari/stylelint-scss/blob/master/src/rules/selector-no-union-class-name/README.md
-    'scss/selector-no-union-class-name',
     // https://stylelint.io/user-guide/rules/selector-no-qualifying-type
     'selector-no-qualifying-type',
+    // List of rules from stylelint v13 upgrade.
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line
+    'scss/at-each-key-value-single-line',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-named-arguments
+    'scss/at-function-named-arguments',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-named-arguments
+    'scss/at-mixin-named-arguments',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-loud
+    'scss/comment-no-loud',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dimension-no-non-numeric-values
+    'scss/dimension-no-non-numeric-values',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after
+    'scss/dollar-variable-empty-line-after',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block
+    'scss/dollar-variable-first-in-block',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-relative
+    'scss/function-color-relative',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/map-keys-quotes
+    'scss/map-keys-quotes',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable
+    'scss/media-feature-value-dollar-variable',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables
+    'scss/no-duplicate-dollar-variables',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-union-class-name
+    'scss/selector-no-union-class-name',
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
     'order/properties-order',
 ];

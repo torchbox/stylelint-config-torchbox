@@ -103,13 +103,11 @@ To get the most out of this config, it is assumed that projects have the followi
 
 ## What’s included
 
-> See [`config.js`](./config.js) for the config definition. This package depends on:
+> See [`config.js`](./config.js) for the config definition. This package includes configuration from:
 >
-> - [`stylelint-scss`](https://github.com/kristerkari/stylelint-scss)
+> - [`stylelint-config-standard-scss`](https://github.com/stylelint-scss/stylelint-config-standard-scss)
 > - [`stylelint-order`](https://github.com/hudochenkov/stylelint-order)
 > - [`stylelint-declaration-strict-value`](https://github.com/AndyOGo/stylelint-declaration-strict-value)
-> - [`stylelint-config-standard`](https://github.com/stylelint/stylelint-config-standard)
-> - [`stylelint-config-prettier`](https://github.com/prettier/stylelint-config-prettier)
 
 <!-- Generated with: npm run build:docs -->
 
@@ -120,7 +118,6 @@ To get the most out of this config, it is assumed that projects have the followi
 #### Custom rules
 
 - [`color-named`](https://stylelint.io/user-guide/rules/color-named/): `never`
-- [`number-leading-zero`](https://stylelint.io/user-guide/rules/number-leading-zero/): `always`
 - [`declaration-block-no-shorthand-property-overrides`](https://stylelint.io/user-guide/rules/declaration-block-no-shorthand-property-overrides/)
 - [`declaration-no-important`](https://stylelint.io/user-guide/rules/declaration-no-important/)
 - [`selector-max-id`](https://stylelint.io/user-guide/rules/selector-max-id/): `0`
@@ -146,49 +143,73 @@ To get the most out of this config, it is assumed that projects have the followi
 
 ## Inherited rules
 
+- [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
 - [`color-hex-length`](https://stylelint.io/user-guide/rules/color-hex-length/): `short`
+- [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)
 - [`comment-empty-line-before`](https://stylelint.io/user-guide/rules/comment-empty-line-before/): `always, except: first-nested, ignore: stylelint-commands`
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
-- [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
-- [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
-- [`function-name-case`](https://stylelint.io/user-guide/rules/function-name-case/): `lower`
-- [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
-- [`function-whitespace-after`](https://stylelint.io/user-guide/rules/function-whitespace-after/): `always`
-- [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/): `angle`
-- [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/)
-- [`media-feature-range-operator-space-after`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-after/): `always`
-- [`media-feature-range-operator-space-before`](https://stylelint.io/user-guide/rules/media-feature-range-operator-space-before/): `always`
-- [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
-- [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
-- [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
-- [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
-- [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
-- [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
-- [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
-- [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)
-- [`comment-no-empty`](https://stylelint.io/user-guide/rules/comment-no-empty/)
 - [`custom-property-no-missing-var-function`](https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function/)
 - [`declaration-block-no-duplicate-custom-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties/)
-- [`declaration-block-no-duplicate-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/): `true, ignore: consecutive-duplicates-with-different-values`
+- [`declaration-block-no-duplicate-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/): `true, ignore: consecutive-duplicates-with-different-syntaxes`
+- [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
+- [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`font-family-no-duplicate-names`](https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/)
 - [`font-family-no-missing-generic-family-keyword`](https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword/)
 - [`function-calc-no-unspaced-operator`](https://stylelint.io/user-guide/rules/function-calc-no-unspaced-operator/)
 - [`function-linear-gradient-no-nonstandard-direction`](https://stylelint.io/user-guide/rules/function-linear-gradient-no-nonstandard-direction/)
+- [`function-name-case`](https://stylelint.io/user-guide/rules/function-name-case/): `lower`
+- [`function-url-quotes`](https://stylelint.io/user-guide/rules/function-url-quotes/): `always`
+- [`hue-degree-notation`](https://stylelint.io/user-guide/rules/hue-degree-notation/): `angle`
+- [`import-notation`](https://stylelint.io/user-guide/rules/import-notation/): `string`
+- [`keyframe-block-no-duplicate-selectors`](https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors/)
 - [`keyframe-declaration-no-important`](https://stylelint.io/user-guide/rules/keyframe-declaration-no-important/)
+- [`keyframe-selector-notation`](https://stylelint.io/user-guide/rules/keyframe-selector-notation/): `percentage-unless-within-keyword-only-block`
+- [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/): `true, ignore: custom-properties`
 - [`media-feature-name-no-unknown`](https://stylelint.io/user-guide/rules/media-feature-name-no-unknown/)
 - [`named-grid-areas-no-invalid`](https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid/)
 - [`no-duplicate-at-import-rules`](https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules/)
 - [`no-duplicate-selectors`](https://stylelint.io/user-guide/rules/no-duplicate-selectors/)
 - [`no-empty-source`](https://stylelint.io/user-guide/rules/no-empty-source/)
 - [`no-invalid-double-slash-comments`](https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/)
-- [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/)
+- [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/): `true, ignoreAtRules: use, forward`
+- [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
+- [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
 - [`property-no-unknown`](https://stylelint.io/user-guide/rules/property-no-unknown/)
+- [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
+- [`scss/at-else-closing-brace-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-closing-brace-newline-after/README.md): `always-last-in-chain`
+- [`scss/at-else-closing-brace-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-closing-brace-space-after/README.md): `always-intermediate`
+- [`scss/at-else-empty-line-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-empty-line-before/README.md): `never`
+- [`scss/at-else-if-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-if-parentheses-space-before/README.md): `always`
+- [`scss/at-function-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-parentheses-space-before/README.md): `never`
+- [`scss/at-if-closing-brace-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-closing-brace-newline-after/README.md): `always-last-in-chain`
+- [`scss/at-if-closing-brace-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-closing-brace-space-after/README.md): `always-intermediate`
+- [`scss/at-if-no-null`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-no-null/README.md)
+- [`scss/at-import-no-partial-leading-underscore`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md)
+- [`scss/at-import-partial-extension`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension/README.md): `never`
+- [`scss/at-mixin-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-parentheses-space-before/README.md): `never`
+- [`scss/at-rule-conditional-no-parentheses`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-rule-conditional-no-parentheses/README.md)
+- [`scss/comment-no-empty`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-empty/README.md)
+- [`scss/declaration-nested-properties-no-divided-groups`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-nested-properties-no-divided-groups/README.md)
+- [`scss/dollar-variable-colon-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-after/README.md): `always`
+- [`scss/dollar-variable-colon-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-before/README.md): `never`
+- [`scss/double-slash-comment-whitespace-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/double-slash-comment-whitespace-inside/README.md): `always`
+- [`scss/function-quote-no-quoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-quote-no-quoted-strings-inside/README.md)
+- [`scss/function-unquote-no-unquoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-unquote-no-unquoted-strings-inside/README.md)
+- [`scss/no-duplicate-mixins`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-mixins/README.md)
+- [`scss/operator-no-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-newline-after/README.md)
+- [`scss/operator-no-newline-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-newline-before/README.md)
+- [`scss/operator-no-unspaced`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-unspaced/README.md)
+- [`selector-anb-no-unmatchable`](https://stylelint.io/user-guide/rules/selector-anb-no-unmatchable/)
+- [`selector-attribute-quotes`](https://stylelint.io/user-guide/rules/selector-attribute-quotes/): `always`
 - [`selector-pseudo-class-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown/)
+- [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
 - [`selector-pseudo-element-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-element-no-unknown/)
+- [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
 - [`selector-type-no-unknown`](https://stylelint.io/user-guide/rules/selector-type-no-unknown/): `true, ignore: custom-elements`
 - [`string-no-newline`](https://stylelint.io/user-guide/rules/string-no-newline/)
 - [`unit-no-unknown`](https://stylelint.io/user-guide/rules/unit-no-unknown/)
+- [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
 
 ## Contributing
 

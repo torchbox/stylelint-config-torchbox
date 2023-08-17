@@ -1,19 +1,11 @@
 'use strict';
 
-const postcssScss = require('postcss-scss');
-
 // See https://stylelint.io/user-guide/rules/.
 module.exports = {
-    extends: ['stylelint-config-standard', 'stylelint-config-prettier'],
-    customSyntax: postcssScss,
-    plugins: [
-        'stylelint-scss',
-        'stylelint-order',
-        'stylelint-declaration-strict-value',
-    ],
+    extends: ['stylelint-config-standard-scss'],
+    plugins: ['stylelint-order', 'stylelint-declaration-strict-value'],
     rules: {
         'color-named': 'never',
-        'number-leading-zero': 'always',
         'declaration-block-no-shorthand-property-overrides': true,
         'declaration-no-important': true,
         'selector-max-id': 0,
@@ -39,16 +31,23 @@ module.exports = {
         'color-function-notation': null,
         'max-nesting-depth': 4,
         'selector-max-specificity': '0,4,0',
+        // Normally: `complex`. Disabled due to backwards-compatibility concerns.
+        'selector-not-notation': null,
         'value-no-vendor-prefix': true,
         'property-no-vendor-prefix': true,
         'selector-no-vendor-prefix': true,
         'media-feature-name-no-vendor-prefix': true,
+        // Normally: `context`. Disabled due to backwards-compatibility concerns.
+        'media-feature-range-notation': null,
+        // Normally: `true`. Disabled due to backwards-compatibility concerns.
+        'scss/no-global-function-names': null,
         'declaration-empty-line-before': null,
         'no-descending-specificity': null,
         'at-rule-no-vendor-prefix': true,
         'at-rule-no-unknown': null,
         'declaration-block-no-redundant-longhand-properties': null,
         'shorthand-property-no-redundant-values': null,
+        'at-rule-empty-line-before': null,
         // Replaces previously-used `a11y/no-text-align-justify`.
         'declaration-property-value-disallowed-list': {
             'text-align': ['justify'],
@@ -67,8 +66,13 @@ module.exports = {
             },
         ],
         'scss/declaration-nested-properties': 'never',
+        'scss/double-slash-comment-empty-line-before': null,
+        'scss/dollar-variable-empty-line-before': null,
         'scss/selector-no-redundant-nesting-selector': true,
+        'scss/dollar-variable-pattern': null,
+        'scss/at-function-pattern': null,
         'scss/percent-placeholder-pattern': '^do-not-use-placeholders$',
+        'scss/at-extend-no-missing-placeholder': null,
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/at-mixin-argumentless-call-parentheses': 'always',
         'scss/at-mixin-pattern': /^[a-z0-9-]+$/,

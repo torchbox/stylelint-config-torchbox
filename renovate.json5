@@ -8,7 +8,6 @@
     // Ignore all package dependencies, we only want these updated in batches as part of new releases.
     'stylelint',
     'stylelint-a11y',
-    'stylelint-config-prettier',
     'stylelint-config-standard',
     'stylelint-declaration-strict-value',
     'stylelint-order',
