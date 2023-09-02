@@ -31,7 +31,7 @@
     "prettier": "3.0.3",
     "prettier-2": "npm:prettier@3.0.3",
     "stylelint": "15.10.2",
-    "stylelint-find-new-rules": "4.1.1"
+    "stylelint-find-new-rules": "4.1.2"
   },
   "dependencies": {
     "stylelint-config-standard-scss": "^10.0.0",
