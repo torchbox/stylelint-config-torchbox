@@ -9,7 +9,7 @@
 Install stylelint, and the config:
 
 ```sh
-npm install --save-dev stylelint@13 stylelint-config-torchbox@1.0.0
+npm install --save-dev stylelint stylelint-config-torchbox
 ```
 
 Then [configure stylelint to use this config](https://stylelint.io/user-guide/configuration/#extends). As a `stylelint.config.js` in the root of your project:
@@ -77,13 +77,13 @@ default_language_version:
   node: system
 repos:
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v13.13.1
+    rev: v15.10.3
     hooks:
       - id: stylelint
         files: \.(scss|vue)$
         additional_dependencies:
-          - stylelint@13.13.1
-          - stylelint-config-torchbox@1.0.0
+          - stylelint@15.10.3
+          - stylelint-config-torchbox@3.0.0
 ```
 
 ### Vue
