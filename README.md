@@ -129,7 +129,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`media-feature-name-no-vendor-prefix`](https://stylelint.io/user-guide/rules/media-feature-name-no-vendor-prefix/)
 - [`at-rule-no-vendor-prefix`](https://stylelint.io/user-guide/rules/at-rule-no-vendor-prefix/)
 - [`declaration-property-value-disallowed-list`](https://stylelint.io/user-guide/rules/declaration-property-value-disallowed-list/): `text-align: justify`
-- [`scss/at-rule-no-unknown`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md): `true, ignoreAtRules: tailwind, apply, variants, responsive, screen, layer`
+- [`scss/at-rule-no-unknown`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-rule-no-unknown/README.md): `true, ignoreAtRules: tailwind, apply, variants, responsive, screen, layer, config, theme, custom-variant, plugin, source, variant, utility, reference`
 - [`scss/declaration-nested-properties`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-nested-properties/README.md): `never`
 - [`scss/selector-no-redundant-nesting-selector`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-redundant-nesting-selector/README.md)
 - [`scss/percent-placeholder-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/percent-placeholder-pattern/README.md): `^do-not-use-placeholders$`
