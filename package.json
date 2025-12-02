@@ -30,7 +30,7 @@
     "eslint": "9.39.1",
     "prettier": "3.7.3",
     "stylelint": "15.10.2",
-    "stylelint-find-new-rules": "4.1.2",
+    "stylelint-find-new-rules": "5.0.0",
     "vitest": "4.0.14"
   },
   "dependencies": {
