@@ -40,7 +40,11 @@
   packageRules: [
     { packageNames: ['prettier'], groupName: 'prettier', automerge: true },
     { packageNames: ['vitest'], groupName: 'vitest', automerge: true },
-    { packageNames: ['eslint'], groupName: 'eslint', automerge: true },
+    {
+      packageNames: ['eslint', '@eslint/js'],
+      groupName: 'eslint',
+      automerge: true,
+    },
     {
       packageNames: ['stylelint-find-new-rules'],
       groupName: 'stylelint-find-new-rules',

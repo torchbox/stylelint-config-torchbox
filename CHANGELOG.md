@@ -8,9 +8,9 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 
 ### Features
 
-- Update stylelint to v16.23.1 and up ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
-- Update all config dependencies to their latest releases, compatible with stylelint v16 ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
-- Change enforced rules from Stylelint and `stylelint-config-standard-scss` (see list below) ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
+- Update stylelint to v16.23.1 and up ([#45](https://github.com/torchbox/stylelint-config-torchbox/pull/45)).
+- Update all config dependencies to their latest releases, compatible with stylelint v16 ([#45](https://github.com/torchbox/stylelint-config-torchbox/pull/45)).
+- Change enforced rules from Stylelint and `stylelint-config-standard-scss` (see list below) ([#45](https://github.com/torchbox/stylelint-config-torchbox/pull/45)).
 
 ### BREAKING CHANGES
 
