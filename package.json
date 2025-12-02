@@ -29,17 +29,17 @@
     "@eslint/js": "9.39.1",
     "eslint": "9.39.1",
     "prettier": "3.7.3",
-    "stylelint": "15.10.2",
-    "stylelint-find-new-rules": "4.1.2",
+    "stylelint": "16.26.1",
+    "stylelint-find-new-rules": "5.0.0",
     "vitest": "4.0.14"
   },
   "dependencies": {
-    "stylelint-config-standard-scss": "^10.0.0",
-    "stylelint-declaration-strict-value": "^1.9.2",
-    "stylelint-order": "^6.0.3"
+    "stylelint-config-standard-scss": "^16.0.0",
+    "stylelint-declaration-strict-value": "^1.10.11",
+    "stylelint-order": "^7.0.0"
   },
   "peerDependencies": {
-    "stylelint": "^15.0.0"
+    "stylelint": "^16.23.1"
   },
   "devEngines": {
     "packageManager": {

@@ -10,10 +10,11 @@ Install stylelint, and the config:
 npm install --save-dev stylelint stylelint-config-torchbox
 ```
 
-Then [configure stylelint to use this config](https://stylelint.io/user-guide/configuration/#extends). As a `stylelint.config.js` in the root of your project:
+Then [configure stylelint to use this config](https://stylelint.io/user-guide/configuration/#extends). As a `stylelint.config.js` or `stylelint.config.mjs` in the root of your project:
 
 ```js
-module.exports = {
+/** @type {import('stylelint').Config} */
+export default {
   // See https://github.com/torchbox/stylelint-config-torchbox for rules.
   extends: 'stylelint-config-torchbox',
 };
@@ -34,7 +35,8 @@ const legacyRules = {
   'selector-max-specificity': null,
 };
 
-module.exports = {
+/** @type {import('stylelint').Config} */
+export default {
   // See https://github.com/torchbox/stylelint-config-torchbox for rules.
   extends: 'stylelint-config-torchbox',
   rules: {
@@ -48,11 +50,12 @@ module.exports = {
 We recommend the following `run` script to add to your `package.json`:
 
 ```json
-"lint:css": "stylelint --report-needless-disables 'src/sass' 'src/vue'"
+"lint:css": "stylelint --report-needless-disables --report-unscoped-disables 'src/sass' 'src/vue'"
 ```
 
-- Use [`--report-needless-disables`](https://stylelint.io/user-guide/node-api/#reportneedlessdisables) flag to ensure you do not use more `stylelint-disable` comments than needed.
-- Target specific folders so Stylelint doesn’t attempt to lint e.g. JS or HTML files.
+- Use [`--report-needless-disables`](https://stylelint.io/user-guide/cli#--report-needless-disables---rd) to ensure you do not use more `stylelint-disable` comments than needed.
+- Use [`--report-unscoped-disables`](https://stylelint.io/user-guide/cli#--report-unscoped-disables---rud) to prevent fully disabling linting.
+- Target specific folders so Stylelint doesn’t attempt to lint other file types, say JS or HTML files.
 
 #### `.stylelintignore`
 
@@ -75,20 +78,20 @@ default_language_version:
   node: system
 repos:
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v15.10.3
+    rev: v16.26.1
     hooks:
       - id: stylelint
         files: \.(scss|vue)$
         additional_dependencies:
-          - stylelint@15.10.3
-          - stylelint-config-torchbox@3.0.0
+          - stylelint@16.26.1
+          - stylelint-config-torchbox@4.0.0
 ```
 
 ### Vue
 
 Stylelint supports Vue, and our configuration is usable in `.vue` single-file components with no changes. Do make sure linting is configured to check `.vue` files:
 
-- Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables './src/sass' './src/vue_components'`.
+- Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables --report-unscoped-disables './src/sass' './src/vue_components'`.
 - With [`stylelint-webpack-plugin`](https://webpack.js.org/plugins/stylelint-webpack-plugin/), use `extensions: ['scss', 'vue'],`.
 - With [`pre-commit`](https://github.com/awebdeveloper/pre-commit-stylelint), use `files: \.(scss|vue)$`.
 
@@ -141,16 +144,21 @@ To get the most out of this config, it is assumed that projects have the followi
 
 ## Inherited rules
 
+- [`at-rule-no-deprecated`](https://stylelint.io/user-guide/rules/at-rule-no-deprecated/)
 - [`block-no-empty`](https://stylelint.io/user-guide/rules/block-no-empty/)
+- [`block-no-redundant-nested-style-rules`](https://stylelint.io/user-guide/rules/block-no-redundant-nested-style-rules/)
+- [`color-function-alias-notation`](https://stylelint.io/user-guide/rules/color-function-alias-notation/): `without-alpha`
 - [`color-hex-length`](https://stylelint.io/user-guide/rules/color-hex-length/): `short`
 - [`color-no-invalid-hex`](https://stylelint.io/user-guide/rules/color-no-invalid-hex/)
 - [`comment-empty-line-before`](https://stylelint.io/user-guide/rules/comment-empty-line-before/): `always, except: first-nested, ignore: stylelint-commands`
 - [`comment-whitespace-inside`](https://stylelint.io/user-guide/rules/comment-whitespace-inside/): `always`
+- [`container-name-pattern`](https://stylelint.io/user-guide/rules/container-name-pattern/): `^(--)?(a-za-z0-9*)(-a-z0-9+)*$, `
 - [`custom-property-empty-line-before`](https://stylelint.io/user-guide/rules/custom-property-empty-line-before/): `always, except: after-custom-property, first-nested, ignore: after-comment, inside-single-line-block`
 - [`custom-property-no-missing-var-function`](https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function/)
 - [`declaration-block-no-duplicate-custom-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties/)
 - [`declaration-block-no-duplicate-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/): `true, ignore: consecutive-duplicates-with-different-syntaxes`
 - [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
+- [`declaration-property-value-keyword-no-deprecated`](https://stylelint.io/user-guide/rules/declaration-property-value-keyword-no-deprecated/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`font-family-no-duplicate-names`](https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/)
 - [`font-family-no-missing-generic-family-keyword`](https://stylelint.io/user-guide/rules/font-family-no-missing-generic-family-keyword/)
@@ -163,16 +171,22 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`keyframe-block-no-duplicate-selectors`](https://stylelint.io/user-guide/rules/keyframe-block-no-duplicate-selectors/)
 - [`keyframe-declaration-no-important`](https://stylelint.io/user-guide/rules/keyframe-declaration-no-important/)
 - [`keyframe-selector-notation`](https://stylelint.io/user-guide/rules/keyframe-selector-notation/): `percentage-unless-within-keyword-only-block`
-- [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/): `true, ignore: custom-properties`
+- [`layer-name-pattern`](https://stylelint.io/user-guide/rules/layer-name-pattern/): `^(a-za-z0-9*)(.-a-z0-9+)*$, `
+- [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/): `true, ignore: custom-properties, ignorePreludeOfAtRules: function, mixin`
+- [`lightness-notation`](https://stylelint.io/user-guide/rules/lightness-notation/): `percentage`
 - [`media-feature-name-no-unknown`](https://stylelint.io/user-guide/rules/media-feature-name-no-unknown/)
+- [`media-type-no-deprecated`](https://stylelint.io/user-guide/rules/media-type-no-deprecated/)
 - [`named-grid-areas-no-invalid`](https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid/)
+- [`nesting-selector-no-missing-scoping-root`](https://stylelint.io/user-guide/rules/nesting-selector-no-missing-scoping-root/): `true, ignoreAtRules: mixin`
 - [`no-duplicate-at-import-rules`](https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules/)
 - [`no-duplicate-selectors`](https://stylelint.io/user-guide/rules/no-duplicate-selectors/)
 - [`no-empty-source`](https://stylelint.io/user-guide/rules/no-empty-source/)
 - [`no-invalid-double-slash-comments`](https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/)
 - [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/): `true, ignoreAtRules: use, forward`
+- [`no-invalid-position-declaration`](https://stylelint.io/user-guide/rules/no-invalid-position-declaration/)
 - [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
 - [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
+- [`property-no-deprecated`](https://stylelint.io/user-guide/rules/property-no-deprecated/)
 - [`property-no-unknown`](https://stylelint.io/user-guide/rules/property-no-unknown/)
 - [`rule-empty-line-before`](https://stylelint.io/user-guide/rules/rule-empty-line-before/): `always-multi-line, except: first-nested, ignore: after-comment`
 - [`scss/at-else-closing-brace-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-else-closing-brace-newline-after/README.md): `always-last-in-chain`
@@ -183,17 +197,17 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/at-if-closing-brace-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-closing-brace-newline-after/README.md): `always-last-in-chain`
 - [`scss/at-if-closing-brace-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-closing-brace-space-after/README.md): `always-intermediate`
 - [`scss/at-if-no-null`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-if-no-null/README.md)
-- [`scss/at-import-no-partial-leading-underscore`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-no-partial-leading-underscore/README.md)
-- [`scss/at-import-partial-extension`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension/README.md): `never`
 - [`scss/at-mixin-parentheses-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-parentheses-space-before/README.md): `never`
 - [`scss/at-rule-conditional-no-parentheses`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-rule-conditional-no-parentheses/README.md)
 - [`scss/comment-no-empty`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-empty/README.md)
 - [`scss/declaration-nested-properties-no-divided-groups`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-nested-properties-no-divided-groups/README.md)
-- [`scss/dollar-variable-colon-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-after/README.md): `always`
+- [`scss/dollar-variable-colon-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-after/README.md): `always-single-line`
 - [`scss/dollar-variable-colon-space-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-before/README.md): `never`
 - [`scss/double-slash-comment-whitespace-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/double-slash-comment-whitespace-inside/README.md): `always`
 - [`scss/function-quote-no-quoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-quote-no-quoted-strings-inside/README.md)
 - [`scss/function-unquote-no-unquoted-strings-inside`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-unquote-no-unquoted-strings-inside/README.md)
+- [`scss/load-no-partial-leading-underscore`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/load-no-partial-leading-underscore/README.md)
+- [`scss/load-partial-extension`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/load-partial-extension/README.md): `never`
 - [`scss/no-duplicate-mixins`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-mixins/README.md)
 - [`scss/operator-no-newline-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-newline-after/README.md)
 - [`scss/operator-no-newline-before`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-newline-before/README.md)
@@ -206,6 +220,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`selector-type-case`](https://stylelint.io/user-guide/rules/selector-type-case/): `lower`
 - [`selector-type-no-unknown`](https://stylelint.io/user-guide/rules/selector-type-no-unknown/): `true, ignore: custom-elements`
 - [`string-no-newline`](https://stylelint.io/user-guide/rules/string-no-newline/)
+- [`syntax-string-no-invalid`](https://stylelint.io/user-guide/rules/syntax-string-no-invalid/)
 - [`unit-no-unknown`](https://stylelint.io/user-guide/rules/unit-no-unknown/)
 - [`value-keyword-case`](https://stylelint.io/user-guide/rules/value-keyword-case/): `lower`
 

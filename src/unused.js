@@ -35,16 +35,20 @@ const tooOpinionated = [
     'media-feature-name-value-allowed-list',
     // https://stylelint.io/user-guide/rules/no-unknown-animations
     'no-unknown-animations',
+    // https://stylelint.io/user-guide/rules/no-unknown-custom-media
+    'no-unknown-custom-media',
     // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-alphabetical-order/README.md
     'order/properties-alphabetical-order',
     // https://stylelint.io/user-guide/rules/property-allowed-list
     'property-allowed-list',
     // https://stylelint.io/user-guide/rules/property-disallowed-list
     'property-disallowed-list',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-blacklist
-    'scss/at-import-partial-extension-blacklist',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-whitelist
-    'scss/at-import-partial-extension-whitelist',
+    // https://stylelint.io/user-guide/rules/rule-nesting-at-rule-required-list
+    'rule-nesting-at-rule-required-list',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-disallowed-list
+    'scss/at-import-partial-extension-disallowed-list',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-allowed-list
+    'scss/at-import-partial-extension-allowed-list',
     // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-default
     'scss/dollar-variable-default',
     // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-dollar-variables
@@ -104,6 +108,28 @@ const formattingByPrettier = [
 ];
 
 const toReview = [
+    // List of rules from stylelint v16.23.1 upgrade.
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-no-risky-nesting-selector
+    'scss/at-mixin-no-risky-nesting-selector',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-root-no-redundant
+    'scss/at-root-no-redundant',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-redundant-alias
+    'scss/at-use-no-redundant-alias',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/block-no-redundant-nesting
+    'scss/block-no-redundant-nesting',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-property-value-no-unknown
+    'scss/declaration-property-value-no-unknown',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-calculation-no-interpolation
+    'scss/function-calculation-no-interpolation',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-channel
+    'scss/function-color-channel',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-load-rules
+    'scss/no-duplicate-load-rules',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-unused-private-members
+    'scss/no-unused-private-members',
+    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/property-no-unknown
+    'scss/property-no-unknown',
+    // ==================================================
     // List of rules from stylelint v15.10.2 upgrade.
     // https://stylelint.io/user-guide/rules/media-query-no-invalid
     'media-query-no-invalid',
