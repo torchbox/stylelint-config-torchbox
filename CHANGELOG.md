@@ -4,6 +4,89 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [4.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v3.1.0...v4.0.0) (2025-12-02)
+
+### Features
+
+- Update stylelint to v16.23.1 and up ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
+- Update all config dependencies to their latest releases, compatible with stylelint v16 ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
+- Change enforced rules from Stylelint and `stylelint-config-standard-scss` (see list below) ([#41](https://github.com/torchbox/stylelint-config-torchbox/pull/41)).
+
+### BREAKING CHANGES
+
+The configuration now mandates stylelint v16. Stylelint has stopped enforcing formatting-related rules, which are no longer relevant with the majority of projects now using Prettier for formatting. See Stylelint’s official [Migrating to 16.0.0](https://stylelint.io/migration-guide/to-16) documentation.
+
+Newly enforced rules:
+
+- [`at-rule-no-deprecated`](https://stylelint.io/user-guide/rules/at-rule-no-deprecated/)
+  - Disallow deprecated at-rules.
+  - Set to: `true`
+- [`block-no-redundant-nested-style-rules`](https://stylelint.io/user-guide/rules/block-no-redundant-nested-style-rules/)
+  - Disallow redundant nested style rules within blocks.
+  - Set to: `true`
+- [`color-function-alias-notation`](https://stylelint.io/user-guide/rules/color-function-alias-notation/)
+  - Specify alias notation for color-functions.
+  - Set to: `without-alpha`
+- [`container-name-pattern`](https://stylelint.io/user-guide/rules/container-name-pattern/)
+  - Specify a pattern for container names.
+  - Set to: `^(--)?(a-za-z0-9*)(-a-z0-9+)*$, `
+- [`declaration-property-value-keyword-no-deprecated`](https://stylelint.io/user-guide/rules/declaration-property-value-keyword-no-deprecated/)
+  - Disallow deprecated keywords for properties within declarations.
+  - Set to: `true`
+- [`layer-name-pattern`](https://stylelint.io/user-guide/rules/layer-name-pattern/)
+  - Specify a pattern for layer names.
+  - Set to: `^(a-za-z0-9*)(.-a-z0-9+)*$, `
+- [`lightness-notation`](https://stylelint.io/user-guide/rules/lightness-notation/)
+  - Specify number or percentage notation for lightness.
+  - Set to: `percentage`
+- [`media-type-no-deprecated`](https://stylelint.io/user-guide/rules/media-type-no-deprecated/)
+  - Disallow deprecated media types.
+  - Set to: `true`
+- [`nesting-selector-no-missing-scoping-root`](https://stylelint.io/user-guide/rules/nesting-selector-no-missing-scoping-root/)
+  - Disallow missing scoping root for nesting selectors.
+  - Set to: `true, ignoreAtRules: mixin`
+- [`no-invalid-position-declaration`](https://stylelint.io/user-guide/rules/no-invalid-position-declaration/)
+  - Disallow invalid position declarations.
+  - Set to: `true`
+- [`property-no-deprecated`](https://stylelint.io/user-guide/rules/property-no-deprecated/)
+  - Disallow deprecated properties.
+  - Set to: `true`
+- [`scss/load-no-partial-leading-underscore`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/load-no-partial-leading-underscore/README.md)
+  - Replaces `scss/at-import-no-partial-leading-underscore`.
+  - Disallow leading underscore in partial names in `@import`, `@use`, `@forward`, and [`meta.load-css`](https://sass-lang.com/documentation/modules/meta/#load-css) `$url` parameter.
+  - Set to: `true`
+- [`scss/load-partial-extension`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/load-partial-extension/README.md)
+  - Replaces `scss/at-import-partial-extension`.
+  - Require or disallow extension in `@import`, `@use`, `@forward`, and [`meta.load-css`](https://sass-lang.com/documentation/modules/meta/#load-css) commands.
+  - Set to: `never`
+- [`syntax-string-no-invalid`](https://stylelint.io/user-guide/rules/syntax-string-no-invalid/)
+  - Disallow invalid `syntax` strings.
+  - Set to: `true`
+
+Rules with new configuration:
+
+- [`scss/dollar-variable-colon-space-after`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-colon-space-after/README.md)
+  - Require or disallow whitespace after the colon in `$`-variable declarations.
+  - Was set to: `always`
+  - Now set to: `always-single-line`
+- [`length-zero-no-unit`](https://stylelint.io/user-guide/rules/length-zero-no-unit/)
+  - Was set to: `true, ignore: custom-properties`
+  - Now set to: `true, ignore: custom-properties, ignorePreludeOfAtRules: function, mixin`
+
+New rules which have been explicitly disabled:
+
+- [`at-rule-descriptor-no-unknown`](https://stylelint.io/user-guide/rules/at-rule-descriptor-no-unknown/)
+- [`at-rule-descriptor-value-no-unknown`](https://stylelint.io/user-guide/rules/at-rule-descriptor-value-no-unknown/)
+- [`at-rule-prelude-no-invalid`](https://stylelint.io/user-guide/rules/at-rule-prelude-no-invalid/)
+- [`declaration-property-value-no-unknown`](https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown/)
+- [`media-feature-name-value-no-unknown`](https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown/)
+- [`media-query-no-invalid`](https://stylelint.io/user-guide/rules/media-query-no-invalid/)
+
+Renamed rules which are disabled:
+
+- [`scss/at-import-partial-extension-disallowed-list`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-disallowed-list/README.md)
+- [`scss/at-import-partial-extension-allowed-list`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-import-partial-extension-allowed-list/README.md)
+
 ## [3.1.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v3.0.0...v3.1.0) (2025-12-02)
 
 ### Features

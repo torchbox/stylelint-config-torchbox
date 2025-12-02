@@ -4,13 +4,25 @@ exports[`semver - should those tests break, consider releasing a new major versi
 {
   "alpha-value-notation": null,
   "annotation-no-unknown": null,
+  "at-rule-descriptor-no-unknown": null,
+  "at-rule-descriptor-value-no-unknown": null,
   "at-rule-empty-line-before": null,
+  "at-rule-no-deprecated": [
+    true,
+  ],
   "at-rule-no-unknown": null,
   "at-rule-no-vendor-prefix": [
     true,
   ],
+  "at-rule-prelude-no-invalid": null,
   "block-no-empty": [
     true,
+  ],
+  "block-no-redundant-nested-style-rules": [
+    true,
+  ],
+  "color-function-alias-notation": [
+    "without-alpha",
   ],
   "color-function-notation": null,
   "color-hex-length": [
@@ -36,6 +48,12 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "comment-no-empty": null,
   "comment-whitespace-inside": [
     "always",
+  ],
+  "container-name-pattern": [
+    "^(--)?([a-z][a-z0-9]*)(-[a-z0-9]+)*$",
+    {
+      "message": [Function],
+    },
   ],
   "custom-media-pattern": null,
   "custom-property-empty-line-before": [
@@ -84,6 +102,10 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
+  "declaration-property-value-keyword-no-deprecated": [
+    true,
+  ],
+  "declaration-property-value-no-unknown": null,
   "font-family-name-quotes": [
     "always-where-recommended",
   ],
@@ -122,13 +144,26 @@ exports[`semver - should those tests break, consider releasing a new major versi
     "percentage-unless-within-keyword-only-block",
   ],
   "keyframes-name-pattern": null,
+  "layer-name-pattern": [
+    "^([a-z][a-z0-9]*)([.-][a-z0-9]+)*$",
+    {
+      "message": [Function],
+    },
+  ],
   "length-zero-no-unit": [
     true,
     {
       "ignore": [
         "custom-properties",
       ],
+      "ignorePreludeOfAtRules": [
+        "function",
+        "mixin",
+      ],
     },
+  ],
+  "lightness-notation": [
+    "percentage",
   ],
   "max-nesting-depth": [
     4,
@@ -139,9 +174,22 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "media-feature-name-no-vendor-prefix": [
     true,
   ],
+  "media-feature-name-value-no-unknown": null,
   "media-feature-range-notation": null,
+  "media-query-no-invalid": null,
+  "media-type-no-deprecated": [
+    true,
+  ],
   "named-grid-areas-no-invalid": [
     true,
+  ],
+  "nesting-selector-no-missing-scoping-root": [
+    true,
+    {
+      "ignoreAtRules": [
+        "mixin",
+      ],
+    },
   ],
   "no-descending-specificity": null,
   "no-duplicate-at-import-rules": [
@@ -165,6 +213,9 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
+  "no-invalid-position-declaration": [
+    true,
+  ],
   "no-irregular-whitespace": [
     true,
   ],
@@ -181,6 +232,9 @@ exports[`semver - should those tests break, consider releasing a new major versi
       },
       "declarations",
     ],
+  ],
+  "property-no-deprecated": [
+    true,
   ],
   "property-no-unknown": [
     true,
@@ -262,12 +316,6 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "scss/at-if-no-null": [
     true,
   ],
-  "scss/at-import-no-partial-leading-underscore": [
-    true,
-  ],
-  "scss/at-import-partial-extension": [
-    "never",
-  ],
   "scss/at-mixin-argumentless-call-parentheses": [
     "always",
   ],
@@ -311,7 +359,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
     true,
   ],
   "scss/dollar-variable-colon-space-after": [
-    "always",
+    "always-single-line",
   ],
   "scss/dollar-variable-colon-space-before": [
     "never",
@@ -330,6 +378,12 @@ exports[`semver - should those tests break, consider releasing a new major versi
   ],
   "scss/function-unquote-no-unquoted-strings-inside": [
     true,
+  ],
+  "scss/load-no-partial-leading-underscore": [
+    true,
+  ],
+  "scss/load-partial-extension": [
+    "never",
   ],
   "scss/no-duplicate-mixins": [
     true,
@@ -405,6 +459,9 @@ exports[`semver - should those tests break, consider releasing a new major versi
   ],
   "shorthand-property-no-redundant-values": null,
   "string-no-newline": [
+    true,
+  ],
+  "syntax-string-no-invalid": [
     true,
   ],
   "unit-no-unknown": [
