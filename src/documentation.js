@@ -1,18 +1,17 @@
-'use strict';
-
+/* global console */
 /**
- * Prototype automated documentation generator for Stylelint configs.
+ * Automated documentation generator for Stylelint configs.
  * Inspiration:
  * - https://github.com/sarbbottam/eslint-find-rules
  * - https://github.com/jfmengels/eslint-rule-documentation
  */
 
-const fs = require('fs');
-const path = require('path');
-const stylelint = require('stylelint');
+import path from 'node:path';
+import { readFile, writeFile } from 'node:fs/promises';
+import stylelint from 'stylelint';
 
-const config = require('../config');
-const unusedConfig = require('./unused');
+import config from '../config.js';
+import unusedConfig from './unused.js';
 
 const unusedRules = Object.keys(unusedConfig.rules).filter(
     (name) => typeof config.rules[name] === 'undefined',
@@ -74,25 +73,39 @@ const formatRows = (rules) => {
     }, []);
 };
 
-const README_PATH = path.join(__dirname, '..', 'README.md');
-const RULES_PATH = path.join(__dirname, 'rules.md');
+const README_PATH = path.join('README.md');
+const RULES_PATH = path.join('src', 'rules.md');
 const README_MARKER = '<!-- Generated with: npm run build:docs -->';
-const README = fs.readFileSync(README_PATH, 'utf-8').split(README_MARKER)[0];
+const readmeFile = await readFile(README_PATH, 'utf-8');
+const README = readmeFile.split(README_MARKER)[0];
 
-const configFile = path.join(__dirname, '..', 'config.js');
+const resolvedConfig = await stylelint.resolveConfig('.', {
+    configFile: 'config.js',
+});
+const { rules } = resolvedConfig;
+const enforcedRules = Object.keys(rules).filter((name) => rules[name] !== null);
+const customRules = Object.keys(config.rules).filter(
+    (name) => rules[name] !== null,
+);
 
-stylelint.resolveConfig(__filename, { configFile }).then((resolvedConfig) => {
-    const { rules } = resolvedConfig;
-    const enforcedRules = Object.keys(rules).filter(
-        (name) => rules[name] !== null,
-    );
-    const customRules = Object.keys(config.rules).filter(
-        (name) => rules[name] !== null,
-    );
+const customConventions = customRules.map((name) => {
+    const opts = rules[name];
+    const value = Array.isArray(opts) && opts.length === 1 ? opts[0] : opts;
+    const row = [formatRuleName(name)];
 
-    const customConventions = customRules.map((name) => {
+    if (value !== true) {
+        row.push(formatRuleValue(value));
+    }
+
+    return row;
+});
+
+const inheritedConventions = enforcedRules
+    .filter((name) => !customRules.includes(name))
+    .map((name) => {
         const opts = rules[name];
         const value = Array.isArray(opts) && opts.length === 1 ? opts[0] : opts;
+
         const row = [formatRuleName(name)];
 
         if (value !== true) {
@@ -102,29 +115,13 @@ stylelint.resolveConfig(__filename, { configFile }).then((resolvedConfig) => {
         return row;
     });
 
-    const inheritedConventions = enforcedRules
-        .filter((name) => !customRules.includes(name))
-        .map((name) => {
-            const opts = rules[name];
-            const value =
-                Array.isArray(opts) && opts.length === 1 ? opts[0] : opts;
+const disabled = Object.keys(rules)
+    .filter((name) => rules[name] === null)
+    .map((name) => [formatRuleName(name)]);
 
-            const row = [formatRuleName(name)];
+const unused = unusedRules.map((name) => [formatRuleName(name)]);
 
-            if (value !== true) {
-                row.push(formatRuleValue(value));
-            }
-
-            return row;
-        });
-
-    const disabled = Object.keys(rules)
-        .filter((name) => rules[name] === null)
-        .map((name) => [formatRuleName(name)]);
-
-    const unused = unusedRules.map((name) => [formatRuleName(name)]);
-
-    const readmeRules = `
+const readmeRules = `
 ### Rules
 
 > For the full list of enabled, disabled, and unused rules, view [src/rules.md](src/rules.md).
@@ -142,7 +139,7 @@ ${generateList(formatRows(inheritedConventions.sort()))}
 See the [contribution guidelines](CONTRIBUTING.md) for guidance and setup instructions.
 `;
 
-    const fullRules = `
+const fullRules = `
 # Rules
 
 ## Custom rules
@@ -166,11 +163,11 @@ ${generateList(formatRows(disabled).sort())}
 ${generateList(formatRows(unused).sort())}
 `;
 
-    const newREADME = `${README}${README_MARKER}\n${readmeRules}`;
-    const newRulesDocs = `${README_MARKER}\n${fullRules}`;
+const newREADME = `${README}${README_MARKER}\n${readmeRules}`;
+const newRulesDocs = `${README_MARKER}\n${fullRules}`;
 
-    fs.writeFileSync(README_PATH, newREADME, 'utf-8');
-    fs.writeFileSync(RULES_PATH, newRulesDocs, 'utf-8');
-    console.log('Updated README.md with rules docs');
-    console.log('Updated rules.md with full rules docs:', newRulesDocs);
-});
+await writeFile(README_PATH, newREADME, 'utf-8');
+await writeFile(RULES_PATH, newRulesDocs, 'utf-8');
+
+console.log('Updated README.md with rules docs');
+console.log('Updated rules.md with full rules docs:', newRulesDocs);

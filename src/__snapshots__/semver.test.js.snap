@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`semver - should those tests break, consider releasing a new major version of the package config contents 1`] = `
+exports[`semver - should those tests break, consider releasing a new major version of the package > config contents 1`] = `
 {
   "alpha-value-notation": null,
   "annotation-no-unknown": null,

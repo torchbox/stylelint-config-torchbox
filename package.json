@@ -26,12 +26,12 @@
     "config.js"
   ],
   "devDependencies": {
-    "eslint": "8.57.1",
-    "jest": "30.0.5",
+    "@eslint/js": "9.39.1",
+    "eslint": "9.39.1",
     "prettier": "3.7.3",
-    "prettier-2": "npm:prettier@3.7.3",
     "stylelint": "15.10.2",
-    "stylelint-find-new-rules": "4.1.2"
+    "stylelint-find-new-rules": "4.1.2",
+    "vitest": "4.0.14"
   },
   "dependencies": {
     "stylelint-config-standard-scss": "^10.0.0",
@@ -41,14 +41,19 @@
   "peerDependencies": {
     "stylelint": "^15.0.0"
   },
+  "devEngines": {
+    "packageManager": {
+      "name": "npm"
+    }
+  },
   "scripts": {
     "prepare": "./.githooks/deploy.sh",
     "lint": "eslint --report-unused-disable-directives . && prettier --check '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "format": "prettier --write '**/?(.)*.{md,css,scss,js,json,yaml,yml,html}'",
     "build:docs": "node src/documentation.js && prettier --write README.md",
-    "test": "jest",
+    "test": "vitest run",
     "test:rules": "stylelint-find-new-rules src/unused.js --unused --deprecated --invalid",
-    "test:watch": "jest --watch",
+    "test:watch": "vitest watch",
     "prepublishOnly": "npm run build:docs"
   }
 }

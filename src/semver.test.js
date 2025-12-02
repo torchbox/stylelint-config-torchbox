@@ -1,7 +1,6 @@
-const path = require('path');
-const stylelint = require('stylelint');
-
-const pkg = require('../package.json');
+import stylelint from 'stylelint';
+import { describe, it, expect } from 'vitest';
+import pkg from '../package.json' with { type: 'json' };
 
 describe('semver - should those tests break, consider releasing a new major version of the package', () => {
     it('dependencies', () => {
@@ -23,8 +22,8 @@ describe('semver - should those tests break, consider releasing a new major vers
     });
 
     it('config contents', async () => {
-        const config = await stylelint.resolveConfig(__filename, {
-            configFile: path.join(__dirname, '..', 'config.js'),
+        const config = await stylelint.resolveConfig('.', {
+            configFile: 'config.js',
         });
         expect(config.rules).toMatchSnapshot();
     });
