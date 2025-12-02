@@ -7,7 +7,7 @@
   "main": "./config.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/torchbox/stylelint-config-torchbox.git"
+    "url": "git+https://github.com/torchbox/stylelint-config-torchbox.git"
   },
   "bugs": {
     "url": "https://github.com/torchbox/stylelint-config-torchbox/issues"
