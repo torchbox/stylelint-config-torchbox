@@ -26,7 +26,7 @@
     "config.js"
   ],
   "devDependencies": {
-    "eslint": "8.57.1",
+    "eslint": "9.39.1",
     "jest": "30.0.5",
     "prettier": "3.7.3",
     "prettier-2": "npm:prettier@3.7.3",
