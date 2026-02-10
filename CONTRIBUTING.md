@@ -40,7 +40,10 @@ npm run lint
 - Update the version number in `package.json`, following semver.
 - Make sure the documentation is up-to-date (`npm run build:docs`)
 - Make a PR and squash merge it.
-- Back on master with the PR merged, use `npm publish`.
-- Head over to [https://www.npmjs.com/package/stylelint-config-torchbox](https://www.npmjs.com/package/stylelint-config-torchbox) and check that all is well.
-- Finally, go to GitHub and create tag then a release for the new version, with the corresponding CHANGELOG entry as content.
-- Done!
+- Tag the release commit with the version number prefixed with `v`.
+- Push
+- GitHub Actions is set up for [Trusted publishing for npm packages](https://docs.npmjs.com/trusted-publishers)
+
+Done! Verify all is well in GitHub Actions / npm after the publish job ran.
+
+As a last step, you may want to go update a project using this library to check that all is well in a fully separate environment.

@@ -1,0 +1,26 @@
+name: Publish
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  id-token: write
+  contents: read
+
+jobs:
+  publish:
+    runs-on: ubuntu-slim
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-node@v6
+        with:
+          node-version-file: '.nvmrc'
+      - run: npm ci
+      - run: npm run lint
+      - run: npm run test
+      - run: npm run test:rules
+      - run: npm run build:docs
+      - run: npm pack --dry-run --loglevel notice 2>&1 >/dev/null | sed -e 's/^npm notice //'
+      - run: npm publish
