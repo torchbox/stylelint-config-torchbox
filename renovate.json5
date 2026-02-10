@@ -5,13 +5,9 @@
   commitBodyTable: true,
   // https://renovatebot.com/docs/configuration-options/#ignoredeps
   ignoreDeps: [
-    // Ignore all package dependencies, we only want these updated in batches as part of new releases.
+    // Updated in batches as part of new releases.
     'stylelint',
-    'stylelint-a11y',
-    'stylelint-config-standard',
-    'stylelint-declaration-strict-value',
-    'stylelint-order',
-    'stylelint-scss',
+    'stylelint-find-new-rules',
   ],
   // https://renovatebot.com/docs/configuration-options/#labels
   labels: ['enhancement'],
@@ -57,6 +53,10 @@
     },
     {
       matchDepTypes: ['peerDependencies'],
+      enabled: false,
+    },
+    {
+      matchDepTypes: ['dependencies'],
       enabled: false,
     },
   ],
