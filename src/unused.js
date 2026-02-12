@@ -6,6 +6,7 @@ const config = require('../config');
  * and decide whether to add them to this "unused" list, or start using them.
  */
 
+/** Rules that we’ve reviewed previously and decided to not enforce. */
 const tooOpinionated = [
     // https://stylelint.io/user-guide/rules/comment-word-disallowed-list
     'comment-word-disallowed-list',
@@ -95,6 +96,7 @@ const tooOpinionated = [
     'unit-disallowed-list',
 ];
 
+/** Rules that are overridden by other rules. */
 const overridenByOtherRule = [
     'at-rule-disallowed-list',
     'at-rule-property-required-list',
@@ -102,7 +104,8 @@ const overridenByOtherRule = [
     'color-no-hex',
 ];
 
-const formattingByPrettier = [
+/** Rules that are unused because they are handled by auto-formatting. */
+const formatting = [
     'scss/dollar-variable-colon-newline-after',
     'scss/double-slash-comment-inline',
 ];
@@ -196,7 +199,7 @@ const toReview = [
 const unusedRules = [
     ...tooOpinionated,
     ...overridenByOtherRule,
-    ...formattingByPrettier,
+    ...formatting,
     ...toReview,
 ].reduce((rules, r) => {
     rules[r] = true;
