@@ -27,7 +27,7 @@
   ],
   "devDependencies": {
     "@eslint/js": "10.0.1",
-    "eslint": "10.0.0",
+    "eslint": "10.0.1",
     "prettier": "3.8.1",
     "stylelint": "16.26.1",
     "stylelint-find-new-rules": "5.0.1",
