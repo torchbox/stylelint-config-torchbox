@@ -6,11 +6,11 @@ We welcome all support, whether on bug reports, feature requests, code, design, 
 
 ### Install
 
-> Clone the project on your computer, and install [Node](https://nodejs.org) and [nvm](https://github.com/creationix/nvm).
+> Clone the project on your computer, and install [Node](https://nodejs.org) and [fnm](https://github.com/Schniz/fnm).
 
 ```sh
 # Switch to the right version of Node.
-nvm use
+fnm use
 # Then, install all project dependencies.
 npm install
 ```
@@ -23,7 +23,7 @@ Also take the time to integrate [Prettier](https://prettier.io/) and [ESLint](ht
 
 ```sh
 # Make sure you use the right node version.
-nvm use
+fnm use
 # View available commands with:
 npm run
 # Most used commands:
