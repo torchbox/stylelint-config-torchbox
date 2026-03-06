@@ -12,6 +12,7 @@ import stylelint from 'stylelint';
 
 import config from '../config.js';
 import unusedConfig from './unused.js';
+import scenarios from './scenarios.js';
 
 const unusedRules = Object.keys(unusedConfig.rules).filter(
     (name) => typeof config.rules[name] === 'undefined',
@@ -169,5 +170,23 @@ const newRulesDocs = `${README_MARKER}\n${fullRules}`;
 await writeFile(README_PATH, newREADME, 'utf-8');
 await writeFile(RULES_PATH, newRulesDocs, 'utf-8');
 
+// Generate demo.css with all test scenarios
+const DEMO_PATH = path.join('demo.css');
+const demoContent = Object.entries(scenarios)
+    .map(([rule, scenario], index) => {
+        const separator = index === 0 ? '' : '\n';
+        return `${separator}/* ${rule}: ${getRuleURL(rule)} */\n${scenario.code}`;
+    })
+    .join('\n\n');
+
+const demoHeader = `/* Stylelint config demo file
+ * This file contains test scenarios for all configured rules.
+ * Run 'npx stylelint demo.css' to see all rule violations.
+ * Generated with: npm run build:docs
+ */\n\n`;
+
+await writeFile(DEMO_PATH, demoHeader + demoContent, 'utf-8');
+
 console.log('Updated README.md with rules docs');
-console.log('Updated rules.md with full rules docs:', newRulesDocs);
+console.log('Updated rules.md with full rules docs');
+console.log('Updated demo.css with test scenarios');
