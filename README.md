@@ -78,13 +78,13 @@ default_language_version:
   node: system
 repos:
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v16.26.1
+    rev: v17.4.0
     hooks:
       - id: stylelint
         files: \.(scss|vue)$
         additional_dependencies:
-          - stylelint@16.26.1
-          - stylelint-config-torchbox@4.0.0
+          - stylelint@17.4.0
+          - stylelint-config-torchbox@5.0.0
 ```
 
 ### Vue
@@ -123,7 +123,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`declaration-no-important`](https://stylelint.io/user-guide/rules/declaration-no-important/)
 - [`selector-max-id`](https://stylelint.io/user-guide/rules/selector-max-id/): `0`
 - [`selector-max-type`](https://stylelint.io/user-guide/rules/selector-max-type/): `2, ignore: child, compounded, next-sibling`
-- [`selector-class-pattern`](https://stylelint.io/user-guide/rules/selector-class-pattern/): `, resolveNestedSelectors: true`
+- [`scss/selector-class-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-class-pattern/README.md): `, resolveNestedSelectors: true`
 - [`max-nesting-depth`](https://stylelint.io/user-guide/rules/max-nesting-depth/): `4`
 - [`selector-max-specificity`](https://stylelint.io/user-guide/rules/selector-max-specificity/): `0,4,0`
 - [`value-no-vendor-prefix`](https://stylelint.io/user-guide/rules/value-no-vendor-prefix/)
@@ -179,7 +179,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`named-grid-areas-no-invalid`](https://stylelint.io/user-guide/rules/named-grid-areas-no-invalid/)
 - [`nesting-selector-no-missing-scoping-root`](https://stylelint.io/user-guide/rules/nesting-selector-no-missing-scoping-root/): `true, ignoreAtRules: mixin`
 - [`no-duplicate-at-import-rules`](https://stylelint.io/user-guide/rules/no-duplicate-at-import-rules/)
-- [`no-duplicate-selectors`](https://stylelint.io/user-guide/rules/no-duplicate-selectors/)
 - [`no-empty-source`](https://stylelint.io/user-guide/rules/no-empty-source/)
 - [`no-invalid-double-slash-comments`](https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/)
 - [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/): `true, ignoreAtRules: use, forward`

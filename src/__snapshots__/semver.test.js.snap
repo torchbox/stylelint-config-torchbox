@@ -195,9 +195,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "no-duplicate-at-import-rules": [
     true,
   ],
-  "no-duplicate-selectors": [
-    true,
-  ],
+  "no-duplicate-selectors": null,
   "no-empty-source": [
     true,
   ],
@@ -401,6 +399,12 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "scss/percent-placeholder-pattern": [
     "^do-not-use-placeholders$",
   ],
+  "scss/selector-class-pattern": [
+    /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
+    {
+      "resolveNestedSelectors": true,
+    },
+  ],
   "scss/selector-no-redundant-nesting-selector": [
     true,
   ],
@@ -410,12 +414,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "selector-attribute-quotes": [
     "always",
   ],
-  "selector-class-pattern": [
-    /\\^\\[a-z\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\(__\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\(--\\[a-z0-9\\]\\+\\(-\\[a-z0-9\\]\\+\\)\\*\\)\\?\\$/,
-    {
-      "resolveNestedSelectors": true,
-    },
-  ],
+  "selector-class-pattern": null,
   "selector-id-pattern": null,
   "selector-max-id": [
     0,

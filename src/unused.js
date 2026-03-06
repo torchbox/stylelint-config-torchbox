@@ -1,4 +1,4 @@
-const config = require('../config');
+import config from '../config.js';
 
 /**
  * Use this file to list all available rules that should *not* be used.
@@ -113,6 +113,9 @@ const formatting = [
 // prettier-ignore
 /** Rules that have been introduced in a new version and haven’t been reviewed yet. */
 const toReviewUpgrades = {
+    upgrade17: {
+        'display-notation': 'https://stylelint.io/user-guide/rules/display-notation',
+    },
     upgrade16: {
         'scss/at-mixin-no-risky-nesting-selector': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-no-risky-nesting-selector',
         'scss/at-root-no-redundant': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-root-no-redundant',
@@ -176,6 +179,6 @@ const unusedRules = [
     return rules;
 }, {});
 
-module.exports = Object.assign({}, config, {
+export default Object.assign({}, config, {
     rules: Object.assign(unusedRules, config.rules),
 });

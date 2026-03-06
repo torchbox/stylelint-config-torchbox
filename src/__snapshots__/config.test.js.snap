@@ -96,8 +96,8 @@ exports[`config > scenarios > scss/at-mixin-argumentless-call-parentheses 1`] = 
 
 exports[`config > scenarios > scss/at-mixin-pattern 1`] = `
 [
-  "Expected @mixin name to match specified pattern (scss/at-mixin-pattern)",
-  "Expected @mixin name to match specified pattern (scss/at-mixin-pattern)",
+  "Expected "InvalidMixinName" to match pattern "/^[a-z0-9-]+$/" (scss/at-mixin-pattern)",
+  "Expected "invalid_mixin" to match pattern "/^[a-z0-9-]+$/" (scss/at-mixin-pattern)",
 ]
 `;
 
@@ -121,18 +121,20 @@ exports[`config > scenarios > scss/no-global-function-names 1`] = `[]`;
 
 exports[`config > scenarios > scss/percent-placeholder-pattern 1`] = `
 [
-  "Expected %-placeholder "%my-placeholder" to match specified pattern (scss/percent-placeholder-pattern)",
+  "Expected "my-placeholder" to match pattern "^do-not-use-placeholders$" (scss/percent-placeholder-pattern)",
+]
+`;
+
+exports[`config > scenarios > scss/selector-class-pattern 1`] = `
+[
+  "Expected ".InvalidClass" to match pattern "/^[a-z]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$/" (scss/selector-class-pattern)",
+  "Expected ".invalid_underscore" to match pattern "/^[a-z]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$/" (scss/selector-class-pattern)",
 ]
 `;
 
 exports[`config > scenarios > scss/selector-no-redundant-nesting-selector 1`] = `[]`;
 
-exports[`config > scenarios > selector-class-pattern 1`] = `
-[
-  "Expected ".InvalidClass" to match pattern "/^[a-z]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$/" (selector-class-pattern)",
-  "Expected ".invalid_underscore" to match pattern "/^[a-z]+(-[a-z0-9]+)*(__[a-z0-9]+(-[a-z0-9]+)*)?(--[a-z0-9]+(-[a-z0-9]+)*)?$/" (selector-class-pattern)",
-]
-`;
+exports[`config > scenarios > selector-class-pattern 1`] = `[]`;
 
 exports[`config > scenarios > selector-id-pattern 1`] = `[]`;
 

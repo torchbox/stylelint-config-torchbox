@@ -4,6 +4,30 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [5.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v4.0.0...v5.0.0) (2026-03-06)
+
+### Features
+
+- Update stylelint to v17 and up.
+- Update all config dependencies to their latest releases, compatible with stylelint v17.
+- Switch from `selector-class-pattern` to `scss/selector-class-pattern` to retain `resolveNestedSelectors` support (removed from built-in rule in Stylelint 17).
+
+### BREAKING CHANGES
+
+The configuration now mandates stylelint v17. This release migrates to ESM (ECMAScript modules) and requires Node.js 20.19.0 or newer. See Stylelint's official [Migrating to 17.0.0](https://stylelint.io/migration-guide/to-17) documentation.
+
+#### Rules configuration changes
+
+| Rule                                                                                                                                     | Purpose                                                          | Set to                                          | Was set to                             |
+| ---------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------- | -------------------------------------- |
+| [`selector-class-pattern`](https://stylelint.io/user-guide/rules/selector-class-pattern/)                                                | Specify a pattern for class selectors                            | `null` (disabled)                               | Hyphenated BEM                         |
+| [`scss/selector-class-pattern`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-class-pattern/README.md) | Specify a pattern for class selectors, with SCSS nesting support | Hyphenated BEM + `resolveNestedSelectors: true` | N/A -replaces `selector-class-pattern` |
+| [`no-duplicate-selectors`](https://stylelint.io/user-guide/rules/no-duplicate-selectors/)                                                | Built-in rule                                                    | `null` (disabled)                               | `true`                                 |
+
+#### New unused rules
+
+- [`display-notation`](https://stylelint.io/user-guide/rules/display-notation/)
+
 ## [4.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v3.1.0...v4.0.0) (2025-12-02)
 
 ### Features

@@ -1,5 +1,5 @@
 // See https://stylelint.io/user-guide/rules/.
-module.exports = {
+export default {
     extends: ['stylelint-config-standard-scss'],
     plugins: ['stylelint-order', 'stylelint-declaration-strict-value'],
     rules: {
@@ -11,7 +11,10 @@ module.exports = {
             2,
             { ignore: ['child', 'compounded', 'next-sibling'] },
         ],
-        'selector-class-pattern': [
+        // Disable built-in rule; we use scss/selector-class-pattern for SCSS nesting support.
+        'selector-class-pattern': null,
+        // Use scss/selector-class-pattern which is compatible with string concatenation in Sass selectors.
+        'scss/selector-class-pattern': [
             // Loose pattern for hyphenated BEM. This also allows simple words to be used as class names, .e.g. `.active`, `.button`.
             // Based on:
             // - https://github.com/postcss/postcss-bem-linter/issues/89#issuecomment-255482072
