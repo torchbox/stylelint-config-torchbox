@@ -22,6 +22,9 @@ export default {
     'selector-class-pattern': {
         code: '.InvalidClass { color: black; } .invalid_underscore { color: black; }',
     },
+    'scss/selector-class-pattern': {
+        code: '.InvalidClass { color: black; } .invalid_underscore { color: black; }',
+    },
     'max-nesting-depth': {
         code: '.a { .b { .c { .d { .e { .f { color: black; } } } } } }',
     },
