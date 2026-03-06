@@ -110,90 +110,60 @@ const formatting = [
     'scss/double-slash-comment-inline',
 ];
 
+// prettier-ignore
+/** Rules that have been introduced in a new version and haven’t been reviewed yet. */
+const toReviewUpgrades = {
+    upgrade16: {
+        'scss/at-mixin-no-risky-nesting-selector': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-no-risky-nesting-selector',
+        'scss/at-root-no-redundant': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-root-no-redundant',
+        'scss/at-use-no-redundant-alias': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-redundant-alias',
+        'scss/block-no-redundant-nesting': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/block-no-redundant-nesting',
+        'scss/declaration-property-value-no-unknown': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-property-value-no-unknown',
+        'scss/function-calculation-no-interpolation': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-calculation-no-interpolation',
+        'scss/function-color-channel': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-channel',
+        'scss/no-duplicate-load-rules': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-load-rules',
+        'scss/no-unused-private-members': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-unused-private-members',
+        'scss/property-no-unknown': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/property-no-unknown',
+    },
+    upgrade15: {
+        'media-query-no-invalid': 'https://stylelint.io/user-guide/rules/media-query-no-invalid',
+        'declaration-property-value-no-unknown': 'https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown',
+        'media-feature-name-unit-allowed-list': 'https://stylelint.io/user-guide/rules/media-feature-name-unit-allowed-list',
+        'media-feature-name-value-no-unknown': 'https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown',
+        'no-unknown-custom-properties': 'https://stylelint.io/user-guide/rules/no-unknown-custom-properties',
+        'scss/at-use-no-unnamespaced': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-unnamespaced',
+        'scss/dollar-variable-no-namespaced-assignment': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-no-namespaced-assignment',
+        'scss/function-disallowed-list': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-disallowed-list',
+        'scss/function-no-unknown': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-no-unknown',
+    },
+    upgrade14: {
+        'declaration-property-max-values': 'https://stylelint.io/user-guide/rules/declaration-property-max-values',
+        'color-hex-alpha': 'https://stylelint.io/user-guide/rules/color-hex-alpha/',
+        'comment-pattern': 'https://stylelint.io/user-guide/rules/comment-pattern/',
+        'rule-selector-property-disallowed-list': 'https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/',
+        'selector-attribute-name-disallowed-list': 'https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/',
+        'selector-disallowed-list': 'https://stylelint.io/user-guide/rules/selector-disallowed-list/',
+        'selector-no-qualifying-type': 'https://stylelint.io/user-guide/rules/selector-no-qualifying-type',
+    },
+    upgrade13: {
+        'scss/at-each-key-value-single-line': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line',
+        'scss/at-function-named-arguments': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-named-arguments',
+        'scss/at-mixin-named-arguments': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-named-arguments',
+        'scss/comment-no-loud': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-loud',
+        'scss/dimension-no-non-numeric-values': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dimension-no-non-numeric-values',
+        'scss/dollar-variable-empty-line-after': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after',
+        'scss/dollar-variable-first-in-block': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block',
+        'scss/function-color-relative': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-relative',
+        'scss/map-keys-quotes': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/map-keys-quotes',
+        'scss/media-feature-value-dollar-variable': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable',
+        'scss/no-duplicate-dollar-variables': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables',
+        'scss/selector-no-union-class-name': 'https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-union-class-name',
+        'order/properties-order': 'https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md',
+    }
+};
+
 const toReview = [
-    // List of rules from stylelint v16.23.1 upgrade.
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-no-risky-nesting-selector
-    'scss/at-mixin-no-risky-nesting-selector',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-root-no-redundant
-    'scss/at-root-no-redundant',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-redundant-alias
-    'scss/at-use-no-redundant-alias',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/block-no-redundant-nesting
-    'scss/block-no-redundant-nesting',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/declaration-property-value-no-unknown
-    'scss/declaration-property-value-no-unknown',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-calculation-no-interpolation
-    'scss/function-calculation-no-interpolation',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-channel
-    'scss/function-color-channel',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-load-rules
-    'scss/no-duplicate-load-rules',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-unused-private-members
-    'scss/no-unused-private-members',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/property-no-unknown
-    'scss/property-no-unknown',
-    // ==================================================
-    // List of rules from stylelint v15.10.2 upgrade.
-    // https://stylelint.io/user-guide/rules/media-query-no-invalid
-    'media-query-no-invalid',
-    // https://stylelint.io/user-guide/rules/declaration-property-value-no-unknown
-    'declaration-property-value-no-unknown',
-    // https://stylelint.io/user-guide/rules/media-feature-name-unit-allowed-list
-    'media-feature-name-unit-allowed-list',
-    // https://stylelint.io/user-guide/rules/media-feature-name-value-no-unknown
-    'media-feature-name-value-no-unknown',
-    // https://stylelint.io/user-guide/rules/no-unknown-custom-properties
-    'no-unknown-custom-properties',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-use-no-unnamespaced
-    'scss/at-use-no-unnamespaced',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-no-namespaced-assignment
-    'scss/dollar-variable-no-namespaced-assignment',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-disallowed-list
-    'scss/function-disallowed-list',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-no-unknown
-    'scss/function-no-unknown',
-    // List of rules from stylelint v14 upgrade.
-    // https://stylelint.io/user-guide/rules/declaration-property-max-values
-    'declaration-property-max-values',
-    // https://stylelint.io/user-guide/rules/color-hex-alpha/
-    'color-hex-alpha',
-    // https://stylelint.io/user-guide/rules/comment-pattern/
-    'comment-pattern',
-    // https://stylelint.io/user-guide/rules/rule-selector-property-disallowed-list/
-    'rule-selector-property-disallowed-list',
-    // https://stylelint.io/user-guide/rules/selector-attribute-name-disallowed-list/
-    'selector-attribute-name-disallowed-list',
-    // https://stylelint.io/user-guide/rules/selector-disallowed-list/
-    'selector-disallowed-list',
-    // https://stylelint.io/user-guide/rules/selector-no-qualifying-type
-    'selector-no-qualifying-type',
-    // List of rules from stylelint v13 upgrade.
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-each-key-value-single-line
-    'scss/at-each-key-value-single-line',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-function-named-arguments
-    'scss/at-function-named-arguments',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/at-mixin-named-arguments
-    'scss/at-mixin-named-arguments',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/comment-no-loud
-    'scss/comment-no-loud',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dimension-no-non-numeric-values
-    'scss/dimension-no-non-numeric-values',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-empty-line-after
-    'scss/dollar-variable-empty-line-after',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/dollar-variable-first-in-block
-    'scss/dollar-variable-first-in-block',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/function-color-relative
-    'scss/function-color-relative',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/map-keys-quotes
-    'scss/map-keys-quotes',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/media-feature-value-dollar-variable
-    'scss/media-feature-value-dollar-variable',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/no-duplicate-dollar-variables
-    'scss/no-duplicate-dollar-variables',
-    // https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/selector-no-union-class-name
-    'scss/selector-no-union-class-name',
-    // https://github.com/hudochenkov/stylelint-order/blob/master/rules/properties-order/README.md
-    'order/properties-order',
+    ...Object.values(toReviewUpgrades).flatMap((obj) => Object.keys(obj)),
 ];
 
 const unusedRules = [
