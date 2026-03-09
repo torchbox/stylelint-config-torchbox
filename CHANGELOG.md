@@ -13,6 +13,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) 
 - Switch from `selector-class-pattern` to `scss/selector-class-pattern` to retain `resolveNestedSelectors` support (removed from built-in rule in Stylelint 17).
 - Experimental: new [upgrading stylelint AI skill](https://github.com/torchbox/stylelint-config-torchbox#agent-skills) to help automating upgrades of Stylelint and-or shared configurations.
 
+Please **[share feedback about agent skills](https://github.com/torchbox/stylelint-config-torchbox/issues/49)** if you use this on projects!
+
 ### BREAKING CHANGES
 
 The configuration now mandates stylelint v17. This release migrates to ESM (ECMAScript modules) and requires Node.js 20.19.0 or newer. See Stylelint's official [Migrating to 17.0.0](https://stylelint.io/migration-guide/to-17) documentation.

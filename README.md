@@ -47,6 +47,8 @@ export default {
 
 #### Agent skills
 
+**This is new - please [share feedback about agent skills](https://github.com/torchbox/stylelint-config-torchbox/issues/49)** if you use this on projects!
+
 This project ships an `upgrading-stylelint` agent skill for AI coding agents. It is meant for auditing or carrying out a Stylelint upgrade, including checking the upgrade path, reviewing migration guides, updating dependencies or config, running QA, and reporting follow-up work.
 
 Install the project skills with [Vercel Lab’s Agent Skills](https://github.com/vercel-labs/agent-skills):
