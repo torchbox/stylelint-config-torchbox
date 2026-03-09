@@ -45,7 +45,7 @@ export default {
 };
 ```
 
-#### Agent skill
+#### Agent skills
 
 This project ships an `upgrading-stylelint` agent skill for AI coding agents. It is meant for auditing or carrying out a Stylelint upgrade, including checking the upgrade path, reviewing migration guides, updating dependencies or config, running QA, and reporting follow-up work.
 
