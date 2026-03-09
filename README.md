@@ -69,9 +69,9 @@ This config is [Prettier](https://prettier.io/)-compatible, there isn’t anythi
 
 This config should work with [Tailwind](https://tailwindcss.com/) with no adjustments needed. Please submit an issue if that’s not the case.
 
-### pre-commit
+### prek for pre-commit hooks
 
-Here is a sample setup with our recommended configuration for the [pre-commit](https://pre-commit.com/) pre-commit hook framework:
+We recommend [prek](https://prek.j178.dev/), an implementation of the pre-commit framework to manage hooks. Our sample setup uses a standard `.pre-commit-config.yaml`, so the same configuration also works with `pre-commit` if needed:
 
 ```yaml
 default_language_version:
@@ -93,7 +93,7 @@ Stylelint supports Vue, and our configuration is usable in `.vue` single-file co
 
 - Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables --report-unscoped-disables './src/sass' './src/vue_components'`.
 - With [`stylelint-webpack-plugin`](https://webpack.js.org/plugins/stylelint-webpack-plugin/), use `extensions: ['scss', 'vue'],`.
-- With [`pre-commit`](https://github.com/awebdeveloper/pre-commit-stylelint), use `files: \.(scss|vue)$`.
+- With [`prek`](https://prek.j178.dev/) or pre-commit, use `files: \.(scss|vue)$`.
 
 ### Related tools
 
