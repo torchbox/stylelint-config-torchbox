@@ -32,7 +32,7 @@
     "prettier": "3.8.3",
     "stylelint": "17.4.0",
     "stylelint-find-new-rules": "6.0.0",
-    "vitest": "4.1.4"
+    "vitest": "4.1.5"
   },
   "dependencies": {
     "stylelint-config-standard-scss": "^17.0.0",
