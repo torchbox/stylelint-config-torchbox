@@ -68,7 +68,7 @@ Use the upgrading-stylelint skill to upgrade this project from Stylelint 16 to 1
 We recommend the following `run` script to add to your `package.json`:
 
 ```json
-"lint:css": "stylelint --report-needless-disables --report-unscoped-disables 'src/sass' 'src/vue'"
+"lint:css": "stylelint --report-needless-disables --report-unscoped-disables 'src/sass'"
 ```
 
 - Use [`--report-needless-disables`](https://stylelint.io/user-guide/cli#--report-needless-disables---rd) to ensure you do not use more `stylelint-disable` comments than needed.
@@ -99,7 +99,7 @@ repos:
     rev: v17.4.0
     hooks:
       - id: stylelint
-        files: \.(scss|vue)$
+        files: \.(scss)$
         additional_dependencies:
           - stylelint@17.4.0
           - stylelint-config-torchbox@5.0.0
@@ -107,7 +107,7 @@ repos:
 
 ### Vue
 
-Stylelint supports Vue, and our configuration is usable in `.vue` single-file components with no changes. Do make sure linting is configured to check `.vue` files:
+Stylelint supports Vue, and this configuration is usable in `.vue` single-file components if Stylelint is configured to parse them. See how [stylelint-config-recommended-vue](https://github.com/ota-meshi/stylelint-config-recommended-vue) does it. Do make sure linting is configured to check `.vue` files:
 
 - Wherever `stylelint` is manually invoked, make sure to point it both at stylesheets, and Vue components: `stylelint --report-needless-disables --report-unscoped-disables './src/sass' './src/vue_components'`.
 - With [`stylelint-webpack-plugin`](https://webpack.js.org/plugins/stylelint-webpack-plugin/), use `extensions: ['scss', 'vue'],`.
