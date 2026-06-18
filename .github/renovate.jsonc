@@ -37,7 +37,7 @@
     "supportPolicy": ["current"],
   },
   // https://renovatebot.com/docs/configuration-options/#lockfilemaintenance
-  "lockFileMaintenance": { "enabled": true },
+  "lockFileMaintenance": { "enabled": true, "automerge": true },
   "packageRules": [
     {
       "packageNames": ["prettier"],
