@@ -33,6 +33,8 @@
     // https://renovatebot.com/docs/node/#configuring-support-policy
     "supportPolicy": ["current"],
   },
+  // https://renovatebot.com/docs/configuration-options/#lockfilemaintenance
+  "lockFileMaintenance": { "enabled": true },
   "packageRules": [
     {
       "packageNames": ["prettier"],
