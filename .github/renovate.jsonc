@@ -1,5 +1,5 @@
 {
-  "extends": ["config:base"],
+  "extends": ["config:base", "helpers:pinGitHubActionDigests"],
   "dependencyDashboard": false,
   // https://renovatebot.com/docs/configuration-options/#commitbodytable
   "commitBodyTable": true,
