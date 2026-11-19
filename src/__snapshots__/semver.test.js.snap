@@ -4,6 +4,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
 {
   "alpha-value-notation": null,
   "annotation-no-unknown": null,
+  "at-charset-rule-no-invalid": null,
   "at-rule-descriptor-no-unknown": null,
   "at-rule-descriptor-value-no-unknown": null,
   "at-rule-empty-line-before": null,
@@ -87,9 +88,6 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "declaration-block-no-redundant-longhand-properties": null,
   "declaration-block-no-shorthand-property-overrides": [
     true,
-  ],
-  "declaration-block-single-line-max-declarations": [
-    1,
   ],
   "declaration-empty-line-before": null,
   "declaration-no-important": [
@@ -213,6 +211,11 @@ exports[`semver - should those tests break, consider releasing a new major versi
   ],
   "no-invalid-position-declaration": [
     true,
+    {
+      "ignoreAtRules": [
+        "mixin",
+      ],
+    },
   ],
   "no-irregular-whitespace": [
     true,
@@ -432,6 +435,11 @@ exports[`semver - should those tests break, consider releasing a new major versi
       ],
     },
   ],
+  "selector-no-deprecated": [
+    true,
+  ],
+  "selector-no-invalid": null,
+  "selector-no-unmatchable": null,
   "selector-no-vendor-prefix": [
     true,
   ],
@@ -469,6 +477,7 @@ exports[`semver - should those tests break, consider releasing a new major versi
   "value-keyword-case": [
     "lower",
   ],
+  "value-no-invalid": null,
   "value-no-vendor-prefix": [
     true,
   ],

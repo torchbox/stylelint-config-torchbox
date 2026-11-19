@@ -56,7 +56,7 @@ npx skills add wagtail/stylelint-config-wagtail
 Example prompt:
 
 ```text
-Use the upgrading-stylelint skill to upgrade this project from Stylelint 16 to 17, including updating to the compatible stylelint-config-torchbox version. Update dependencies and config as needed, update as much of the styles as you can if safe.
+Use the upgrading-stylelint skill to upgrade this project from Stylelint 17 to 18, including updating to the compatible stylelint-config-torchbox version. Update dependencies and config as needed, update as much of the styles as you can if safe.
 ```
 
 #### Common CLI flags
@@ -92,13 +92,13 @@ default_language_version:
   node: system
 repos:
   - repo: https://github.com/thibaudcolas/pre-commit-stylelint
-    rev: v17.4.0
+    rev: v18.0.0
     hooks:
       - id: stylelint
         files: \.(scss)$
         additional_dependencies:
-          - stylelint@17.4.0
-          - stylelint-config-torchbox@5.0.0
+          - stylelint@18.0.0
+          - stylelint-config-torchbox@6.0.0
 ```
 
 ### Vue
@@ -171,7 +171,6 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`custom-property-no-missing-var-function`](https://stylelint.io/user-guide/rules/custom-property-no-missing-var-function/)
 - [`declaration-block-no-duplicate-custom-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-custom-properties/)
 - [`declaration-block-no-duplicate-properties`](https://stylelint.io/user-guide/rules/declaration-block-no-duplicate-properties/): `true, ignore: consecutive-duplicates-with-different-syntaxes`
-- [`declaration-block-single-line-max-declarations`](https://stylelint.io/user-guide/rules/declaration-block-single-line-max-declarations/): `1`
 - [`declaration-property-value-keyword-no-deprecated`](https://stylelint.io/user-guide/rules/declaration-property-value-keyword-no-deprecated/)
 - [`font-family-name-quotes`](https://stylelint.io/user-guide/rules/font-family-name-quotes/): `always-where-recommended`
 - [`font-family-no-duplicate-names`](https://stylelint.io/user-guide/rules/font-family-no-duplicate-names/)
@@ -196,7 +195,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`no-empty-source`](https://stylelint.io/user-guide/rules/no-empty-source/)
 - [`no-invalid-double-slash-comments`](https://stylelint.io/user-guide/rules/no-invalid-double-slash-comments/)
 - [`no-invalid-position-at-import-rule`](https://stylelint.io/user-guide/rules/no-invalid-position-at-import-rule/): `true, ignoreAtRules: use, forward`
-- [`no-invalid-position-declaration`](https://stylelint.io/user-guide/rules/no-invalid-position-declaration/)
+- [`no-invalid-position-declaration`](https://stylelint.io/user-guide/rules/no-invalid-position-declaration/): `true, ignoreAtRules: mixin`
 - [`no-irregular-whitespace`](https://stylelint.io/user-guide/rules/no-irregular-whitespace/)
 - [`number-max-precision`](https://stylelint.io/user-guide/rules/number-max-precision/): `4`
 - [`property-no-deprecated`](https://stylelint.io/user-guide/rules/property-no-deprecated/)
@@ -227,6 +226,7 @@ To get the most out of this config, it is assumed that projects have the followi
 - [`scss/operator-no-unspaced`](https://github.com/stylelint-scss/stylelint-scss/blob/master/src/rules/operator-no-unspaced/README.md)
 - [`selector-anb-no-unmatchable`](https://stylelint.io/user-guide/rules/selector-anb-no-unmatchable/)
 - [`selector-attribute-quotes`](https://stylelint.io/user-guide/rules/selector-attribute-quotes/): `always`
+- [`selector-no-deprecated`](https://stylelint.io/user-guide/rules/selector-no-deprecated/)
 - [`selector-pseudo-class-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-class-no-unknown/)
 - [`selector-pseudo-element-colon-notation`](https://stylelint.io/user-guide/rules/selector-pseudo-element-colon-notation/): `double`
 - [`selector-pseudo-element-no-unknown`](https://stylelint.io/user-guide/rules/selector-pseudo-element-no-unknown/)

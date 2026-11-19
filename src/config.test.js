@@ -21,7 +21,7 @@ describe('config', () => {
                 configFile: 'config.js',
             })
             .then((results) => {
-                expect(results.results[0].warnings.length).toBe(7);
+                expect(results.results[0].warnings.length).toBe(6);
             });
     });
 

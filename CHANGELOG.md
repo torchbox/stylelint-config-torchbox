@@ -4,6 +4,38 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/) and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [6.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v5.0.0...v6.0.0) (Unreleased)
+
+### Features
+
+- Update stylelint to v18 and up.
+- Update all config dependencies to their latest releases, compatible with stylelint v18: `stylelint-config-standard-scss` v18, `stylelint-order` v8 and `stylelint-declaration-strict-value` v1.13.
+- Let block-less @-rules such as `@include` go either side of declarations in `order/order`. Since Dart Sass 1.92, a declaration after an `@include` of a mixin with media queries overrides those media queries ([#53](https://github.com/torchbox/stylelint-config-torchbox/pull/53)).
+
+### BREAKING CHANGES
+
+The configuration now mandates stylelint v18, which requires Node.js 22.22.2, 24.15.0, or 26.0.0 and newer. See Stylelint's official [Migrating to 18.0.0](https://stylelint.io/migration-guide/to-18) documentation.
+
+#### Rules configuration changes
+
+| Rule                                                                                                        | Purpose                                                    | Set to                       | Was set to |
+| ----------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------- | ---------------------------- | ---------- |
+| `declaration-block-single-line-max-declarations`                                                            | Limit the number of declarations in a single-line block    | Removed from Stylelint 18    | `1`        |
+| [`selector-no-deprecated`](https://stylelint.io/user-guide/rules/selector-no-deprecated/)                   | Disallow deprecated selectors                              | `true`                       | N/A        |
+| [`no-invalid-position-declaration`](https://stylelint.io/user-guide/rules/no-invalid-position-declaration/) | Disallow declarations outside of rules, except in `@mixin` | `true, ignoreAtRules: mixin` | `true`     |
+
+`stylelint-config-standard-scss` turns off the new `at-charset-rule-no-invalid`, `selector-no-invalid`, `selector-no-unmatchable` and `value-no-invalid` rules, so they stay disabled here too.
+
+#### New unused rules
+
+- [`declaration-property-custom-property-allowed-list`](https://stylelint.io/user-guide/rules/declaration-property-custom-property-allowed-list/)
+- [`order/custom-properties-alphabetical-order`](https://github.com/hudochenkov/stylelint-order/blob/master/rules/custom-properties-alphabetical-order/README.md)
+- [`property-layout-mappings`](https://stylelint.io/user-guide/rules/property-layout-mappings/)
+- [`relative-selector-nesting-notation`](https://stylelint.io/user-guide/rules/relative-selector-nesting-notation/)
+- [`unit-layout-mappings`](https://stylelint.io/user-guide/rules/unit-layout-mappings/)
+- [`value-keyword-layout-mappings`](https://stylelint.io/user-guide/rules/value-keyword-layout-mappings/)
+- [`value-type-custom-property-required-list`](https://stylelint.io/user-guide/rules/value-type-custom-property-required-list/)
+
 ## [5.0.0](https://github.com/torchbox/stylelint-config-torchbox/compare/v4.0.0...v5.0.0) (2026-03-09)
 
 ### Features
