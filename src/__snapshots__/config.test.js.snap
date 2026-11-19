@@ -8,7 +8,7 @@ exports[`config > scenarios > at-rule-no-unknown 1`] = `[]`;
 
 exports[`config > scenarios > at-rule-no-vendor-prefix 1`] = `
 [
-  "Unexpected vendor-prefixed at-rule "@-webkit-keyframes" (at-rule-no-vendor-prefix)",
+  "Vendor-prefixed at-rule "@-webkit-keyframes" (at-rule-no-vendor-prefix)",
 ]
 `;
 
@@ -16,8 +16,8 @@ exports[`config > scenarios > color-function-notation 1`] = `[]`;
 
 exports[`config > scenarios > color-named 1`] = `
 [
-  "Unexpected named color "red" (color-named)",
-  "Unexpected named color "blue" (color-named)",
+  "Disallowed named color "red" (color-named)",
+  "Disallowed named color "blue" (color-named)",
 ]
 `;
 
@@ -29,7 +29,7 @@ exports[`config > scenarios > declaration-block-no-redundant-longhand-properties
 
 exports[`config > scenarios > declaration-block-no-shorthand-property-overrides 1`] = `
 [
-  "Unexpected shorthand "padding" after "padding-left" (declaration-block-no-shorthand-property-overrides)",
+  "Overridden property "padding-left" by shorthand "padding" (declaration-block-no-shorthand-property-overrides)",
 ]
 `;
 
@@ -37,14 +37,14 @@ exports[`config > scenarios > declaration-empty-line-before 1`] = `[]`;
 
 exports[`config > scenarios > declaration-no-important 1`] = `
 [
-  "Unexpected !important (declaration-no-important)",
-  "Unexpected !important (declaration-no-important)",
+  "Disallowed !important (declaration-no-important)",
+  "Disallowed !important (declaration-no-important)",
 ]
 `;
 
 exports[`config > scenarios > declaration-property-value-disallowed-list 1`] = `
 [
-  "Unexpected value "justify" for property "text-align" (declaration-property-value-disallowed-list)",
+  "Disallowed value "justify" for property "text-align" (declaration-property-value-disallowed-list)",
 ]
 `;
 
@@ -52,13 +52,13 @@ exports[`config > scenarios > keyframes-name-pattern 1`] = `[]`;
 
 exports[`config > scenarios > max-nesting-depth 1`] = `
 [
-  "Expected nesting depth to be no more than 4 (max-nesting-depth)",
+  "Too deep nesting, maximum 4 (max-nesting-depth)",
 ]
 `;
 
 exports[`config > scenarios > media-feature-name-no-vendor-prefix 1`] = `
 [
-  "Unexpected vendor-prefix (media-feature-name-no-vendor-prefix)",
+  "Vendor-prefixed media feature name (media-feature-name-no-vendor-prefix)",
 ]
 `;
 
@@ -74,7 +74,7 @@ exports[`config > scenarios > order/order 1`] = `
 
 exports[`config > scenarios > property-no-vendor-prefix 1`] = `
 [
-  "Unexpected vendor-prefixed property "-webkit-transform" (property-no-vendor-prefix)",
+  "Vendor-prefixed property "-webkit-transform" (property-no-vendor-prefix)",
 ]
 `;
 
@@ -140,26 +140,26 @@ exports[`config > scenarios > selector-id-pattern 1`] = `[]`;
 
 exports[`config > scenarios > selector-max-id 1`] = `
 [
-  "Expected "#foo" to have no more than 0 ID selectors (selector-max-id)",
-  "Expected "#bar #baz" to have no more than 0 ID selectors (selector-max-id)",
+  "Too many ID selectors in "#foo", maximum 0 (selector-max-id)",
+  "Too many ID selectors in "#bar #baz", maximum 0 (selector-max-id)",
 ]
 `;
 
 exports[`config > scenarios > selector-max-specificity 1`] = `
 [
-  "Expected ".a .b .c .d .e" to have a specificity no more than "0,4,0" (selector-max-specificity)",
+  "Too high specificity in ".a .b .c .d .e", maximum "0,4,0" (selector-max-specificity)",
 ]
 `;
 
 exports[`config > scenarios > selector-max-type 1`] = `
 [
-  "Expected "div span a strong" to have no more than 2 type selectors (selector-max-type)",
+  "Too many type selectors in "div span a strong", maximum 2 (selector-max-type)",
 ]
 `;
 
 exports[`config > scenarios > selector-no-vendor-prefix 1`] = `
 [
-  "Unexpected vendor-prefixed selector "::-webkit-input-placeholder" (selector-no-vendor-prefix)",
+  "Vendor-prefixed selector "::-webkit-input-placeholder" (selector-no-vendor-prefix)",
 ]
 `;
 

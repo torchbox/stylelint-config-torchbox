@@ -113,6 +113,15 @@ const formatting = [
 // prettier-ignore
 /** Rules that have been introduced in a new version and haven’t been reviewed yet. */
 const toReviewUpgrades = {
+    upgrade18: {
+        'declaration-property-custom-property-allowed-list': 'https://stylelint.io/user-guide/rules/declaration-property-custom-property-allowed-list',
+        'order/custom-properties-alphabetical-order': 'https://github.com/hudochenkov/stylelint-order/blob/master/rules/custom-properties-alphabetical-order/README.md',
+        'property-layout-mappings': 'https://stylelint.io/user-guide/rules/property-layout-mappings',
+        'relative-selector-nesting-notation': 'https://stylelint.io/user-guide/rules/relative-selector-nesting-notation',
+        'unit-layout-mappings': 'https://stylelint.io/user-guide/rules/unit-layout-mappings',
+        'value-keyword-layout-mappings': 'https://stylelint.io/user-guide/rules/value-keyword-layout-mappings',
+        'value-type-custom-property-required-list': 'https://stylelint.io/user-guide/rules/value-type-custom-property-required-list',
+    },
     upgrade17: {
         'display-notation': 'https://stylelint.io/user-guide/rules/display-notation',
     },
