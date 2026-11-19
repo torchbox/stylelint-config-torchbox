@@ -85,11 +85,13 @@ export default {
         'scss/dollar-variable-no-missing-interpolation': true,
         'scss/at-mixin-argumentless-call-parentheses': 'always',
         'scss/at-mixin-pattern': /^[a-z0-9-]+$/,
+        // Block-less @-rules can go on either side of declarations. Since Dart
+        // Sass 1.92, a declaration after an @include of a mixin that outputs
+        // nested rules comes out after those rules, so @include-first isn't
+        // always safe.
         'order/order': [
             'dollar-variables',
             'custom-properties',
-            // @-rules that have no nesting.
-            { type: 'at-rule', hasBlock: false },
             'declarations',
         ],
         'scale-unlimited/declaration-strict-value': [

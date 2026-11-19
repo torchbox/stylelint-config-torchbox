@@ -224,10 +224,6 @@ exports[`semver - should those tests break, consider releasing a new major versi
     [
       "dollar-variables",
       "custom-properties",
-      {
-        "hasBlock": false,
-        "type": "at-rule",
-      },
       "declarations",
     ],
   ],
